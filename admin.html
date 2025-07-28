@@ -2,19 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Dashboard – Atlas Games</title>
-
-    <!-- Styles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin – Atlas Games</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/admin.css" />
-    <link rel="icon" href="assets/logos/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/logos/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 <main class="admin-wrapper">
 
-    <!-- 🔐 LOGIN SECTION -->
+    <!-- 🔐 LOGIN -->
     <div id="login-section">
         <h1>Admin Login</h1>
         <input type="email" id="admin-email" placeholder="Email" />
@@ -23,118 +21,26 @@
         <p id="login-error" class="error-text"></p>
     </div>
 
-    <!-- ✅ DASHBOARD SECTION -->
+    <!-- ✅ DASHBOARD NAV -->
     <div id="dashboard-section" style="display: none;">
         <h1>Welcome, Admin 👋</h1>
-        <button id="logout-button" class="btn secondary">Log Out</button>
-
-        <hr style="margin: 3rem 0;" />
-
-        <!-- 📝 ADD BLOG POST -->
-        <section class="form-block">
-            <h2>Add Blog Post</h2>
-            <input type="text" id="blog-title" placeholder="Post Title" />
-            <textarea id="blog-content" placeholder="Post Content"></textarea>
-            <input type="file" id="blog-image-file" accept="image/*" />
-            <button id="submit-blog">Submit Blog Post</button>
-            <p id="blog-success" class="success-text"></p>
-        </section>
-
-        <hr style="margin: 3rem 0;" />
-
-        <!-- ✏️ EDIT BLOG POST -->
-        <section class="form-block">
-            <h2>Edit Blog Post</h2>
-            <select id="edit-blog-select">
-                <option value="">Select a blog post to edit</option>
-            </select>
-            <input type="text" id="edit-blog-title" placeholder="New Title" />
-            <textarea id="edit-blog-content" placeholder="New Content"></textarea>
-            <button id="edit-blog-save">Save Changes</button>
-            <p id="edit-blog-success" class="success-text"></p>
-
-            <h3>Delete a Blog Post</h3>
-            <select id="delete-blog-select">
-                <option value="">Select a blog to delete</option>
-            </select>
-            <button id="delete-blog-button">🗑️ Delete Blog</button>
-            <p id="delete-blog-success" class="success-text"></p>
-
-        </section>
-
-
-        <hr style="margin: 3rem 0;" />
-
-        <!-- 🎮 ADD NEW GAME -->
-        <section class="form-block">
-            <h2>Add New Game</h2>
-            <input type="text" id="game-title" placeholder="Game Title" />
-            <input type="text" id="game-description" placeholder="Short Description" />
-            <input type="text" id="game-image-path" placeholder="Main Thumbnail Path (e.g., assets/images/games/harvest-hustle.jpg)" />
-            <input type="text" id="game-tags" placeholder="Tags (comma separated)" />
-            <input type="text" id="game-link" placeholder="Play/Download Link (Itch.io, Steam, etc.)" />
-            <input type="text" id="game-screenshots" placeholder="Screenshot Paths (comma separated, e.g., assets/images/screenshots/ss1.jpg, ss2.jpg)" />
-            <button id="submit-game">Submit Game</button>
-            <p id="game-success" class="success-text"></p>
-        </section>
-
-        <hr style="margin: 3rem 0;" />
-
-        <!-- 🎮 EDIT GAME -->
-        <section class="form-block">
-            <h2>Edit Game</h2>
-            <select id="edit-game-select"></select>
-            <input type="text" id="edit-game-title" placeholder="New Title" />
-            <input type="text" id="edit-game-description" placeholder="New Description" />
-            <input type="text" id="edit-game-tags" placeholder="Tags (comma separated)" />
-            <input type="text" id="edit-game-link" placeholder="New Play/Download Link" />
-            <button id="edit-game-save">Save Changes</button>
-            <p id="edit-game-success" class="success-text"></p>
-
-            <h3>Delete Game</h3>
-            <select id="delete-game-select"></select>
-            <button id="delete-game-button">🗑️ Delete Game</button>
-            <p id="delete-game-success"></p>
-        </section>
-
-        <hr style="margin: 3rem 0;" />
-
-        <!-- 👤 ADD TEAM MEMBER -->
-        <section class="form-block">
-            <h2>Add Team Member</h2>
-            <input type="text" id="team-name" placeholder="Full Name" />
-            <input type="text" id="team-role" placeholder="Role (e.g., Game Designer)" />
-            <input type="text" id="team-bio" placeholder="Short Bio" />
-            <input type="text" id="team-image-path" placeholder="assets/images/teams/jane-doe.jpg" />
-            <input type="text" id="team-social" placeholder="Link to Social/Portfolio" />
-            <button id="submit-team">Submit Team Member</button>
-            <p id="team-success" class="success-text"></p>
-        </section>
-
-        <hr style="margin: 3rem 0;" />
-
-        <!-- 👤 EDIT TEAM MEMBER -->
-        <section class="form-block">
-            <h2>Edit Team Member</h2>
-            <select id="edit-team-select"></select>
-            <input type="text" id="edit-team-name" placeholder="New Name" />
-            <input type="text" id="edit-team-role" placeholder="New Role" />
-            <textarea id="edit-team-bio" placeholder="New Bio"></textarea>
-            <button id="edit-team-save">Save Changes</button>
-            <p id="edit-team-success" class="success-text"></p>
-
-            <h3>Delete Team Member</h3>
-            <select id="delete-team-select"></select>
-            <button id="delete-team-button">🗑️ Delete Member</button>
-            <p id="delete-team-success"></p>
-
-        </section>
-
+        <nav class="admin-nav">
+            <ul>
+                <li><a href="adminPages/add-blog.html">Add Blog</a></li>
+                <li><a href="adminPages/edit-blog.html">Edit Blogs</a></li>
+                <li><a href="adminPages/add-game.html">Add Game</a></li>
+                <li><a href="adminPages/edit-game.html">Edit Games</a></li>
+                <li><a href="adminPages/add-team.html">Add Team</a></li>
+                <li><a href="adminPages/edit-team.html">Edit Team</a></li>
+                <li><button id="logout-button">Log Out</button></li>
+            </ul>
+        </nav>
     </div>
+
 </main>
 
-<!-- 🧠 Admin JS -->
 <script type="module" src="auth/auth-check.js"></script>
-<script type="module" src="js/admin.js"></script>
+<script type="module" src="js/admin/login.js"></script>
+<script type="module" src="js/admin/shared.js"></script>
 </body>
 </html>

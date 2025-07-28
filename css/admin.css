@@ -1,3 +1,18 @@
+:root {
+    --primary: #C62828;
+    --secondary: #4F4F4F;
+    --background: #121212;
+    --text: #F2F2F2;
+    --success: #66bb6a;
+    --error: #f44336;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+}
+
 .admin-wrapper {
     padding: 4rem 1rem;
     max-width: 500px;
@@ -11,15 +26,32 @@ input {
     margin: 1rem 0;
     padding: 0.75rem;
     border-radius: 5px;
-    border: 1px solid #4F4F4F;
+    border: 1px solid var(--secondary);
     background-color: #1E1E1E;
-    color: #F2F2F2;
+    color: var(--text);
     font-family: 'Poppins', sans-serif;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--secondary);
+    background-color: #1E1E1E;
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+input:not([type="submit"]) {
+    margin-bottom: 1rem;
 }
 
 button {
     padding: 0.75rem 2rem;
-    background-color: #C62828;
+    background-color: var(--primary);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -29,13 +61,8 @@ button {
 
 button.secondary {
     background-color: transparent;
-    border: 2px solid #C62828;
-    color: #C62828;
-}
-
-.error-text {
-    color: #f44336;
-    margin-top: 1rem;
+    border: 2px solid var(--primary);
+    color: var(--primary);
 }
 
 .form-block {
@@ -44,30 +71,42 @@ button.secondary {
 }
 
 .form-block h2 {
-    color: #C62828;
+    color: var(--primary);
     margin-bottom: 1rem;
     text-align: center;
 }
 
-textarea {
-    width: 100%;
-    height: 150px;
-    padding: 1rem;
-    border-radius: 5px;
-    border: 1px solid #4F4F4F;
-    background-color: #1E1E1E;
-    color: #F2F2F2;
-    font-family: 'Poppins', sans-serif;
-    resize: vertical;
-    margin-bottom: 1rem;
-}
-
 .success-text {
-    color: #66bb6a;
+    color: var(--success);
     margin-top: 1rem;
     text-align: center;
 }
 
-input:not([type="submit"]) {
-    margin-bottom: 1rem;
+.error-text {
+    color: var(--error);
+    margin-top: 1rem;
+}
+
+.admin-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-nav li {
+    margin: 1rem 0;
+}
+
+.admin-nav a,
+.admin-nav button {
+    text-decoration: none;
+    color: var(--text);
+    background: var(--primary);
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.admin-nav button {
+    background: crimson;
 }

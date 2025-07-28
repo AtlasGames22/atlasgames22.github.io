@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Game – Atlas Games</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+  <link rel="icon" href="../assets/logos/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- 🍔 Shared Admin Navigation -->
+<nav class="admin-nav">
+  <div class="hamburger" id="hamburger-toggle">☰</div>
+  <ul id="admin-menu" class="hidden">
+    <li><a href="../admin.html">Dashboard</a></li>
+    <li><a href="add-blog.html">Add Blog</a></li>
+    <li><a href="edit-blog.html">Edit Blogs</a></li>
+    <li><a href="add-game.html">Add Game</a></li>
+    <li><a href="edit-game.html">Edit Games</a></li>
+    <li><a href="add-team.html">Add Team</a></li>
+    <li><a href="edit-team.html">Edit Team</a></li>
+    <li><button id="logout-button">Log Out</button></li>
+  </ul>
+</nav>
+
+<!-- 🎮 Add Game Form -->
+<main class="admin-wrapper">
+  <h1>Add New Game</h1>
+  <section class="form-block">
+    <input type="text" id="game-title" placeholder="Game Title" />
+    <input type="text" id="game-description" placeholder="Short Description" />
+    <input type="text" id="game-image-path" placeholder="Thumbnail Path (e.g., assets/images/games/thumbnails/game1.jpg)" />
+    <input type="text" id="game-tags" placeholder="Tags (comma separated)" />
+    <input type="text" id="game-link" placeholder="Play/Download Link" />
+    <input type="text" id="game-screenshots" placeholder="Screenshot Paths (comma separated)" />
+    <button id="submit-game">Submit Game</button>
+    <p id="game-success" class="success-text"></p>
+  </section>
+</main>
+
+<script type="module" src="../auth/auth-check.js"></script>
+<script type="module" src="../js/admin/addGame.js"></script>
+<script type="module" src="../js/admin/shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Games – Atlas Games</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+  <link rel="icon" href="../assets/logos/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- 🍔 Shared Admin Navigation -->
+<nav class="admin-nav">
+  <div class="hamburger" id="hamburger-toggle">☰</div>
+  <ul id="admin-menu" class="hidden">
+    <li><a href="../admin.html">Dashboard</a></li>
+    <li><a href="add-blog.html">Add Blog</a></li>
+    <li><a href="edit-blog.html">Edit Blogs</a></li>
+    <li><a href="add-game.html">Add Game</a></li>
+    <li><a href="edit-game.html">Edit Games</a></li>
+    <li><a href="add-team.html">Add Team</a></li>
+    <li><a href="edit-team.html">Edit Team</a></li>
+    <li><button id="logout-button">Log Out</button></li>
+  </ul>
+</nav>
+
+<main class="admin-wrapper">
+  <h1>Edit & Delete Games</h1>
+
+  <!-- ✏️ Edit Game -->
+  <section class="form-block">
+    <h2>Edit Game</h2>
+    <select id="edit-game-select">
+      <option value="">Select a game</option>
+    </select>
+    <input type="text" id="edit-game-title" placeholder="New Title" />
+    <input type="text" id="edit-game-description" placeholder="New Description" />
+    <input type="text" id="edit-game-tags" placeholder="Tags (comma separated)" />
+    <input type="text" id="edit-game-link" placeholder="New Play/Download Link" />
+    <button id="edit-game-save">Save Changes</button>
+    <p id="edit-game-success" class="success-text"></p>
+  </section>
+
+  <hr style="margin: 3rem 0;" />
+
+  <!-- 🗑️ Delete Game -->
+  <section class="form-block">
+    <h2>Delete Game</h2>
+    <select id="delete-game-select">
+      <option value="">Select a game</option>
+    </select>
+    <button id="delete-game-button">🗑️ Delete Game</button>
+    <p id="delete-game-success" class="success-text"></p>
+  </section>
+</main>
+
+<script type="module" src="../auth/auth-check.js"></script>
+<script type="module" src="../js/admin/editGame.js"></script>
+<script type="module" src="../js/admin/shared.js"></script>
+</body>
+</html>
