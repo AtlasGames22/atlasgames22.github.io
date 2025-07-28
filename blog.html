@@ -27,29 +27,10 @@
     <div class="container">
         <h1>Dev Blog & Updates</h1>
         <p class="subtitle">Behind the scenes. Game updates. Honest indie progress.</p>
-
-        <div class="blog-grid">
-            <!-- BLOG POST CARD -->
-            <div class="blog-card">
-                <img src="assets/images/devlog-harvesthustle.jpg" alt="Harvest Hustle Devlog">
-                <div class="blog-content">
-                    <h3>Devlog #1 – Harvest Hustle Progress</h3>
-                    <p>We finally implemented the chaos mechanic! Here's how we designed it, tested it, and made it fun (and unfair)...</p>
-                    <a href="blogs/devlog1.html" class="btn secondary">Read More</a>
-                </div>
-            </div>
-
-            <div class="blog-card">
-                <img src="assets/images/devlog-tools.jpg" alt="Tools We Use">
-                <div class="blog-content">
-                    <h3>Our Toolbox: What We Use to Build Games</h3>
-                    <p>From Unity to Rider to Figma — these are the essential tools we rely on to bring Atlas Games to life.</p>
-                    <a href="blogs/devlog-tools.html" class="btn secondary">Read More</a>
-                </div>
-            </div>
-
-            <!-- More blog cards can be added here -->
+        <div class="blog-grid" id="blog-posts-container">
+            <!-- Blog posts will load here dynamically -->
         </div>
+        <script type="module" src="js/blog.js"></script>
     </div>
 </main>
 

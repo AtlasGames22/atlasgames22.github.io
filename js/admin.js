@@ -51,28 +51,28 @@ logoutBtn.addEventListener('click', () => {
 });
 
 // === BLOG SUBMISSION ===
-const blogTitle = document.getElementById('blog-title');
-const blogContent = document.getElementById('blog-content');
-const blogSuccess = document.getElementById('blog-success');
-const blogSubmit = document.getElementById('submit-blog');
+const blogImageFile = document.getElementById('blog-image-file');
+
 blogSubmit.addEventListener('click', async () => {
     const title = blogTitle.value.trim();
     const content = blogContent.value.trim();
-    const imageFile = document.getElementById('blog-image-file').files[0];
+    const imageFile = blogImageFile.files[0];
 
-    if (!title || !content || !imageFile) {
-        blogSuccess.textContent = 'Please fill out all fields and upload a blog image.';
+    if (!title || !content) {
+        blogSuccess.textContent = 'Please fill out all fields.';
         return;
     }
 
-    try {
-        // Upload blog image
-        const cleanTitle = title.replace(/\s+/g, '-').toLowerCase();
-        const imageRef = ref(storage, `blogs/${cleanTitle}/${imageFile.name}`);
-        await uploadBytes(imageRef, imageFile);
-        const imageUrl = await getDownloadURL(imageRef);
+    let imageUrl = null;
 
-        // Save to Firestore
+    try {
+        if (imageFile) {
+            const cleanTitle = title.replace(/\s+/g, '-').toLowerCase();
+            const imageRef = ref(storage, `blogs/${cleanTitle}/${imageFile.name}`);
+            await uploadBytes(imageRef, imageFile);
+            imageUrl = await getDownloadURL(imageRef);
+        }
+
         await addDoc(collection(db, 'blogs'), {
             title,
             content,
@@ -82,7 +82,7 @@ blogSubmit.addEventListener('click', async () => {
 
         blogTitle.value = '';
         blogContent.value = '';
-        document.getElementById('blog-image-file').value = '';
+        blogImageFile.value = '';
         blogSuccess.textContent = '✅ Blog post submitted successfully!';
     } catch (error) {
         console.error("Error adding blog post:", error);
