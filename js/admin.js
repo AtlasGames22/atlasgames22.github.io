@@ -17,16 +17,6 @@ const loginBtn = document.getElementById('login-button');
 const logoutBtn = document.getElementById('logout-button');
 const errorText = document.getElementById('login-error');
 
-onAuthStateChanged(auth, (user) => {
-    if (user) {
-        loginSection.style.display = 'none';
-        dashboardSection.style.display = 'block';
-    } else {
-        loginSection.style.display = 'block';
-        dashboardSection.style.display = 'none';
-    }
-});
-
 loginBtn.addEventListener('click', () => {
     const email = document.getElementById('admin-email').value;
     const password = document.getElementById('admin-password').value;
@@ -481,5 +471,3 @@ deleteTeamBtn.addEventListener('click', async () => {
 });
 
 populateDeleteTeamSelect();
-
-
