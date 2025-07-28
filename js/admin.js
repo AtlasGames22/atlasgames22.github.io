@@ -1,4 +1,4 @@
-import { db, auth } from './firebase-config.js'; // ✅ make sure db is imported
+import { db, auth, storage } from './firebase-config.js'; // Add storage import
 import {
     collection,
     addDoc,
@@ -9,6 +9,11 @@ import {
     onAuthStateChanged,
     signOut
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+import {
+    ref,
+    uploadBytes,
+    getDownloadURL
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-storage.js";
 
 // === AUTH UI ===
 const loginSection = document.getElementById('login-section');
@@ -50,25 +55,34 @@ const blogTitle = document.getElementById('blog-title');
 const blogContent = document.getElementById('blog-content');
 const blogSuccess = document.getElementById('blog-success');
 const blogSubmit = document.getElementById('submit-blog');
-
 blogSubmit.addEventListener('click', async () => {
     const title = blogTitle.value.trim();
     const content = blogContent.value.trim();
+    const imageFile = document.getElementById('blog-image-file').files[0];
 
-    if (!title || !content) {
-        blogSuccess.textContent = 'Please fill out all fields.';
+    if (!title || !content || !imageFile) {
+        blogSuccess.textContent = 'Please fill out all fields and upload a blog image.';
         return;
     }
 
     try {
+        // Upload blog image
+        const cleanTitle = title.replace(/\s+/g, '-').toLowerCase();
+        const imageRef = ref(storage, `blogs/${cleanTitle}/${imageFile.name}`);
+        await uploadBytes(imageRef, imageFile);
+        const imageUrl = await getDownloadURL(imageRef);
+
+        // Save to Firestore
         await addDoc(collection(db, 'blogs'), {
             title,
             content,
+            imageUrl,
             date: serverTimestamp()
         });
 
         blogTitle.value = '';
         blogContent.value = '';
+        document.getElementById('blog-image-file').value = '';
         blogSuccess.textContent = '✅ Blog post submitted successfully!';
     } catch (error) {
         console.error("Error adding blog post:", error);
@@ -76,10 +90,10 @@ blogSubmit.addEventListener('click', async () => {
     }
 });
 
-// === GAME SUBMISSION ===
+// === GAME SUBMISSION (with image upload) ===
 const gameTitle = document.getElementById('game-title');
 const gameDescription = document.getElementById('game-description');
-const gameImage = document.getElementById('game-image');
+const gameImageFile = document.getElementById('game-image-file'); // file input
 const gameTags = document.getElementById('game-tags');
 const gameLink = document.getElementById('game-link');
 const gameSuccess = document.getElementById('game-success');
@@ -88,16 +102,23 @@ const gameSubmit = document.getElementById('submit-game');
 gameSubmit.addEventListener('click', async () => {
     const title = gameTitle.value.trim();
     const description = gameDescription.value.trim();
-    const imageUrl = gameImage.value.trim();
+    const imageFile = gameImageFile.files[0];
     const tags = gameTags.value.split(',').map(tag => tag.trim()).filter(Boolean);
     const link = gameLink.value.trim();
 
-    if (!title || !description || !imageUrl || !tags.length || !link) {
-        gameSuccess.textContent = 'Please fill out all fields.';
+    if (!title || !description || !imageFile || !tags.length || !link) {
+        gameSuccess.textContent = 'Please fill out all fields and upload an image.';
         return;
     }
 
     try {
+        // Upload image to Firebase Storage
+        const cleanTitle = title.replace(/\s+/g, '-').toLowerCase();
+        const imageRef = ref(storage, `games/${cleanTitle}/${imageFile.name}`);
+        await uploadBytes(imageRef, imageFile);
+        const imageUrl = await getDownloadURL(imageRef);
+
+        // Add to Firestore
         await addDoc(collection(db, 'games'), {
             title,
             description,
@@ -107,9 +128,10 @@ gameSubmit.addEventListener('click', async () => {
             dateAdded: serverTimestamp()
         });
 
+        // Reset form
         gameTitle.value = '';
         gameDescription.value = '';
-        gameImage.value = '';
+        gameImageFile.value = '';
         gameTags.value = '';
         gameLink.value = '';
         gameSuccess.textContent = '✅ Game submitted successfully!';

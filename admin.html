@@ -31,8 +31,9 @@
         <hr style="margin: 3rem 0;" />
         <section class="form-block">
             <h2>Add Blog Post</h2>
-            <label for="blog-title"></label><input type="text" id="blog-title" placeholder="Post Title" />
-            <label for="blog-content"></label><textarea id="blog-content" placeholder="Post Content"></textarea>
+            <input type="text" id="blog-title" placeholder="Post Title" />
+            <textarea id="blog-content" placeholder="Post Content"></textarea>
+            <input type="file" id="blog-image-file" accept="image/*" />
             <button id="submit-blog">Submit Blog Post</button>
             <p id="blog-success" class="success-text"></p>
         </section>
@@ -42,13 +43,12 @@
             <h2>Add New Game</h2>
             <input type="text" id="game-title" placeholder="Game Title" />
             <input type="text" id="game-description" placeholder="Short Description" />
-            <input type="text" id="game-image" placeholder="Image URL (Thumbnail or Cover)" />
+            <input type="file" id="game-image-file" accept="image/*" />
             <input type="text" id="game-tags" placeholder="Tags (comma separated)" />
             <input type="text" id="game-link" placeholder="Play/Download Link (Itch.io or Steam)" />
             <button id="submit-game">Submit Game</button>
             <p id="game-success" class="success-text"></p>
         </section>
-
     </div>
 </main>
 
