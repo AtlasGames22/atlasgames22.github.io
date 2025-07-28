@@ -20,13 +20,18 @@ async function loadGames() {
     snapshot.forEach(doc => {
         const game = doc.data();
         const id = doc.id;
-        const imageUrl = game.imageUrl || 'assets/images/default-game.jpg';
+
+        const imageUrl =
+            game.thumbnailUrl ||
+            game.imageUrl ||
+            'assets/images/default-game.jpg';
+
         const tags = game.tags?.join(', ') || '';
 
         const card = document.createElement('div');
         card.className = 'game-card';
 
-        // Create image element with fallback
+        // Image element with fallback
         const img = document.createElement('img');
         img.src = imageUrl;
         img.alt = game.title;

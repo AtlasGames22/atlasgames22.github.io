@@ -55,8 +55,20 @@ async function loadGame() {
             });
         }
 
-        // Optional: Add screenshots to gallery in the future
-        // if (Array.isArray(game.screenshots)) { ... }
+        // ✅ Screenshot Gallery
+        galleryEl.innerHTML = '';
+        if (Array.isArray(game.screenshots)) {
+            game.screenshots.forEach((url, i) => {
+                const img = document.createElement('img');
+                img.src = url;
+                img.alt = `${game.title} Screenshot ${i + 1}`;
+                img.onerror = () => {
+                    img.src = 'assets/images/default-game.jpg';
+                };
+                img.className = 'gallery-img'; // for styling
+                galleryEl.appendChild(img);
+            });
+        }
 
     } catch (err) {
         console.error("Error loading game detail:", err);
@@ -64,5 +76,6 @@ async function loadGame() {
         subtitleEl.textContent = "There was a problem loading this game.";
     }
 }
+
 
 loadGame();
