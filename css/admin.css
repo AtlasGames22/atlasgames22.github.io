@@ -37,3 +37,37 @@ button.secondary {
     color: #f44336;
     margin-top: 1rem;
 }
+
+.form-block {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.form-block h2 {
+    color: #C62828;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #4F4F4F;
+    background-color: #1E1E1E;
+    color: #F2F2F2;
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+.success-text {
+    color: #66bb6a;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+input:not([type="submit"]) {
+    margin-bottom: 1rem;
+}
