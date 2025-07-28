@@ -1,0 +1,77 @@
+.about-section {
+    padding: 4rem 0;
+}
+
+.about-section h1,
+.about-section h2 {
+    text-align: center;
+    color: #C62828;
+    margin-bottom: 1rem;
+}
+
+.about-section .intro,
+.about-section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.mission-values ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+.mission-values li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #F2F2F2;
+}
+
+.tools-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.tools-logos img {
+    height: 48px;
+    filter: brightness(90%);
+    transition: 0.3s ease;
+}
+
+.tools-logos img:hover {
+    filter: brightness(110%);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-card {
+    background-color: #1E1E1E;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #4F4F4F;
+    text-align: center;
+}
+
+.team-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 3rem;
+}
