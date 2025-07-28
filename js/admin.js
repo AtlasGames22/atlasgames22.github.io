@@ -87,7 +87,7 @@ blogSubmit.addEventListener('click', async () => {
 // === GAME SUBMISSION ===
 const gameTitle = document.getElementById('game-title');
 const gameDescription = document.getElementById('game-description');
-const gameImageFile = document.getElementById('game-image-file');
+const gameImagePath = document.getElementById('game-image-path'); // updated from file to text
 const gameTags = document.getElementById('game-tags');
 const gameLink = document.getElementById('game-link');
 const gameSuccess = document.getElementById('game-success');
@@ -96,19 +96,16 @@ const gameSubmit = document.getElementById('submit-game');
 gameSubmit.addEventListener('click', async () => {
     const title = gameTitle.value.trim();
     const description = gameDescription.value.trim();
-    const imageFile = gameImageFile.files[0];
+    const imageUrl = gameImagePath.value.trim(); // path like: assets/images/games/harvest-hustle.jpg
     const tags = gameTags.value.split(',').map(tag => tag.trim()).filter(Boolean);
     const link = gameLink.value.trim();
 
-    if (!title || !description || !imageFile || !tags.length || !link) {
-        gameSuccess.textContent = 'Please fill out all fields and select an image.';
+    if (!title || !description || !imageUrl || !tags.length || !link) {
+        gameSuccess.textContent = 'Please fill out all fields.';
         return;
     }
 
     try {
-        const cleanTitle = title.replace(/\s+/g, '-').toLowerCase();
-        const imageUrl = `assets/images/games/${cleanTitle}/${imageFile.name}`;
-
         await addDoc(collection(db, 'games'), {
             title,
             description,
@@ -118,15 +115,16 @@ gameSubmit.addEventListener('click', async () => {
             dateAdded: serverTimestamp()
         });
 
+        // Reset form
         gameTitle.value = '';
         gameDescription.value = '';
-        gameImageFile.value = '';
+        gameImagePath.value = ''; // reset image input
         gameTags.value = '';
         gameLink.value = '';
         gameSuccess.textContent = '✅ Game submitted successfully!';
-
     } catch (error) {
         console.error("Error adding game:", error);
         gameSuccess.textContent = '❌ Failed to submit game.';
     }
 });
+

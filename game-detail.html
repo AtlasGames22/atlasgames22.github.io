@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Details – Atlas Games</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/games.css" />
+  <link rel="icon" href="assets/logos/favicon.ico" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="game-detail-section">
+  <h1 id="game-title">Loading...</h1>
+  <p class="game-subtitle" id="game-subtitle">Please wait while we load this game’s details.</p>
+
+  <div class="game-detail-grid">
+    <!-- Left Column: Images -->
+    <div>
+      <img id="main-image" class="main-game-img" src="assets/images/default-game.jpg" alt="Main Game Image" />
+      <div class="screenshot-gallery" id="gallery">
+        <!-- Optional future screenshots -->
+      </div>
+    </div>
+
+    <!-- Right Column: Info -->
+    <div class="game-detail-right">
+      <h2>Description</h2>
+      <p id="game-description">Loading description...</p>
+
+      <h2>Tags</h2>
+      <ul id="game-tags">
+        <!-- Tags will appear here -->
+      </ul>
+
+      <h2>Play or Download</h2>
+      <p>
+        <a id="game-link" class="btn secondary" href="#" target="_blank" rel="noopener">
+          Launch Game ↗
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<script type="module" src="js/game-detail.js"></script>
+</body>
+</html>

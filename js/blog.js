@@ -33,7 +33,7 @@ async function loadBlogPosts() {
                 <h3>${post.title}</h3>
                 <p class="blog-date">${date}</p>
                 <p>${preview}</p>
-                <a href="blogs/${safeTitle}.html" class="btn secondary">Read More</a>
+                <a href="blogs/blogPost.html?id=${doc.id}" class="btn secondary">Read More</a>
             </div>
         </div>
         `;
