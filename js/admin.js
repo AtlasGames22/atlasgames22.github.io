@@ -1,4 +1,4 @@
-import { db } from './firebase-config.js';
+import { auth } from './firebase-config.js';
 import {
     collection,
     addDoc,
@@ -21,7 +21,7 @@ blogSubmit.addEventListener('click', async () => {
     }
 
     try {
-        await addDoc(collection(db, 'blogs'), {
+        await addDoc(collection(auth, 'blogs'), {
             title,
             content,
             date: serverTimestamp()
@@ -58,7 +58,7 @@ gameSubmit.addEventListener('click', async () => {
     }
 
     try {
-        await addDoc(collection(db, 'games'), {
+        await addDoc(collection(auth, 'games'), {
             title,
             description,
             imageUrl,
