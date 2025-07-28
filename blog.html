@@ -1,10 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Blog – Atlas Games</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/blogs.css" />
+    <link rel="icon" href="assets/logos/favicon.ico" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+<header class="navbar">
+    <div class="container">
+        <img src="assets/logos/atlas-logo.svg" alt="Atlas Games Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+            <a href="about.html">About</a>
+            <a href="blog.html" class="active">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
 
+<main class="blog-section">
+    <div class="container">
+        <h1>Dev Blog & Updates</h1>
+        <p class="subtitle">Behind the scenes. Game updates. Honest indie progress.</p>
+
+        <div class="blog-grid">
+            <!-- BLOG POST CARD -->
+            <div class="blog-card">
+                <img src="assets/images/devlog-harvesthustle.jpg" alt="Harvest Hustle Devlog">
+                <div class="blog-content">
+                    <h3>Devlog #1 – Harvest Hustle Progress</h3>
+                    <p>We finally implemented the chaos mechanic! Here's how we designed it, tested it, and made it fun (and unfair)...</p>
+                    <a href="blogs/devlog1.html" class="btn secondary">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="assets/images/devlog-tools.jpg" alt="Tools We Use">
+                <div class="blog-content">
+                    <h3>Our Toolbox: What We Use to Build Games</h3>
+                    <p>From Unity to Rider to Figma — these are the essential tools we rely on to bring Atlas Games to life.</p>
+                    <a href="blogs/devlog-tools.html" class="btn secondary">Read More</a>
+                </div>
+            </div>
+
+            <!-- More blog cards can be added here -->
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>📧 <a href="mailto:atlasgamesstudio22@gmail.com">atlasgamesstudio22@gmail.com</a> |
+            📞 <a href="tel:+27814752986">+27 81 475 2986</a> |
+            💬 <a href="https://discord.gg/YuSKf7aPwf" target="_blank">Discord</a> |
+            🎮 <a href="https://atlas-games-22.itch.io/" target="_blank">Itch.io</a></p>
+        <p>&copy; 2025 Atlas Games. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 </html>
