@@ -1,81 +1,62 @@
 import { db } from './firebase-config.js';
-import { doc, getDoc } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+import { doc, getDoc } from 'firebase/firestore';
 
 // Get game ID from URL
 const params = new URLSearchParams(window.location.search);
 const gameId = params.get('id');
 
-// DOM elements
 const titleEl = document.getElementById('game-title');
-const subtitleEl = document.getElementById('game-subtitle');
 const descEl = document.getElementById('game-description');
-const tagsEl = document.getElementById('game-tags');
-const linkEl = document.getElementById('game-link');
-const mainImageEl = document.getElementById('main-image');
-const galleryEl = document.getElementById('gallery');
+const imgEl = document.getElementById('game-image');
+const gallery = document.getElementById('screenshot-gallery');
 
 async function loadGame() {
     if (!gameId) {
-        titleEl.textContent = "Game Not Found";
-        subtitleEl.textContent = "No game ID provided.";
+        titleEl.textContent = 'Game not found';
         return;
     }
 
     try {
-        const docRef = doc(db, 'games', gameId);
-        const docSnap = await getDoc(docRef);
+        const gameRef = doc(db, 'games', gameId);
+        const docSnap = await getDoc(gameRef);
 
         if (!docSnap.exists()) {
-            titleEl.textContent = "Game Not Found";
-            subtitleEl.textContent = "The requested game does not exist.";
+            titleEl.textContent = 'Game not found';
             return;
         }
 
         const game = docSnap.data();
+        document.title = `${game.title || 'Untitled'} – Atlas Games`;
 
-        titleEl.textContent = game.title;
-        subtitleEl.textContent = game.dateAdded?.toDate().toLocaleDateString('en-GB') || 'Unknown Date';
-        descEl.textContent = game.description;
-        linkEl.href = game.link || '#';
-
-        // Main image fallback
-        mainImageEl.src = game.imageUrl || 'assets/images/default-game.jpg';
-        mainImageEl.alt = game.title || 'Game Image';
-        mainImageEl.onerror = () => {
-            mainImageEl.src = 'assets/images/default-game.jpg';
+        titleEl.textContent = game.title || 'Untitled';
+        descEl.textContent = game.description || 'No description available.';
+        imgEl.src = game.thumbnail || 'assets/images/games/thumbnails/default.jpg';
+        imgEl.alt = game.title || 'Game Thumbnail';
+        imgEl.onerror = () => {
+            imgEl.src = 'assets/images/games/thumbnails/default.jpg';
         };
 
-        // Tags
-        tagsEl.innerHTML = '';
-        if (Array.isArray(game.tags)) {
-            game.tags.forEach(tag => {
-                const li = document.createElement('li');
-                li.textContent = tag;
-                tagsEl.appendChild(li);
-            });
-        }
-
-        // ✅ Screenshot Gallery
-        galleryEl.innerHTML = '';
-        if (Array.isArray(game.screenshots)) {
-            game.screenshots.forEach((url, i) => {
+        // Load screenshots if available
+        if (Array.isArray(game.screenshots) && game.screenshots.length > 0) {
+            game.screenshots.forEach((url) => {
                 const img = document.createElement('img');
                 img.src = url;
-                img.alt = `${game.title} Screenshot ${i + 1}`;
+                img.alt = `${game.title || 'Game'} Screenshot`;
+                img.className = 'screenshot';
+                img.loading = 'lazy';
                 img.onerror = () => {
-                    img.src = 'assets/images/default-game.jpg';
+                    img.remove(); // Remove broken images
                 };
-                img.className = 'gallery-img'; // for styling
-                galleryEl.appendChild(img);
+                gallery.appendChild(img);
             });
+        } else {
+            gallery.innerHTML = '<p>No screenshots available.</p>';
         }
 
     } catch (err) {
-        console.error("Error loading game detail:", err);
-        titleEl.textContent = "Error";
-        subtitleEl.textContent = "There was a problem loading this game.";
+        console.error('Error loading game:', err);
+        titleEl.textContent = 'Error loading game';
     }
 }
-
 
 loadGame();

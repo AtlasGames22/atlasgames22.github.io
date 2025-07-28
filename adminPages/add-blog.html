@@ -13,6 +13,7 @@
 <!-- 🍔 Shared Admin Navigation -->
 <nav class="admin-nav">
     <div class="hamburger" id="hamburger-toggle">☰</div>
+    <div id="admin-overlay" class="hidden"></div>
     <ul id="admin-menu" class="hidden">
         <li><a href="../admin.html">Dashboard</a></li>
         <li><a href="add-blog.html">Add Blog</a></li>
@@ -25,12 +26,13 @@
     </ul>
 </nav>
 
+
 <!-- ✍️ Add Blog Form -->
 <main class="admin-wrapper">
     <h1>Add Blog Post</h1>
     <section class="form-block">
-        <input type="text" id="blog-title" placeholder="Post Title" />
-        <textarea id="blog-content" placeholder="Post Content"></textarea>
+        <label for="blog-title"></label><input type="text" id="blog-title" placeholder="Post Title" />
+        <label for="blog-content"></label><textarea id="blog-content" placeholder="Post Content"></textarea>
         <input type="file" id="blog-image-file" accept="image/*" />
         <button id="submit-blog">Submit Blog Post</button>
         <p id="blog-success" class="success-text"></p>

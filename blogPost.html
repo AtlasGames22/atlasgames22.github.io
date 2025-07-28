@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Games – Atlas Games</title>
+    <title>Blog Post – Atlas Games</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/games.css" />
-    <link rel="icon" href="assets/logos/favicon.ico" type="image/png" />
+    <link rel="stylesheet" href="css/blogs.css" />
+    <link rel="icon" href="assets/logos/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
+<!-- Optional: Shared header -->
 <header class="navbar">
     <div class="container navbar-content">
         <a href="index.html" class="logo-link">
@@ -26,17 +26,14 @@
     </div>
 </header>
 
-<main>
-    <section class="games-section" aria-labelledby="games-heading">
-        <h1 id="games-heading">Our Games</h1>
-        <p class="subtitle">Explore our growing library of indie experiences</p>
 
-        <div id="games-grid" class="games-grid" role="region" aria-live="polite">
-            <p>Loading games...</p>
-        </div>
-    </section>
+<main class="blog-detail-wrapper">
+    <h1 id="blog-title">Loading...</h1>
+    <p id="blog-date" class="blog-date"></p>
+    <img id="blog-image" class="blog-image" alt="Blog Image" />
+    <article id="blog-content" class="blog-content"></article>
 </main>
 
-<script type="module" src="js/games.js"></script>
+<script type="module" src="js/blogPost.js"></script>
 </body>
 </html>

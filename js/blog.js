@@ -19,25 +19,59 @@ async function loadBlogPosts() {
 
     blogSnapshot.forEach(doc => {
         const post = doc.data();
-        const date = post.date?.toDate().toLocaleDateString('en-GB') || 'Date Unknown';
         const safeTitle = post.title?.replace(/\s+/g, '-').toLowerCase() || 'untitled';
 
-        // 🖼 Use local image path instead of Firebase Storage
+        // 🗓 Format date safely
+        let date = 'Date Unknown';
+        if (post.date?.toDate) {
+            try {
+                date = post.date.toDate().toLocaleDateString('en-GB');
+            } catch {}
+        }
+
+        // 🖼 Image fallback
         const image = post.imageUrl || `assets/images/blogsImages/${safeTitle}.jpg`;
         const preview = post.content.length > 140 ? post.content.slice(0, 140) + '...' : post.content;
 
-        const cardHTML = `
-        <div class="blog-card">
-            <img src="${image}" alt="Blog Image for ${post.title}" onerror="this.onerror=null;this.src='assets/images/default-blog.jpg';">
-            <div class="blog-content">
-                <h3>${post.title}</h3>
-                <p class="blog-date">${date}</p>
-                <p>${preview}</p>
-                <a href="blogs/blogPost.html?id=${doc.id}" class="btn secondary">Read More</a>
-            </div>
-        </div>
-        `;
-        blogContainer.innerHTML += cardHTML;
+        // 🧱 Build blog card element
+        const card = document.createElement('div');
+        card.className = 'blog-card';
+
+        const img = document.createElement('img');
+        img.src = image;
+        img.alt = `Blog Image for ${post.title}`;
+        img.loading = "lazy";
+        img.onerror = () => {
+            img.src = 'assets/images/default-blog.jpg';
+        };
+
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'blog-content';
+
+        const title = document.createElement('h3');
+        title.textContent = post.title;
+
+        const blogDate = document.createElement('p');
+        blogDate.className = 'blog-date';
+        blogDate.textContent = date;
+
+        const previewPara = document.createElement('p');
+        previewPara.textContent = preview;
+
+        const readMoreLink = document.createElement('a');
+        readMoreLink.href = `blogs/blogPost.html?id=${doc.id}`;
+        readMoreLink.className = 'btn secondary';
+        readMoreLink.textContent = 'Read More';
+
+        contentDiv.appendChild(title);
+        contentDiv.appendChild(blogDate);
+        contentDiv.appendChild(previewPara);
+        contentDiv.appendChild(readMoreLink);
+
+        card.appendChild(img);
+        card.appendChild(contentDiv);
+
+        blogContainer.appendChild(card);
     });
 }
 
