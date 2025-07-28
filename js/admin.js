@@ -1,11 +1,51 @@
-import { auth } from './firebase-config.js';
+import { db, auth } from './firebase-config.js'; // ✅ make sure db is imported
 import {
     collection,
     addDoc,
     serverTimestamp
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+import {
+    signInWithEmailAndPassword,
+    onAuthStateChanged,
+    signOut
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
-// Blog submission
+// === AUTH UI ===
+const loginSection = document.getElementById('login-section');
+const dashboardSection = document.getElementById('dashboard-section');
+const loginBtn = document.getElementById('login-button');
+const logoutBtn = document.getElementById('logout-button');
+const errorText = document.getElementById('login-error');
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        loginSection.style.display = 'none';
+        dashboardSection.style.display = 'block';
+    } else {
+        loginSection.style.display = 'block';
+        dashboardSection.style.display = 'none';
+    }
+});
+
+loginBtn.addEventListener('click', () => {
+    const email = document.getElementById('admin-email').value;
+    const password = document.getElementById('admin-password').value;
+
+    signInWithEmailAndPassword(auth, email, password)
+        .then(() => {
+            errorText.textContent = '';
+        })
+        .catch((error) => {
+            console.error("Login error:", error);
+            errorText.textContent = "Login failed. Check credentials.";
+        });
+});
+
+logoutBtn.addEventListener('click', () => {
+    signOut(auth).catch(console.error);
+});
+
+// === BLOG SUBMISSION ===
 const blogTitle = document.getElementById('blog-title');
 const blogContent = document.getElementById('blog-content');
 const blogSuccess = document.getElementById('blog-success');
@@ -21,7 +61,7 @@ blogSubmit.addEventListener('click', async () => {
     }
 
     try {
-        await addDoc(collection(auth, 'blogs'), {
+        await addDoc(collection(db, 'blogs'), {
             title,
             content,
             date: serverTimestamp()
@@ -36,7 +76,7 @@ blogSubmit.addEventListener('click', async () => {
     }
 });
 
-// Game submission
+// === GAME SUBMISSION ===
 const gameTitle = document.getElementById('game-title');
 const gameDescription = document.getElementById('game-description');
 const gameImage = document.getElementById('game-image');
@@ -58,7 +98,7 @@ gameSubmit.addEventListener('click', async () => {
     }
 
     try {
-        await addDoc(collection(auth, 'games'), {
+        await addDoc(collection(db, 'games'), {
             title,
             description,
             imageUrl,
