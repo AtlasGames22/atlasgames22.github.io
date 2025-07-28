@@ -42,6 +42,21 @@
 
         <hr style="margin: 3rem 0;" />
 
+        <!-- ✏️ EDIT BLOG POST -->
+        <section class="form-block">
+            <h2>Edit Blog Post</h2>
+            <select id="edit-blog-select">
+                <option value="">Select a blog post to edit</option>
+            </select>
+            <input type="text" id="edit-blog-title" placeholder="New Title" />
+            <textarea id="edit-blog-content" placeholder="New Content"></textarea>
+            <button id="edit-blog-save">Save Changes</button>
+            <p id="edit-blog-success" class="success-text"></p>
+        </section>
+
+
+        <hr style="margin: 3rem 0;" />
+
         <!-- 🎮 ADD NEW GAME -->
         <section class="form-block">
             <h2>Add New Game</h2>
@@ -55,7 +70,47 @@
             <p id="game-success" class="success-text"></p>
         </section>
 
-        <!-- 💡 Future: Add Team form here -->
+        <hr style="margin: 3rem 0;" />
+
+        <!-- 🎮 EDIT GAME -->
+        <section class="form-block">
+            <h2>Edit Game</h2>
+            <select id="edit-game-select"></select>
+            <input type="text" id="edit-game-title" placeholder="New Title" />
+            <input type="text" id="edit-game-description" placeholder="New Description" />
+            <input type="text" id="edit-game-tags" placeholder="Tags (comma separated)" />
+            <input type="text" id="edit-game-link" placeholder="New Play/Download Link" />
+            <button id="edit-game-save">Save Changes</button>
+            <p id="edit-game-success" class="success-text"></p>
+        </section>
+
+        <hr style="margin: 3rem 0;" />
+
+        <!-- 👤 ADD TEAM MEMBER -->
+        <section class="form-block">
+            <h2>Add Team Member</h2>
+            <input type="text" id="team-name" placeholder="Full Name" />
+            <input type="text" id="team-role" placeholder="Role (e.g., Game Designer)" />
+            <input type="text" id="team-bio" placeholder="Short Bio" />
+            <input type="text" id="team-image-path" placeholder="assets/images/teams/jane-doe.jpg" />
+            <input type="text" id="team-social" placeholder="Link to Social/Portfolio" />
+            <button id="submit-team">Submit Team Member</button>
+            <p id="team-success" class="success-text"></p>
+        </section>
+
+        <hr style="margin: 3rem 0;" />
+
+        <!-- 👤 EDIT TEAM MEMBER -->
+        <section class="form-block">
+            <h2>Edit Team Member</h2>
+            <select id="edit-team-select"></select>
+            <input type="text" id="edit-team-name" placeholder="New Name" />
+            <input type="text" id="edit-team-role" placeholder="New Role" />
+            <textarea id="edit-team-bio" placeholder="New Bio"></textarea>
+            <button id="edit-team-save">Save Changes</button>
+            <p id="edit-team-success" class="success-text"></p>
+        </section>
+
     </div>
 </main>
 

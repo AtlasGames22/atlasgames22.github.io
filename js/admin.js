@@ -84,6 +84,75 @@ blogSubmit.addEventListener('click', async () => {
     }
 });
 
+import {
+    getDocs,
+    doc,
+    updateDoc
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+// === BLOG EDITOR ===
+const blogSelect = document.getElementById('edit-blog-select');
+const editTitle = document.getElementById('edit-blog-title');
+const editContent = document.getElementById('edit-blog-content');
+const editSuccess = document.getElementById('edit-blog-success');
+const editSave = document.getElementById('edit-blog-save');
+
+// Load blog posts into the dropdown
+async function populateBlogSelect() {
+    const snapshot = await getDocs(collection(db, 'blogs'));
+    blogSelect.innerHTML = `<option value="">Select a blog post to edit</option>`;
+
+    snapshot.forEach(docSnap => {
+        const blog = docSnap.data();
+        const option = document.createElement('option');
+        option.value = docSnap.id;
+        option.textContent = blog.title;
+        blogSelect.appendChild(option);
+    });
+}
+
+// When a blog is selected, prefill fields
+blogSelect.addEventListener('change', async () => {
+    const blogId = blogSelect.value;
+    if (!blogId) return;
+
+    const docRef = doc(db, 'blogs', blogId);
+    const docSnap = await getDoc(docRef);
+    const blog = docSnap.data();
+
+    editTitle.value = blog.title;
+    editContent.value = blog.content;
+});
+
+// Save changes
+editSave.addEventListener('click', async () => {
+    const blogId = blogSelect.value;
+    const newTitle = editTitle.value.trim();
+    const newContent = editContent.value.trim();
+
+    if (!blogId || !newTitle || !newContent) {
+        editSuccess.textContent = 'Please select a blog and fill out all fields.';
+        return;
+    }
+
+    try {
+        const docRef = doc(db, 'blogs', blogId);
+        await updateDoc(docRef, {
+            title: newTitle,
+            content: newContent
+        });
+
+        editSuccess.textContent = '✅ Blog post updated!';
+        populateBlogSelect(); // Refresh dropdown
+    } catch (error) {
+        console.error("Error updating blog:", error);
+        editSuccess.textContent = '❌ Failed to update blog post.';
+    }
+});
+
+populateBlogSelect();
+
+
 // === GAME SUBMISSION ===
 const gameTitle = document.getElementById('game-title');
 const gameDescription = document.getElementById('game-description');
@@ -131,4 +200,162 @@ gameSubmit.addEventListener('click', async () => {
         gameSuccess.textContent = '❌ Failed to submit game.';
     }
 });
+
+// === GAME EDITOR ===
+const gameSelect = document.getElementById('edit-game-select');
+const editGameTitle = document.getElementById('edit-game-title');
+const editGameDesc = document.getElementById('edit-game-description');
+const editGameTags = document.getElementById('edit-game-tags');
+const editGameLink = document.getElementById('edit-game-link');
+const editGameSuccess = document.getElementById('edit-game-success');
+const editGameSave = document.getElementById('edit-game-save');
+
+async function populateGameSelect() {
+    const snapshot = await getDocs(collection(db, 'games'));
+    gameSelect.innerHTML = `<option value="">Select a game to edit</option>`;
+    snapshot.forEach(docSnap => {
+        const game = docSnap.data();
+        const option = document.createElement('option');
+        option.value = docSnap.id;
+        option.textContent = game.title;
+        gameSelect.appendChild(option);
+    });
+}
+
+gameSelect.addEventListener('change', async () => {
+    const id = gameSelect.value;
+    if (!id) return;
+    const docSnap = await getDoc(doc(db, 'games', id));
+    const game = docSnap.data();
+    editGameTitle.value = game.title;
+    editGameDesc.value = game.description;
+    editGameTags.value = game.tags.join(', ');
+    editGameLink.value = game.link;
+});
+
+editGameSave.addEventListener('click', async () => {
+    const id = gameSelect.value;
+    const title = editGameTitle.value.trim();
+    const description = editGameDesc.value.trim();
+    const tags = editGameTags.value.split(',').map(t => t.trim()).filter(Boolean);
+    const link = editGameLink.value.trim();
+
+    if (!id || !title || !description || !tags.length || !link) {
+        editGameSuccess.textContent = 'Please complete all fields.';
+        return;
+    }
+
+    try {
+        await updateDoc(doc(db, 'games', id), {
+            title,
+            description,
+            tags,
+            link
+        });
+        editGameSuccess.textContent = '✅ Game updated!';
+        populateGameSelect();
+    } catch (err) {
+        console.error(err);
+        editGameSuccess.textContent = '❌ Failed to update game.';
+    }
+});
+
+populateGameSelect();
+
+
+// === TEAM MEMBER SUBMISSION ===
+const teamName = document.getElementById('team-name');
+const teamRole = document.getElementById('team-role');
+const teamBio = document.getElementById('team-bio');
+const teamImage = document.getElementById('team-image');
+const teamSuccess = document.getElementById('team-success');
+const teamSubmit = document.getElementById('submit-team');
+
+teamSubmit.addEventListener('click', async () => {
+    const name = teamName.value.trim();
+    const role = teamRole.value.trim();
+    const bio = teamBio.value.trim();
+    const imageUrl = teamImage.value.trim();
+
+    if (!name || !role || !bio || !imageUrl) {
+        teamSuccess.textContent = 'Please fill out all fields.';
+        return;
+    }
+
+    try {
+        await addDoc(collection(db, 'team'), {
+            name,
+            role,
+            bio,
+            imageUrl,
+            dateAdded: serverTimestamp()
+        });
+
+        teamName.value = '';
+        teamRole.value = '';
+        teamBio.value = '';
+        teamImage.value = '';
+        teamSuccess.textContent = '✅ Team member added successfully!';
+    } catch (error) {
+        console.error("Error adding team member:", error);
+        teamSuccess.textContent = '❌ Failed to add team member.';
+    }
+});
+
+// === TEAM EDITOR ===
+const teamSelect = document.getElementById('edit-team-select');
+const editTeamName = document.getElementById('edit-team-name');
+const editTeamRole = document.getElementById('edit-team-role');
+const editTeamBio = document.getElementById('edit-team-bio');
+const editTeamSuccess = document.getElementById('edit-team-success');
+const editTeamSave = document.getElementById('edit-team-save');
+
+async function populateTeamSelect() {
+    const snapshot = await getDocs(collection(db, 'team'));
+    teamSelect.innerHTML = `<option value="">Select a member to edit</option>`;
+    snapshot.forEach(docSnap => {
+        const member = docSnap.data();
+        const option = document.createElement('option');
+        option.value = docSnap.id;
+        option.textContent = member.name;
+        teamSelect.appendChild(option);
+    });
+}
+
+teamSelect.addEventListener('change', async () => {
+    const id = teamSelect.value;
+    if (!id) return;
+    const docSnap = await getDoc(doc(db, 'team', id));
+    const member = docSnap.data();
+    editTeamName.value = member.name;
+    editTeamRole.value = member.role;
+    editTeamBio.value = member.bio;
+});
+
+editTeamSave.addEventListener('click', async () => {
+    const id = teamSelect.value;
+    const name = editTeamName.value.trim();
+    const role = editTeamRole.value.trim();
+    const bio = editTeamBio.value.trim();
+
+    if (!id || !name || !role || !bio) {
+        editTeamSuccess.textContent = 'Please complete all fields.';
+        return;
+    }
+
+    try {
+        await updateDoc(doc(db, 'team', id), {
+            name,
+            role,
+            bio
+        });
+        editTeamSuccess.textContent = '✅ Team member updated!';
+        populateTeamSelect();
+    } catch (err) {
+        console.error(err);
+        editTeamSuccess.textContent = '❌ Failed to update team member.';
+    }
+});
+
+populateTeamSelect();
 
