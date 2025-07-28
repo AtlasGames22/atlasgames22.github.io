@@ -3,7 +3,7 @@ import {
     signInWithEmailAndPassword,
     onAuthStateChanged,
     signOut
-} from 'https://www.gstatic.com/firebasejs/12.0.0/firebase-auth/externs.js';
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
 // DOM Elements
 const loginSection = document.getElementById('login-section');
