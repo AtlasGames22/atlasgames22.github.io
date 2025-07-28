@@ -87,7 +87,8 @@ blogSubmit.addEventListener('click', async () => {
 import {
     getDocs,
     doc,
-    updateDoc
+    updateDoc,
+    deleteDoc
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 // === BLOG EDITOR ===
@@ -151,6 +152,46 @@ editSave.addEventListener('click', async () => {
 });
 
 populateBlogSelect();
+
+const deleteBlogSelect = document.getElementById('delete-blog-select');
+const deleteBlogBtn = document.getElementById('delete-blog-button');
+const deleteBlogSuccess = document.getElementById('delete-blog-success');
+
+// Reuse populateBlogSelect() to fill delete dropdown too
+async function populateDeleteBlogSelect() {
+    const snapshot = await getDocs(collection(db, 'blogs'));
+    deleteBlogSelect.innerHTML = `<option value="">Select a blog to delete</option>`;
+    snapshot.forEach(docSnap => {
+        const blog = docSnap.data();
+        const option = document.createElement('option');
+        option.value = docSnap.id;
+        option.textContent = blog.title;
+        deleteBlogSelect.appendChild(option);
+    });
+}
+
+deleteBlogBtn.addEventListener('click', async () => {
+    const blogId = deleteBlogSelect.value;
+    if (!blogId) {
+        deleteBlogSuccess.textContent = 'Please select a blog to delete.';
+        return;
+    }
+
+    const confirmDelete = confirm('Are you sure you want to delete this blog post?');
+    if (!confirmDelete) return;
+
+    try {
+        await deleteDoc(doc(db, 'blogs', blogId));
+        deleteBlogSuccess.textContent = '✅ Blog post deleted!';
+        populateBlogSelect();        // Refresh both dropdowns
+        populateDeleteBlogSelect();
+    } catch (error) {
+        console.error("Error deleting blog:", error);
+        deleteBlogSuccess.textContent = '❌ Failed to delete blog post.';
+    }
+});
+populateDeleteBlogSelect();
+
 
 
 // === GAME SUBMISSION ===
@@ -263,6 +304,48 @@ editGameSave.addEventListener('click', async () => {
 populateGameSelect();
 
 
+const deleteGameSelect = document.getElementById('delete-game-select');
+const deleteGameBtn = document.getElementById('delete-game-button');
+const deleteGameSuccess = document.getElementById('delete-game-success');
+
+// Reuse populateGameSelect() to also fill the delete dropdown
+async function populateDeleteGameSelect() {
+    const snapshot = await getDocs(collection(db, 'games'));
+    deleteGameSelect.innerHTML = `<option value="">Select a game to delete</option>`;
+    snapshot.forEach(docSnap => {
+        const game = docSnap.data();
+        const option = document.createElement('option');
+        option.value = docSnap.id;
+        option.textContent = game.title;
+        deleteGameSelect.appendChild(option);
+    });
+}
+
+deleteGameBtn.addEventListener('click', async () => {
+    const gameId = deleteGameSelect.value;
+    if (!gameId) {
+        deleteGameSuccess.textContent = 'Please select a game to delete.';
+        return;
+    }
+
+    const confirmDelete = confirm('Are you sure you want to delete this game?');
+    if (!confirmDelete) return;
+
+    try {
+        await deleteDoc(doc(db, 'games', gameId));
+        deleteGameSuccess.textContent = '✅ Game deleted!';
+        populateGameSelect();         // Refresh edit dropdown
+        populateDeleteGameSelect();   // Refresh delete dropdown
+    } catch (error) {
+        console.error("Error deleting game:", error);
+        deleteGameSuccess.textContent = '❌ Failed to delete game.';
+    }
+});
+
+populateDeleteGameSelect();
+
+
+
 // === TEAM MEMBER SUBMISSION ===
 const teamName = document.getElementById('team-name');
 const teamRole = document.getElementById('team-role');
@@ -358,4 +441,45 @@ editTeamSave.addEventListener('click', async () => {
 });
 
 populateTeamSelect();
+
+const deleteTeamSelect = document.getElementById('delete-team-select');
+const deleteTeamBtn = document.getElementById('delete-team-button');
+const deleteTeamSuccess = document.getElementById('delete-team-success');
+
+// Reuse populateTeamSelect() for the delete dropdown too
+async function populateDeleteTeamSelect() {
+    const snapshot = await getDocs(collection(db, 'team'));
+    deleteTeamSelect.innerHTML = `<option value="">Select a member to delete</option>`;
+    snapshot.forEach(docSnap => {
+        const member = docSnap.data();
+        const option = document.createElement('option');
+        option.value = docSnap.id;
+        option.textContent = member.name;
+        deleteTeamSelect.appendChild(option);
+    });
+}
+
+deleteTeamBtn.addEventListener('click', async () => {
+    const teamId = deleteTeamSelect.value;
+    if (!teamId) {
+        deleteTeamSuccess.textContent = 'Please select a team member to delete.';
+        return;
+    }
+
+    const confirmDelete = confirm('Are you sure you want to delete this team member?');
+    if (!confirmDelete) return;
+
+    try {
+        await deleteDoc(doc(db, 'team', teamId));
+        deleteTeamSuccess.textContent = '✅ Team member deleted!';
+        populateTeamSelect();         // Refresh edit dropdown
+        populateDeleteTeamSelect();   // Refresh delete dropdown
+    } catch (error) {
+        console.error("Error deleting team member:", error);
+        deleteTeamSuccess.textContent = '❌ Failed to delete team member.';
+    }
+});
+
+populateDeleteTeamSelect();
+
 
