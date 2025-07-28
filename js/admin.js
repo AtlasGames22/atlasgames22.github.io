@@ -29,12 +29,13 @@ loginBtn.addEventListener('click', () => {
     const password = document.getElementById('admin-password').value;
 
     signInWithEmailAndPassword(auth, email, password)
-        .then(() => {
+        .then((userCredential) => {
+            console.log("✅ Logged in as:", userCredential.user.email);
             errorText.textContent = '';
         })
         .catch((error) => {
+            console.error("❌ Login error:", error.message);
             errorText.textContent = "Login failed. Check credentials.";
-            console.error(error);
         });
 });
 
