@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard – Atlas Games</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="icon" href="assets/logos/favicon.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+<main class="admin-wrapper">
+    <!-- Login Section -->
+    <div id="login-section">
+        <h1>Admin Login</h1>
+        <input type="email" id="admin-email" placeholder="Email" />
+        <input type="password" id="admin-password" placeholder="Password" />
+        <button id="login-button">Log In</button>
+        <p id="login-error" class="error-text"></p>
+    </div>
 
+    <!-- Dashboard Section -->
+    <div id="dashboard-section" style="display: none;">
+        <h1>Welcome, Admin 👋</h1>
+        <button id="logout-button" class="btn secondary">Log Out</button>
+
+        <!-- Future: Blog/Game/Team Forms will go here -->
+        <p style="margin-top: 2rem;">You're now logged in. We'll add forms here next.</p>
+    </div>
+</main>
+
+<script type="module" src="js/admin.js"></script>
 </body>
 </html>

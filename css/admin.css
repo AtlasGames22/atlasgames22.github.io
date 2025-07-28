@@ -1,0 +1,39 @@
+.admin-wrapper {
+    padding: 4rem 1rem;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #4F4F4F;
+    background-color: #1E1E1E;
+    color: #F2F2F2;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    padding: 0.75rem 2rem;
+    background-color: #C62828;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button.secondary {
+    background-color: transparent;
+    border: 2px solid #C62828;
+    color: #C62828;
+}
+
+.error-text {
+    color: #f44336;
+    margin-top: 1rem;
+}
