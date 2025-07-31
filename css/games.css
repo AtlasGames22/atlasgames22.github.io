@@ -168,3 +168,16 @@
         width: 100%;
     }
 }
+
+.preview-img {
+    margin: 1rem 0;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.preview-gallery img {
+    max-height: 80px;
+    margin: 0.25rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+}

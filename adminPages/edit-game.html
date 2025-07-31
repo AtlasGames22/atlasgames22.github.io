@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- 🍔 Shared Admin Navigation -->
 <nav class="admin-nav">
   <div class="hamburger" id="hamburger-toggle">☰</div>
   <div id="admin-overlay" class="hidden"></div>
@@ -35,10 +34,20 @@
     <select id="edit-game-select">
       <option value="">Select a game</option>
     </select>
+
     <input type="text" id="edit-game-title" placeholder="New Title" />
     <input type="text" id="edit-game-description" placeholder="New Description" />
     <input type="text" id="edit-game-tags" placeholder="Tags (comma separated)" />
     <input type="text" id="edit-game-link" placeholder="New Play/Download Link" />
+
+    <label for="edit-thumbnail-upload">Change Thumbnail</label>
+    <input type="file" id="edit-thumbnail-upload" accept="image/*" />
+    <img id="edit-thumbnail-preview" class="preview-img" style="display:none; max-height:150px;" />
+
+    <label for="edit-screenshots-upload">Replace/Add Screenshots</label>
+    <input type="file" id="edit-screenshots-upload" accept="image/*" multiple />
+    <div id="edit-screenshots-preview" class="preview-gallery"></div>
+
     <button id="edit-game-save">Save Changes</button>
     <p id="edit-game-success" class="success-text"></p>
   </section>
