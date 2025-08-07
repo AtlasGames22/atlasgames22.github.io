@@ -1,10 +1,99 @@
 [
   {
+    "title": "Harvest Hustle",
+    "slug": "harvest-hustle",
+    "pitch": "A fast-paced farming simulation where time management meets strategic planning. Build your agricultural empire while racing against the seasons.",
+    "description": "In Harvest Hustle, every second counts as you manage crops, livestock, and resources in this innovative farming simulation. Unlike traditional farming games, Harvest Hustle introduces time pressure and strategic decision-making that keeps you on your toes. Plan your seasons, optimize your farm layout, and adapt to changing weather conditions while building relationships with the local community.",
+    "status": "released",
+    "releaseDate": "2024-08-15",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "tags": [
+      "Simulation",
+      "Strategy",
+      "Farming",
+      "Time Management"
+    ],
+    "coverImage": "/assets/images/games/harvest-hustle-cover.jpg",
+    "screenshots": [
+      {
+        "url": "/assets/images/games/harvest-hustle-1.jpg",
+        "alt": "Harvest Hustle farm overview showing crops and buildings"
+      },
+      {
+        "url": "/assets/images/games/harvest-hustle-2.jpg",
+        "alt": "Weather system affecting crop growth in Harvest Hustle"
+      },
+      {
+        "url": "/assets/images/games/harvest-hustle-3.jpg",
+        "alt": "Community interaction and relationship building interface"
+      },
+      {
+        "url": "/assets/images/games/harvest-hustle-4.jpg",
+        "alt": "Customizable farm layout and building placement"
+      },
+      {
+        "url": "/assets/images/games/harvest-hustle-5.jpg",
+        "alt": "Leaderboards and achievement system"
+      }
+    ],
+    "features": [
+      "Dynamic weather system affecting crop growth",
+      "Time-based challenges and seasonal events",
+      "Extensive crop and livestock management",
+      "Community relationship building",
+      "Customizable farm layouts and buildings",
+      "Local and online leaderboards"
+    ],
+    "systemRequirements": {
+      "minimum": {
+        "os": "Windows 10 / macOS 10.14 / Ubuntu 18.04",
+        "processor": "Intel Core i3-2100 / AMD FX-4300",
+        "memory": "4 GB RAM",
+        "graphics": "DirectX 11 compatible",
+        "storage": "2 GB available space"
+      },
+      "recommended": {
+        "os": "Windows 11 / macOS 12.0 / Ubuntu 20.04",
+        "processor": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+        "memory": "8 GB RAM",
+        "graphics": "NVIDIA GTX 1060 / AMD RX 580",
+        "storage": "4 GB available space"
+      }
+    },
+    "links": {
+      "itchio": "https://atlas-games-22.itch.io/harvest-hustle",
+      "trailer": "https://www.youtube.com/watch?v=example"
+    },
+    "credits": {
+      "gameDesign": [
+        "Maya Rodriguez",
+        "Sam Patel"
+      ],
+      "programming": [
+        "Alex Chen"
+      ],
+      "art": [
+        "Jordan Kim"
+      ],
+      "audio": [
+        "Emma Thompson"
+      ],
+      "qa": [
+        "Chris Wilson"
+      ]
+    },
+    "featured": true,
+    "statusLabel": "Released",
+    "releaseDateFormatted": "August 15, 2024"
+  },
+  {
     "title": "Void Breaker",
     "slug": "void-breaker",
-    "shortPitch": "A sci-fi action game where you pilot advanced mechs through dimensional rifts. Fast-paced combat meets strategic mech customization.",
-    "fullDescription": "Void Breaker thrusts players into an epic sci-fi conflict where reality itself is under threat. As an elite mech pilot, you'll traverse dimensional rifts to combat an otherworldly invasion. The game combines intense real-time combat with deep mech customization, allowing players to adapt their machines for different mission types and enemy encounters. Each dimensional rift presents unique challenges and environmental hazards.",
-    "status": "Prototype",
+    "status": "in-development",
     "releaseDate": "2025-12-01",
     "platforms": [
       "Windows"
@@ -15,13 +104,28 @@
       "Mech",
       "Combat"
     ],
-    "coverImage": "assets/images/games/void-breaker-cover.jpg",
+    "coverImage": "/assets/images/games/void-breaker-cover.jpg",
     "screenshots": [
-      "assets/images/games/void-breaker-1.jpg",
-      "assets/images/games/void-breaker-2.jpg",
-      "assets/images/games/void-breaker-3.jpg",
-      "assets/images/games/void-breaker-4.jpg",
-      "assets/images/games/void-breaker-5.jpg"
+      {
+        "url": "/assets/images/games/void-breaker-1.jpg",
+        "alt": "Void Breaker screenshot 1"
+      },
+      {
+        "url": "/assets/images/games/void-breaker-2.jpg",
+        "alt": "Void Breaker screenshot 2"
+      },
+      {
+        "url": "/assets/images/games/void-breaker-3.jpg",
+        "alt": "Void Breaker screenshot 3"
+      },
+      {
+        "url": "/assets/images/games/void-breaker-4.jpg",
+        "alt": "Void Breaker screenshot 4"
+      },
+      {
+        "url": "/assets/images/games/void-breaker-5.jpg",
+        "alt": "Void Breaker screenshot 5"
+      }
     ],
     "features": [
       "Extensive mech customization system",
@@ -70,18 +174,20 @@
         "Chris Wilson"
       ]
     },
-    "featured": false
+    "featured": false,
+    "pitch": "A sci-fi action game where you pilot advanced mechs through dimensional rifts. Fast-paced combat meets strategic mech customization.",
+    "description": "Void Breaker thrusts players into an epic sci-fi conflict where reality itself is under threat. As an elite mech pilot, you'll traverse dimensional rifts to combat an otherworldly invasion. The game combines intense real-time combat with deep mech customization, allowing players to adapt their machines for different mission types and enemy encounters. Each dimensional rift presents unique challenges and environmental hazards.",
+    "statusLabel": "In Development",
+    "releaseDateFormatted": "December 1, 2025"
   },
   {
     "title": "Timmy's Revenge",
     "slug": "timmys-revenge",
-    "shortPitch": "A quirky platformer following young Timmy's quest for justice. Unique mechanics, colorful worlds, and boss battles await in this charming adventure.",
-    "fullDescription": "When Timmy's favorite toy is stolen by the neighborhood bully, he embarks on an epic quest through imaginative worlds born from a child's imagination. Timmy's Revenge is a heartwarming platformer that combines classic jump-and-run gameplay with innovative mechanics like emotion-based abilities and perspective-shifting puzzles. Each world represents different aspects of childhood, from the backyard jungle gym to the mysterious basement.",
-    "status": "In Development",
+    "status": "in-development",
     "releaseDate": "2025-09-15",
     "platforms": [
       "Windows",
-      "Mac",
+      "macOS",
       "Linux"
     ],
     "tags": [
@@ -90,13 +196,28 @@
       "Family-Friendly",
       "Puzzle"
     ],
-    "coverImage": "assets/images/games/timmys-revenge-cover.jpg",
+    "coverImage": "/assets/images/games/timmys-revenge-cover.jpg",
     "screenshots": [
-      "assets/images/games/timmys-revenge-1.jpg",
-      "assets/images/games/timmys-revenge-2.jpg",
-      "assets/images/games/timmys-revenge-3.jpg",
-      "assets/images/games/timmys-revenge-4.jpg",
-      "assets/images/games/timmys-revenge-5.jpg"
+      {
+        "url": "/assets/images/games/timmys-revenge-1.jpg",
+        "alt": "Timmy's Revenge screenshot 1"
+      },
+      {
+        "url": "/assets/images/games/timmys-revenge-2.jpg",
+        "alt": "Timmy's Revenge screenshot 2"
+      },
+      {
+        "url": "/assets/images/games/timmys-revenge-3.jpg",
+        "alt": "Timmy's Revenge screenshot 3"
+      },
+      {
+        "url": "/assets/images/games/timmys-revenge-4.jpg",
+        "alt": "Timmy's Revenge screenshot 4"
+      },
+      {
+        "url": "/assets/images/games/timmys-revenge-5.jpg",
+        "alt": "Timmy's Revenge screenshot 5"
+      }
     ],
     "features": [
       "Emotion-based gameplay mechanics",
@@ -145,18 +266,22 @@
         "Chris Wilson"
       ]
     },
-    "featured": false
+    "featured": false,
+    "pitch": "A quirky platformer following young Timmy's quest for justice. Unique mechanics, colorful worlds, and boss battles await in this charming adventure.",
+    "description": "When Timmy's favorite toy is stolen by the neighborhood bully, he embarks on an epic quest through imaginative worlds born from a child's imagination. Timmy's Revenge is a heartwarming platformer that combines classic jump-and-run gameplay with innovative mechanics like emotion-based abilities and perspective-shifting puzzles. Each world represents different aspects of childhood, from the backyard jungle gym to the mysterious basement.",
+    "statusLabel": "In Development",
+    "releaseDateFormatted": "September 15, 2025"
   },
   {
     "title": "Kenny's Khaos",
     "slug": "kennys-khaos",
-    "shortPitch": "Join Kenny on a chaotic adventure through procedurally generated worlds filled with puzzles, enemies, and unexpected surprises at every turn.",
-    "fullDescription": "Kenny's Khaos is a roguelike action-adventure that throws players into ever-changing worlds where no two runs are the same. As Kenny, a quirky hero with a knack for finding trouble, you'll navigate through procedurally generated levels filled with challenging enemies, mind-bending puzzles, and hidden secrets. The game features a unique chaos system where player actions affect the world's stability, leading to increasingly unpredictable and exciting gameplay.",
-    "status": "In Development",
+    "pitch": "Join Kenny on a chaotic adventure through procedurally generated worlds filled with puzzles, enemies, and unexpected surprises at every turn.",
+    "description": "Kenny's Khaos is a roguelike action-adventure that throws players into ever-changing worlds where no two runs are the same. As Kenny, a quirky hero with a knack for finding trouble, you'll navigate through procedurally generated levels filled with challenging enemies, mind-bending puzzles, and hidden secrets. The game features a unique chaos system where player actions affect the world's stability, leading to increasingly unpredictable and exciting gameplay.",
+    "status": "in-development",
     "releaseDate": "2025-06-01",
     "platforms": [
       "Windows",
-      "Mac"
+      "macOS"
     ],
     "tags": [
       "Action",
@@ -164,13 +289,28 @@
       "Roguelike",
       "Procedural Generation"
     ],
-    "coverImage": "assets/images/games/kennys-khaos-cover.jpg",
+    "coverImage": "/assets/images/games/kennys-khaos-cover.jpg",
     "screenshots": [
-      "assets/images/games/kennys-khaos-1.jpg",
-      "assets/images/games/kennys-khaos-2.jpg",
-      "assets/images/games/kennys-khaos-3.jpg",
-      "assets/images/games/kennys-khaos-4.jpg",
-      "assets/images/games/kennys-khaos-5.jpg"
+      {
+        "url": "/assets/images/games/kennys-khaos-1.jpg",
+        "alt": "Kenny exploring a procedurally generated dungeon"
+      },
+      {
+        "url": "/assets/images/games/kennys-khaos-2.jpg",
+        "alt": "Dynamic chaos system affecting the environment"
+      },
+      {
+        "url": "/assets/images/games/kennys-khaos-3.jpg",
+        "alt": "Unique puzzle mechanics that change each run"
+      },
+      {
+        "url": "/assets/images/games/kennys-khaos-4.jpg",
+        "alt": "Character progression and unlockable abilities"
+      },
+      {
+        "url": "/assets/images/games/kennys-khaos-5.jpg",
+        "alt": "Local co-op multiplayer gameplay"
+      }
     ],
     "features": [
       "Procedurally generated levels and encounters",
@@ -198,114 +338,37 @@
     },
     "links": {
       "itchio": "https://atlas-games-22.itch.io/kennys-khaos",
-      "steam": "",
-      "trailer": ""
+      "trailer": "https://www.youtube.com/watch?v=example2"
     },
     "credits": {
       "gameDesign": [
         "Sam Patel",
+        "Jordan Kim"
+      ],
+      "programming": [
+        "Alex Chen",
+        "Chris Wilson"
+      ],
+      "art": [
+        "Jordan Kim",
         "Maya Rodriguez"
       ],
-      "programming": [
-        "Alex Chen"
-      ],
-      "art": [
-        "Jordan Kim"
-      ],
       "audio": [
         "Emma Thompson"
-      ],
-      "qa": [
-        "Chris Wilson"
       ]
     },
-    "featured": false
-  },
-  {
-    "title": "Harvest Hustle",
-    "slug": "harvest-hustle",
-    "shortPitch": "A fast-paced farming simulation where time management meets strategic planning. Build your agricultural empire while racing against the seasons.",
-    "fullDescription": "In Harvest Hustle, every second counts as you manage crops, livestock, and resources in this innovative farming simulation. Unlike traditional farming games, Harvest Hustle introduces time pressure and strategic decision-making that keeps you on your toes. Plan your seasons, optimize your farm layout, and adapt to changing weather conditions while building relationships with the local community.",
-    "status": "Released",
-    "releaseDate": "2024-08-15",
-    "platforms": [
-      "Windows",
-      "Mac",
-      "Linux"
-    ],
-    "tags": [
-      "Simulation",
-      "Strategy",
-      "Farming",
-      "Time Management"
-    ],
-    "coverImage": "assets/images/games/harvest-hustle-cover.jpg",
-    "screenshots": [
-      "assets/images/games/harvest-hustle-1.jpg",
-      "assets/images/games/harvest-hustle-2.jpg",
-      "assets/images/games/harvest-hustle-3.jpg",
-      "assets/images/games/harvest-hustle-4.jpg",
-      "assets/images/games/harvest-hustle-5.jpg"
-    ],
-    "features": [
-      "Dynamic weather system affecting crop growth",
-      "Time-based challenges and seasonal events",
-      "Extensive crop and livestock management",
-      "Community relationship building",
-      "Customizable farm layouts and buildings",
-      "Local and online leaderboards"
-    ],
-    "systemRequirements": {
-      "minimum": {
-        "os": "Windows 10 / macOS 10.14 / Ubuntu 18.04",
-        "processor": "Intel Core i3-2100 / AMD FX-4300",
-        "memory": "4 GB RAM",
-        "graphics": "DirectX 11 compatible",
-        "storage": "2 GB available space"
-      },
-      "recommended": {
-        "os": "Windows 11 / macOS 12.0 / Ubuntu 20.04",
-        "processor": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-        "memory": "8 GB RAM",
-        "graphics": "NVIDIA GTX 1060 / AMD RX 580",
-        "storage": "4 GB available space"
-      }
-    },
-    "links": {
-      "itchio": "https://atlas-games-22.itch.io/harvest-hustle",
-      "steam": "",
-      "trailer": "https://www.youtube.com/watch?v=example"
-    },
-    "credits": {
-      "gameDesign": [
-        "Maya Rodriguez",
-        "Sam Patel"
-      ],
-      "programming": [
-        "Alex Chen"
-      ],
-      "art": [
-        "Jordan Kim"
-      ],
-      "audio": [
-        "Emma Thompson"
-      ],
-      "qa": [
-        "Chris Wilson"
-      ]
-    },
-    "featured": true
+    "featured": false,
+    "statusLabel": "In Development",
+    "releaseDateFormatted": "June 1, 2025"
   },
   {
     "title": "Tiny Cafe",
     "slug": "tiny-cafe",
-    "shortPitch": "Manage your own cozy cafe in this relaxing simulation game. Serve customers, customize your space, and build the perfect coffee experience.",
-    "fullDescription": "Tiny Cafe offers a peaceful escape into the world of cafe management. Create the perfect coffee shop atmosphere by customizing your interior, crafting specialty drinks, and building relationships with regular customers. Each customer has unique preferences and stories, creating a warm, community-focused experience that emphasizes creativity and hospitality over stress and competition.",
-    "status": "Released",
+    "status": "released",
     "releaseDate": "2024-05-20",
     "platforms": [
       "Windows",
-      "Mac",
+      "macOS",
       "Web"
     ],
     "tags": [
@@ -314,13 +377,28 @@
       "Casual",
       "Relaxing"
     ],
-    "coverImage": "assets/images/games/tiny-cafe-cover.jpg",
+    "coverImage": "/assets/images/games/tiny-cafe-cover.jpg",
     "screenshots": [
-      "assets/images/games/tiny-cafe-1.jpg",
-      "assets/images/games/tiny-cafe-2.jpg",
-      "assets/images/games/tiny-cafe-3.jpg",
-      "assets/images/games/tiny-cafe-4.jpg",
-      "assets/images/games/tiny-cafe-5.jpg"
+      {
+        "url": "/assets/images/games/tiny-cafe-1.jpg",
+        "alt": "Tiny Cafe screenshot 1"
+      },
+      {
+        "url": "/assets/images/games/tiny-cafe-2.jpg",
+        "alt": "Tiny Cafe screenshot 2"
+      },
+      {
+        "url": "/assets/images/games/tiny-cafe-3.jpg",
+        "alt": "Tiny Cafe screenshot 3"
+      },
+      {
+        "url": "/assets/images/games/tiny-cafe-4.jpg",
+        "alt": "Tiny Cafe screenshot 4"
+      },
+      {
+        "url": "/assets/images/games/tiny-cafe-5.jpg",
+        "alt": "Tiny Cafe screenshot 5"
+      }
     ],
     "features": [
       "Extensive cafe customization options",
@@ -368,18 +446,20 @@
         "Chris Wilson"
       ]
     },
-    "featured": false
+    "featured": false,
+    "pitch": "Manage your own cozy cafe in this relaxing simulation game. Serve customers, customize your space, and build the perfect coffee experience.",
+    "description": "Tiny Cafe offers a peaceful escape into the world of cafe management. Create the perfect coffee shop atmosphere by customizing your interior, crafting specialty drinks, and building relationships with regular customers. Each customer has unique preferences and stories, creating a warm, community-focused experience that emphasizes creativity and hospitality over stress and competition.",
+    "statusLabel": "Released",
+    "releaseDateFormatted": "May 20, 2024"
   },
   {
     "title": "Honey Haven",
     "slug": "honey-haven",
-    "shortPitch": "Become a master beekeeper in this peaceful simulation. Manage hives, explore flower fields, and create the sweetest honey empire.",
-    "fullDescription": "Honey Haven invites players into the serene world of beekeeping, where patience and observation are key to success. Manage multiple hives, learn about different bee species, and explore beautiful environments to find the best flower sources. The game emphasizes education and relaxation, teaching real beekeeping concepts while providing a meditative gaming experience. Seasonal changes affect flower availability and bee behavior, creating natural rhythms in gameplay.",
-    "status": "Released",
+    "status": "released",
     "releaseDate": "2024-03-10",
     "platforms": [
       "Windows",
-      "Mac",
+      "macOS",
       "Linux",
       "Web"
     ],
@@ -389,13 +469,28 @@
       "Relaxing",
       "Educational"
     ],
-    "coverImage": "assets/images/games/honey-haven-cover.jpg",
+    "coverImage": "/assets/images/games/honey-haven-cover.jpg",
     "screenshots": [
-      "assets/images/games/honey-haven-1.jpg",
-      "assets/images/games/honey-haven-2.jpg",
-      "assets/images/games/honey-haven-3.jpg",
-      "assets/images/games/honey-haven-4.jpg",
-      "assets/images/games/honey-haven-5.jpg"
+      {
+        "url": "/assets/images/games/honey-haven-1.jpg",
+        "alt": "Honey Haven screenshot 1"
+      },
+      {
+        "url": "/assets/images/games/honey-haven-2.jpg",
+        "alt": "Honey Haven screenshot 2"
+      },
+      {
+        "url": "/assets/images/games/honey-haven-3.jpg",
+        "alt": "Honey Haven screenshot 3"
+      },
+      {
+        "url": "/assets/images/games/honey-haven-4.jpg",
+        "alt": "Honey Haven screenshot 4"
+      },
+      {
+        "url": "/assets/images/games/honey-haven-5.jpg",
+        "alt": "Honey Haven screenshot 5"
+      }
     ],
     "features": [
       "Realistic beekeeping simulation mechanics",
@@ -443,6 +538,10 @@
         "Chris Wilson"
       ]
     },
-    "featured": false
+    "featured": false,
+    "pitch": "Become a master beekeeper in this peaceful simulation. Manage hives, explore flower fields, and create the sweetest honey empire.",
+    "description": "Honey Haven invites players into the serene world of beekeeping, where patience and observation are key to success. Manage multiple hives, learn about different bee species, and explore beautiful environments to find the best flower sources. The game emphasizes education and relaxation, teaching real beekeeping concepts while providing a meditative gaming experience. Seasonal changes affect flower availability and bee behavior, creating natural rhythms in gameplay.",
+    "statusLabel": "Released",
+    "releaseDateFormatted": "March 10, 2024"
   }
 ]

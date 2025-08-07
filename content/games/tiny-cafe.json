@@ -1,19 +1,41 @@
 {
   "title": "Tiny Cafe",
   "slug": "tiny-cafe",
-  "shortPitch": "Manage your own cozy cafe in this relaxing simulation game. Serve customers, customize your space, and build the perfect coffee experience.",
-  "fullDescription": "Tiny Cafe offers a peaceful escape into the world of cafe management. Create the perfect coffee shop atmosphere by customizing your interior, crafting specialty drinks, and building relationships with regular customers. Each customer has unique preferences and stories, creating a warm, community-focused experience that emphasizes creativity and hospitality over stress and competition.",
-  "status": "Released",
+  "status": "released",
   "releaseDate": "2024-05-20",
-  "platforms": ["Windows", "Mac", "Web"],
-  "tags": ["Simulation", "Management", "Casual", "Relaxing"],
-  "coverImage": "assets/images/games/tiny-cafe-cover.jpg",
+  "platforms": [
+    "Windows",
+    "macOS",
+    "Web"
+  ],
+  "tags": [
+    "Simulation",
+    "Management",
+    "Casual",
+    "Relaxing"
+  ],
+  "coverImage": "/assets/images/games/tiny-cafe-cover.jpg",
   "screenshots": [
-    "assets/images/games/tiny-cafe-1.jpg",
-    "assets/images/games/tiny-cafe-2.jpg",
-    "assets/images/games/tiny-cafe-3.jpg",
-    "assets/images/games/tiny-cafe-4.jpg",
-    "assets/images/games/tiny-cafe-5.jpg"
+    {
+      "url": "/assets/images/games/tiny-cafe-1.jpg",
+      "alt": "Tiny Cafe screenshot 1"
+    },
+    {
+      "url": "/assets/images/games/tiny-cafe-2.jpg",
+      "alt": "Tiny Cafe screenshot 2"
+    },
+    {
+      "url": "/assets/images/games/tiny-cafe-3.jpg",
+      "alt": "Tiny Cafe screenshot 3"
+    },
+    {
+      "url": "/assets/images/games/tiny-cafe-4.jpg",
+      "alt": "Tiny Cafe screenshot 4"
+    },
+    {
+      "url": "/assets/images/games/tiny-cafe-5.jpg",
+      "alt": "Tiny Cafe screenshot 5"
+    }
   ],
   "features": [
     "Extensive cafe customization options",
@@ -45,12 +67,23 @@
     "webPlay": "https://atlas-games-22.itch.io/tiny-cafe"
   },
   "credits": {
-    "gameDesign": ["Maya Rodriguez"],
-    "programming": ["Alex Chen"],
-    "art": ["Jordan Kim"],
-    "audio": ["Emma Thompson"],
-    "qa": ["Chris Wilson"]
+    "gameDesign": [
+      "Maya Rodriguez"
+    ],
+    "programming": [
+      "Alex Chen"
+    ],
+    "art": [
+      "Jordan Kim"
+    ],
+    "audio": [
+      "Emma Thompson"
+    ],
+    "qa": [
+      "Chris Wilson"
+    ]
   },
-  "featured": false
+  "featured": false,
+  "pitch": "Manage your own cozy cafe in this relaxing simulation game. Serve customers, customize your space, and build the perfect coffee experience.",
+  "description": "Tiny Cafe offers a peaceful escape into the world of cafe management. Create the perfect coffee shop atmosphere by customizing your interior, crafting specialty drinks, and building relationships with regular customers. Each customer has unique preferences and stories, creating a warm, community-focused experience that emphasizes creativity and hospitality over stress and competition."
 }
-

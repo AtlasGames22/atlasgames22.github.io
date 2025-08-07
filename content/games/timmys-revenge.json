@@ -1,19 +1,41 @@
 {
   "title": "Timmy's Revenge",
   "slug": "timmys-revenge",
-  "shortPitch": "A quirky platformer following young Timmy's quest for justice. Unique mechanics, colorful worlds, and boss battles await in this charming adventure.",
-  "fullDescription": "When Timmy's favorite toy is stolen by the neighborhood bully, he embarks on an epic quest through imaginative worlds born from a child's imagination. Timmy's Revenge is a heartwarming platformer that combines classic jump-and-run gameplay with innovative mechanics like emotion-based abilities and perspective-shifting puzzles. Each world represents different aspects of childhood, from the backyard jungle gym to the mysterious basement.",
-  "status": "In Development",
+  "status": "in-development",
   "releaseDate": "2025-09-15",
-  "platforms": ["Windows", "Mac", "Linux"],
-  "tags": ["Platformer", "Adventure", "Family-Friendly", "Puzzle"],
-  "coverImage": "assets/images/games/timmys-revenge-cover.jpg",
+  "platforms": [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  "tags": [
+    "Platformer",
+    "Adventure",
+    "Family-Friendly",
+    "Puzzle"
+  ],
+  "coverImage": "/assets/images/games/timmys-revenge-cover.jpg",
   "screenshots": [
-    "assets/images/games/timmys-revenge-1.jpg",
-    "assets/images/games/timmys-revenge-2.jpg",
-    "assets/images/games/timmys-revenge-3.jpg",
-    "assets/images/games/timmys-revenge-4.jpg",
-    "assets/images/games/timmys-revenge-5.jpg"
+    {
+      "url": "/assets/images/games/timmys-revenge-1.jpg",
+      "alt": "Timmy's Revenge screenshot 1"
+    },
+    {
+      "url": "/assets/images/games/timmys-revenge-2.jpg",
+      "alt": "Timmy's Revenge screenshot 2"
+    },
+    {
+      "url": "/assets/images/games/timmys-revenge-3.jpg",
+      "alt": "Timmy's Revenge screenshot 3"
+    },
+    {
+      "url": "/assets/images/games/timmys-revenge-4.jpg",
+      "alt": "Timmy's Revenge screenshot 4"
+    },
+    {
+      "url": "/assets/images/games/timmys-revenge-5.jpg",
+      "alt": "Timmy's Revenge screenshot 5"
+    }
   ],
   "features": [
     "Emotion-based gameplay mechanics",
@@ -45,12 +67,24 @@
     "trailer": ""
   },
   "credits": {
-    "gameDesign": ["Maya Rodriguez", "Sam Patel"],
-    "programming": ["Alex Chen"],
-    "art": ["Jordan Kim"],
-    "audio": ["Emma Thompson"],
-    "qa": ["Chris Wilson"]
+    "gameDesign": [
+      "Maya Rodriguez",
+      "Sam Patel"
+    ],
+    "programming": [
+      "Alex Chen"
+    ],
+    "art": [
+      "Jordan Kim"
+    ],
+    "audio": [
+      "Emma Thompson"
+    ],
+    "qa": [
+      "Chris Wilson"
+    ]
   },
-  "featured": false
+  "featured": false,
+  "pitch": "A quirky platformer following young Timmy's quest for justice. Unique mechanics, colorful worlds, and boss battles await in this charming adventure.",
+  "description": "When Timmy's favorite toy is stolen by the neighborhood bully, he embarks on an epic quest through imaginative worlds born from a child's imagination. Timmy's Revenge is a heartwarming platformer that combines classic jump-and-run gameplay with innovative mechanics like emotion-based abilities and perspective-shifting puzzles. Each world represents different aspects of childhood, from the backyard jungle gym to the mysterious basement."
 }
-

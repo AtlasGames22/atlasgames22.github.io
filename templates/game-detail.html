@@ -1,0 +1,106 @@
+{{head}}
+{{header}}
+
+<article class="game-detail" itemscope itemtype="https://schema.org/VideoGame">
+    <!-- Hero Section -->
+    <section class="game-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="game-title" itemprop="name">{{title}}</h1>
+                    <p class="game-tagline">{{tagline}}</p>
+
+                    <div class="game-meta">
+                        <div class="platforms">
+                            <span class="meta-label">Platforms:</span>
+                            <div class="platform-badges">
+                                {{platformBadges}}
+                            </div>
+                        </div>
+
+                        <div class="status-release">
+                            <span class="status-badge status-{{status}}">{{statusLabel}}</span>
+                            <time class="release-date" datetime="{{releaseDate}}" itemprop="datePublished">
+                                {{releaseDateFormatted}}
+                            </time>
+                        </div>
+                    </div>
+
+                    <p class="game-pitch" itemprop="description">{{pitch}}</p>
+
+                    <div class="game-links">
+                        {{gameLinks}}
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="{{coverImage}}" alt="{{title}} cover art" class="cover-image" itemprop="image" loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshot Gallery -->
+    <section class="screenshot-gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Screenshots</h2>
+            <div class="gallery-grid">
+                {{screenshotGallery}}
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()" role="dialog" aria-label="Screenshot viewer" aria-hidden="true">
+            <div class="lightbox-content" onclick="event.stopPropagation()">
+                <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close screenshot viewer">&times;</button>
+                <img src="" alt="" class="lightbox-image" id="lightbox-image">
+                <div class="lightbox-controls">
+                    <button class="lightbox-prev" onclick="prevImage()" aria-label="Previous screenshot">&larr;</button>
+                    <span class="lightbox-counter" id="lightbox-counter"></span>
+                    <button class="lightbox-next" onclick="nextImage()" aria-label="Next screenshot">&rarr;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Details -->
+    <section class="game-details">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Description -->
+                <div class="description-section">
+                    <h2 class="section-title">About {{title}}</h2>
+                    <div class="game-description" itemprop="about">
+                        {{gameDescription}}
+                    </div>
+
+                    <div class="features-section">
+                        <h3 class="subsection-title">Key Features</h3>
+                        <ul class="features-list">
+                            {{featuresList}}
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="game-sidebar">
+                    {{systemRequirements}}
+                    {{credits}}
+                    {{tags}}
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Games -->
+    <section class="related-games">
+        <div class="container">
+            <h2 class="section-title">More Games</h2>
+            <div class="games-grid" id="related-games">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+</article>
+
+{{footer}}

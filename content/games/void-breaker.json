@@ -1,19 +1,39 @@
 {
   "title": "Void Breaker",
   "slug": "void-breaker",
-  "shortPitch": "A sci-fi action game where you pilot advanced mechs through dimensional rifts. Fast-paced combat meets strategic mech customization.",
-  "fullDescription": "Void Breaker thrusts players into an epic sci-fi conflict where reality itself is under threat. As an elite mech pilot, you'll traverse dimensional rifts to combat an otherworldly invasion. The game combines intense real-time combat with deep mech customization, allowing players to adapt their machines for different mission types and enemy encounters. Each dimensional rift presents unique challenges and environmental hazards.",
-  "status": "Prototype",
+  "status": "in-development",
   "releaseDate": "2025-12-01",
-  "platforms": ["Windows"],
-  "tags": ["Action", "Sci-Fi", "Mech", "Combat"],
-  "coverImage": "assets/images/games/void-breaker-cover.jpg",
+  "platforms": [
+    "Windows"
+  ],
+  "tags": [
+    "Action",
+    "Sci-Fi",
+    "Mech",
+    "Combat"
+  ],
+  "coverImage": "/assets/images/games/void-breaker-cover.jpg",
   "screenshots": [
-    "assets/images/games/void-breaker-1.jpg",
-    "assets/images/games/void-breaker-2.jpg",
-    "assets/images/games/void-breaker-3.jpg",
-    "assets/images/games/void-breaker-4.jpg",
-    "assets/images/games/void-breaker-5.jpg"
+    {
+      "url": "/assets/images/games/void-breaker-1.jpg",
+      "alt": "Void Breaker screenshot 1"
+    },
+    {
+      "url": "/assets/images/games/void-breaker-2.jpg",
+      "alt": "Void Breaker screenshot 2"
+    },
+    {
+      "url": "/assets/images/games/void-breaker-3.jpg",
+      "alt": "Void Breaker screenshot 3"
+    },
+    {
+      "url": "/assets/images/games/void-breaker-4.jpg",
+      "alt": "Void Breaker screenshot 4"
+    },
+    {
+      "url": "/assets/images/games/void-breaker-5.jpg",
+      "alt": "Void Breaker screenshot 5"
+    }
   ],
   "features": [
     "Extensive mech customization system",
@@ -45,12 +65,24 @@
     "trailer": ""
   },
   "credits": {
-    "gameDesign": ["Sam Patel", "Alex Chen"],
-    "programming": ["Alex Chen"],
-    "art": ["Jordan Kim"],
-    "audio": ["Emma Thompson"],
-    "qa": ["Chris Wilson"]
+    "gameDesign": [
+      "Sam Patel",
+      "Alex Chen"
+    ],
+    "programming": [
+      "Alex Chen"
+    ],
+    "art": [
+      "Jordan Kim"
+    ],
+    "audio": [
+      "Emma Thompson"
+    ],
+    "qa": [
+      "Chris Wilson"
+    ]
   },
-  "featured": false
+  "featured": false,
+  "pitch": "A sci-fi action game where you pilot advanced mechs through dimensional rifts. Fast-paced combat meets strategic mech customization.",
+  "description": "Void Breaker thrusts players into an epic sci-fi conflict where reality itself is under threat. As an elite mech pilot, you'll traverse dimensional rifts to combat an otherworldly invasion. The game combines intense real-time combat with deep mech customization, allowing players to adapt their machines for different mission types and enemy encounters. Each dimensional rift presents unique challenges and environmental hazards."
 }
-

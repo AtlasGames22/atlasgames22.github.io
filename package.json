@@ -7,14 +7,31 @@
     "build": "node build.js",
     "dev": "node build.js && node -e \"console.log('Built successfully! Open dist/index.html in your browser')\"",
     "clean": "node -e \"require('fs').rmSync('dist', {recursive: true, force: true})\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build && npm run check-links",
+    "check-links": "blc http://localhost:8080 --recursive --exclude-external",
+    "serve": "npx http-server dist -p 8080 -c-1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/atlasgames22/atlasgames22.github.io.git"
   },
-  "keywords": ["indie-games", "game-studio", "atlas-games"],
+  "keywords": [
+    "indie-games",
+    "game-studio",
+    "atlas-games"
+  ],
   "author": "Atlas Games",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "handlebars": "^4.7.8",
+    "marked": "^16.1.2"
+  },
+  "devDependencies": {
+    "broken-link-checker": "^0.7.8"
+  },
+  "devDependencies": {
+    "broken-link-checker": "^0.7.8"
+  }
 }

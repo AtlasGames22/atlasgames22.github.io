@@ -1,236 +1,241 @@
 # Atlas Games Website
 
-**Games Built to Endure**
-
-A professional website for Atlas Games, an indie game studio creating immersive gaming experiences that stand the test of time.
-
-## 🌟 Features
-
-- **Dark-first responsive design** with automatic light mode fallback
-- **SEO optimized** with Open Graph, Twitter Cards, and JSON-LD schema
-- **Accessible** (WCAG 2.1 AA compliant) with skip links and ARIA labels
-- **Performance optimized** with lazy loading and minimal JavaScript
-- **Static-first architecture** with content stored as JSON/Markdown files
-- **Search and filtering** on games and blog pages
-- **Lightbox gallery** for screenshots and artwork
-- **Mobile-friendly** navigation with touch-friendly interactions
-
-## 🛠️ Tech Stack
-
-- **Frontend**: Vanilla HTML, CSS, JavaScript (no frameworks)
-- **Build System**: Node.js static site generator
-- **Styling**: CSS Custom Properties with dark/light theme support
-- **Content**: JSON files for structured data, Markdown for blog posts
-- **Deployment**: GitHub Pages with automated CI/CD
-- **Performance**: Optimized images, critical CSS, lazy loading
+Professional website for Atlas Games indie game studio, featuring automated static site generation with unified game detail pages.
 
 ## 🚀 Quick Start
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/atlasgames22/atlasgames22.github.io.git
-   cd atlasgames22.github.io
-   ```
+```bash
+# Install dependencies
+npm install
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+# Build the website
+npm run build
 
-3. **Build the site**:
-   ```bash
-   npm run build
-   ```
-
-4. **Development**:
-   ```bash
-   npm run dev
-   ```
-
-The built site will be in the `dist/` folder, ready for deployment.
-
-## 📁 Project Structure
-
-```
-/
-├── index.html              # Home page
-├── games.html              # Games collection
-├── team.html               # Team profiles
-├── blog.html               # Blog listing
-├── about.html              # Studio information
-├── contact.html            # Contact form and info
-├── 404.html                # Error page
-├── build.js                # Static site generator
-├── package.json            # Dependencies and scripts
-├── assets/
-│   ├── css/                # Stylesheets
-│   ├── js/                 # JavaScript modules
-│   ├── images/             # Game covers, screenshots, team photos
-│   ├── logos/              # Atlas Games branding
-│   └── icons/              # Favicons and app icons
-├── content/
-│   ├── games/*.json        # Game metadata
-│   ├── team/*.json         # Team member profiles
-│   └── blog/*.md           # Blog posts with frontmatter
-├── .github/workflows/      # GitHub Actions for deployment
-└── dist/                   # Built site (generated)
+# Serve locally for development
+npm run serve
 ```
 
-## ✏️ Content Management
+Visit `http://localhost:8080` to view the site locally.
 
-### Adding a New Game
+## 🎮 How to Add a New Game
 
-1. Create a new JSON file in `content/games/`:
+### 1. Create Game Data File
+
+Create a new JSON file in `content/games/` following this format:
 
 ```json
 {
   "title": "Your Game Title",
-  "slug": "your-game-title",
-  "shortPitch": "Brief description for cards and previews",
-  "fullDescription": "Detailed description for the game page",
-  "status": "Released|In Development|Prototype",
-  "releaseDate": "2025-01-01",
-  "platforms": ["Windows", "Mac", "Linux"],
-  "tags": ["Genre", "Keywords"],
-  "coverImage": "assets/images/games/your-game-cover.jpg",
+  "slug": "your-game-slug",
+  "pitch": "Brief elevator pitch (10+ characters)",
+  "description": "Detailed description (50+ characters)",
+  "status": "released|early-access|in-development|coming-soon",
+  "releaseDate": "YYYY-MM-DD",
+  "platforms": ["Windows", "macOS", "Linux", "Web"],
+  "tags": ["Action", "Adventure"],
+  "coverImage": "/assets/images/games/your-game-cover.jpg",
   "screenshots": [
-    "assets/images/games/your-game-1.jpg",
-    "assets/images/games/your-game-2.jpg"
+    {
+      "url": "/assets/images/games/your-game-1.jpg",
+      "alt": "Descriptive alt text",
+      "caption": "Optional caption"
+    }
   ],
-  "features": ["Key feature 1", "Key feature 2"],
+  "features": [
+    "Key feature 1",
+    "Key feature 2"
+  ],
+  "systemRequirements": {
+    "minimum": {
+      "os": "Windows 10",
+      "processor": "Intel Core i3",
+      "memory": "4 GB RAM",
+      "graphics": "DirectX 11 compatible",
+      "storage": "2 GB available space"
+    }
+  },
   "links": {
-    "itchio": "https://atlas-games-22.itch.io/your-game",
-    "steam": "",
-    "trailer": ""
+    "itchio": "https://your-itch-url",
+    "steam": "https://your-steam-url",
+    "trailer": "https://your-trailer-url"
   },
   "credits": {
     "gameDesign": ["Designer Name"],
-    "programming": ["Developer Name"],
-    "art": ["Artist Name"]
+    "programming": ["Programmer Name"],
+    "art": ["Artist Name"],
+    "audio": ["Audio Designer Name"]
   },
   "featured": false
 }
 ```
 
-2. Add game images to `assets/images/games/`
-3. Run `npm run build` to regenerate the site
+### 2. Add Game Assets
 
-### Adding a Team Member
+- **Cover Image**: Add to `/assets/images/games/`
+- **Screenshots**: Add at least 3 screenshots to `/assets/images/games/`
+- **Optional Markdown**: Create `content/games/your-game-slug.md` for extended description
 
-1. Create a new JSON file in `content/team/`:
+### 3. Build and Deploy
 
-```json
-{
-  "name": "Full Name",
-  "slug": "first-last",
-  "role": "Job Title",
-  "bio": "Brief biography and background",
-  "avatar": "assets/images/team/first-last.jpg",
-  "specialties": ["Skill 1", "Skill 2", "Skill 3"],
-  "joinDate": "2024-01-01",
-  "links": {
-    "linkedin": "https://linkedin.com/in/username",
-    "twitter": "https://twitter.com/username",
-    "email": "email@atlasgames.dev"
-  },
-  "achievements": [
-    "Notable achievement 1",
-    "Notable achievement 2"
-  ]
-}
+```bash
+npm run build
 ```
 
-2. Add profile photo to `assets/images/team/`
-3. Run `npm run build` to regenerate the site
+The game page will be automatically generated at `/game/your-game-slug.html`.
 
-### Adding a Blog Post
+## 📁 Project Structure
 
-1. Create a new Markdown file in `content/blog/`:
-
-```markdown
----
-title: Your Post Title
-date: 2025-01-01
-author: Author Name
-tags: Category, Keywords
-excerpt: Brief summary for post previews
-cover: assets/images/blog/post-cover.jpg
----
-
-# Your Post Title
-
-Your blog content here using Markdown syntax...
+```
+├── content/
+│   ├── games/          # Game data (JSON + optional MD)
+│   ├── team/           # Team member data
+│   ├── blog/           # Blog posts (Markdown)
+│   └── schemas/        # JSON validation schemas
+├── templates/
+│   ├── game-detail.html    # Game page template
+│   └── partials/           # Reusable template parts
+├── assets/
+│   ├── css/main.css        # Unified stylesheet
+│   └── js/main.js          # Interactive functionality
+├── dist/               # Built website (auto-generated)
+└── build.js           # Build system
 ```
 
-2. Add featured image to `assets/images/blog/`
-3. Run `npm run build` to regenerate the site
+## 🔧 Build System
 
-## 🎨 Branding Guidelines
+### Commands
 
-### Colors
-- **Primary**: Crimson Red `#C62828`
-- **Background**: Charcoal Black `#121212` (dark) / Off-White `#F2F2F2` (light)
-- **Secondary**: Steel Grey `#4F4F4F`
-- **Text**: Off-White `#F2F2F2` (dark) / Charcoal Black `#121212` (light)
+- `npm run build` - Build the complete website
+- `npm run dev` - Build and show success message
+- `npm run serve` - Start local development server
+- `npm run clean` - Clean the dist directory
+- `npm run test` - Build and run link checker
+- `npm run check-links` - Check for broken links
+
+### Validation
+
+All game data is validated against JSON Schema before building:
+
+- **Required fields**: title, slug, pitch, status, platforms, coverImage, screenshots, description
+- **Status values**: released, early-access, in-development, coming-soon, cancelled
+- **Platform values**: Windows, macOS, Linux, Android, iOS, Web, PlayStation, Xbox, Nintendo Switch
+- **Screenshots**: Minimum 3 required, must include URL and alt text
+
+### Features
+
+- ✅ **Unified templating** - All game pages built from single template
+- ✅ **JSON Schema validation** - Ensures data consistency
+- ✅ **SEO optimization** - Meta tags, Open Graph, JSON-LD schema
+- ✅ **Accessibility** - WCAG AA compliant, keyboard navigation
+- ✅ **Responsive design** - Mobile-first CSS Grid/Flexbox
+- ✅ **Performance** - Lazy loading, optimized assets
+- ✅ **Automated sitemap** - Generated from content
+- ✅ **Broken link checking** - CI validation
+
+## 🎨 Design System
+
+### Brand Colors
+- Primary Red: `#C62828`
+- Dark Background: `#121212`
+- Medium Gray: `#4F4F4F`
+- Light Gray: `#F2F2F2`
 
 ### Typography
-- **Font**: Poppins (Google Fonts)
-- **Weights**: 300, 400, 500, 600, 700
+- Font: Poppins (Google Fonts)
+- Responsive scaling with proper contrast
 
-### Logo Usage
-- Use `atlas-games-logo.png` for light backgrounds
-- Use `atlas-games-logo-light.png` for dark backgrounds
-- Maintain aspect ratio and minimum size of 32px height
+### Components
+- Platform badges
+- Status indicators
+- Screenshot lightbox gallery
+- Feature lists
+- System requirements
+- Team credits
 
 ## 🚀 Deployment
 
-The site is automatically deployed to GitHub Pages when changes are pushed to the `main` branch:
+### GitHub Pages (Automatic)
 
-1. **Push to main branch**:
-   ```bash
-   git add .
-   git commit -m "Add new content"
-   git push origin main
-   ```
+Push to `main` branch triggers automatic deployment via GitHub Actions:
 
-2. **GitHub Actions** will automatically:
-   - Install dependencies
-   - Run the build process
-   - Deploy to GitHub Pages
+1. **Validation** - JSON Schema validation of all content
+2. **Build** - Generate static site from templates
+3. **Link Check** - Verify all internal links work
+4. **Deploy** - Upload to GitHub Pages
 
-3. **Live site**: https://atlasgames22.github.io
+### Manual Deployment
 
-## 📊 Performance
+```bash
+npm run build
+# Upload contents of dist/ folder to your web server
+```
 
-The site is optimized for performance:
-- **Lighthouse Score**: 95+ across all metrics
-- **Image Optimization**: Responsive images with lazy loading
-- **CSS**: Critical CSS inlined, deferred non-critical styles
-- **JavaScript**: Minimal, vanilla JS with no heavy frameworks
-- **Caching**: Proper cache headers for static assets
+## 🔍 Quality Assurance
+
+### Content Validation
+- JSON Schema validation prevents invalid game data
+- Required fields enforced
+- Image paths validated
+- Alt text required for accessibility
+
+### Performance
+- Lighthouse scores target: ≥95 across all metrics
+- Lazy loading for images
+- Minimal critical CSS inlined
+- Deferred JavaScript loading
+
+### Accessibility
+- WCAG AA compliance
+- Keyboard navigation
+- Screen reader optimization
+- Focus management
+- Skip links
+
+## 🛠️ Development
+
+### Adding New Features
+
+1. **Templates**: Modify `templates/game-detail.html` or partials
+2. **Styling**: Update `assets/css/main.css`
+3. **JavaScript**: Enhance `assets/js/main.js`
+4. **Build Logic**: Extend `build.js`
+
+### Schema Updates
+
+Modify `content/schemas/game.schema.json` for new fields, then update:
+- Template placeholders
+- Build script data processing
+- Documentation
+
+### Testing Locally
+
+```bash
+# Build and serve
+npm run dev
+npm run serve
+
+# Open http://localhost:8080 in browser
+# Test individual game pages at /game/{slug}.html
+```
+
+## 📊 Current Content
+
+- **Games**: 6 (Harvest Hustle, Kenny's Khaos, Void Breaker, Timmy's Revenge, Tiny Cafe, Honey Haven)
+- **Team Members**: 6
+- **Blog Posts**: 2
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-### Development Workflow
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feat/new-feature`
-3. **Make changes and test**: `npm run build && npm run dev`
-4. **Commit changes**: `git commit -m "feat: add new feature"`
-5. **Push and create PR**: `git push origin feat/new-feature`
-
-## 📞 Support
-
-- **Email**: atlasgamesstudio22@gmail.com
-- **Discord**: https://discord.gg/YuSKf7aPwf
-- **Phone**: +27 81 475 2986
+1. Fork the repository
+2. Create a feature branch
+3. Make changes following the established patterns
+4. Test locally with `npm run test`
+5. Submit a pull request
 
 ## 📄 License
 
-Copyright © 2025 Atlas Games. All rights reserved.
+MIT License - see LICENSE file for details.
 
 ---
 
-**Atlas Games** - Games Built to Endure 🌍
+**Atlas Games** - Creating games built to endure.

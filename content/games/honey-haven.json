@@ -1,19 +1,42 @@
 {
   "title": "Honey Haven",
   "slug": "honey-haven",
-  "shortPitch": "Become a master beekeeper in this peaceful simulation. Manage hives, explore flower fields, and create the sweetest honey empire.",
-  "fullDescription": "Honey Haven invites players into the serene world of beekeeping, where patience and observation are key to success. Manage multiple hives, learn about different bee species, and explore beautiful environments to find the best flower sources. The game emphasizes education and relaxation, teaching real beekeeping concepts while providing a meditative gaming experience. Seasonal changes affect flower availability and bee behavior, creating natural rhythms in gameplay.",
-  "status": "Released",
+  "status": "released",
   "releaseDate": "2024-03-10",
-  "platforms": ["Windows", "Mac", "Linux", "Web"],
-  "tags": ["Simulation", "Nature", "Relaxing", "Educational"],
-  "coverImage": "assets/images/games/honey-haven-cover.jpg",
+  "platforms": [
+    "Windows",
+    "macOS",
+    "Linux",
+    "Web"
+  ],
+  "tags": [
+    "Simulation",
+    "Nature",
+    "Relaxing",
+    "Educational"
+  ],
+  "coverImage": "/assets/images/games/honey-haven-cover.jpg",
   "screenshots": [
-    "assets/images/games/honey-haven-1.jpg",
-    "assets/images/games/honey-haven-2.jpg",
-    "assets/images/games/honey-haven-3.jpg",
-    "assets/images/games/honey-haven-4.jpg",
-    "assets/images/games/honey-haven-5.jpg"
+    {
+      "url": "/assets/images/games/honey-haven-1.jpg",
+      "alt": "Honey Haven screenshot 1"
+    },
+    {
+      "url": "/assets/images/games/honey-haven-2.jpg",
+      "alt": "Honey Haven screenshot 2"
+    },
+    {
+      "url": "/assets/images/games/honey-haven-3.jpg",
+      "alt": "Honey Haven screenshot 3"
+    },
+    {
+      "url": "/assets/images/games/honey-haven-4.jpg",
+      "alt": "Honey Haven screenshot 4"
+    },
+    {
+      "url": "/assets/images/games/honey-haven-5.jpg",
+      "alt": "Honey Haven screenshot 5"
+    }
   ],
   "features": [
     "Realistic beekeeping simulation mechanics",
@@ -45,12 +68,23 @@
     "webPlay": "https://atlas-games-22.itch.io/honey-haven"
   },
   "credits": {
-    "gameDesign": ["Maya Rodriguez"],
-    "programming": ["Alex Chen"],
-    "art": ["Jordan Kim"],
-    "audio": ["Emma Thompson"],
-    "qa": ["Chris Wilson"]
+    "gameDesign": [
+      "Maya Rodriguez"
+    ],
+    "programming": [
+      "Alex Chen"
+    ],
+    "art": [
+      "Jordan Kim"
+    ],
+    "audio": [
+      "Emma Thompson"
+    ],
+    "qa": [
+      "Chris Wilson"
+    ]
   },
-  "featured": false
+  "featured": false,
+  "pitch": "Become a master beekeeper in this peaceful simulation. Manage hives, explore flower fields, and create the sweetest honey empire.",
+  "description": "Honey Haven invites players into the serene world of beekeeping, where patience and observation are key to success. Manage multiple hives, learn about different bee species, and explore beautiful environments to find the best flower sources. The game emphasizes education and relaxation, teaching real beekeeping concepts while providing a meditative gaming experience. Seasonal changes affect flower availability and bee behavior, creating natural rhythms in gameplay."
 }
-

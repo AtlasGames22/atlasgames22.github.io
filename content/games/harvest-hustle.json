@@ -1,19 +1,34 @@
 {
   "title": "Harvest Hustle",
   "slug": "harvest-hustle",
-  "shortPitch": "A fast-paced farming simulation where time management meets strategic planning. Build your agricultural empire while racing against the seasons.",
-  "fullDescription": "In Harvest Hustle, every second counts as you manage crops, livestock, and resources in this innovative farming simulation. Unlike traditional farming games, Harvest Hustle introduces time pressure and strategic decision-making that keeps you on your toes. Plan your seasons, optimize your farm layout, and adapt to changing weather conditions while building relationships with the local community.",
-  "status": "Released",
+  "pitch": "A fast-paced farming simulation where time management meets strategic planning. Build your agricultural empire while racing against the seasons.",
+  "description": "In Harvest Hustle, every second counts as you manage crops, livestock, and resources in this innovative farming simulation. Unlike traditional farming games, Harvest Hustle introduces time pressure and strategic decision-making that keeps you on your toes. Plan your seasons, optimize your farm layout, and adapt to changing weather conditions while building relationships with the local community.",
+  "status": "released",
   "releaseDate": "2024-08-15",
-  "platforms": ["Windows", "Mac", "Linux"],
+  "platforms": ["Windows", "macOS", "Linux"],
   "tags": ["Simulation", "Strategy", "Farming", "Time Management"],
-  "coverImage": "assets/images/games/harvest-hustle-cover.jpg",
+  "coverImage": "/assets/images/games/harvest-hustle-cover.jpg",
   "screenshots": [
-    "assets/images/games/harvest-hustle-1.jpg",
-    "assets/images/games/harvest-hustle-2.jpg",
-    "assets/images/games/harvest-hustle-3.jpg",
-    "assets/images/games/harvest-hustle-4.jpg",
-    "assets/images/games/harvest-hustle-5.jpg"
+    {
+      "url": "/assets/images/games/harvest-hustle-1.jpg",
+      "alt": "Harvest Hustle farm overview showing crops and buildings"
+    },
+    {
+      "url": "/assets/images/games/harvest-hustle-2.jpg",
+      "alt": "Weather system affecting crop growth in Harvest Hustle"
+    },
+    {
+      "url": "/assets/images/games/harvest-hustle-3.jpg",
+      "alt": "Community interaction and relationship building interface"
+    },
+    {
+      "url": "/assets/images/games/harvest-hustle-4.jpg",
+      "alt": "Customizable farm layout and building placement"
+    },
+    {
+      "url": "/assets/images/games/harvest-hustle-5.jpg",
+      "alt": "Leaderboards and achievement system"
+    }
   ],
   "features": [
     "Dynamic weather system affecting crop growth",
@@ -41,7 +56,6 @@
   },
   "links": {
     "itchio": "https://atlas-games-22.itch.io/harvest-hustle",
-    "steam": "",
     "trailer": "https://www.youtube.com/watch?v=example"
   },
   "credits": {
@@ -53,4 +67,3 @@
   },
   "featured": true
 }
-
