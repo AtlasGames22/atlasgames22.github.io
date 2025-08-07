@@ -1,0 +1,21 @@
+{
+  "name": "Maya Rodriguez",
+  "slug": "maya-rodriguez",
+  "role": "Creative Director & Co-Founder",
+  "bio": "Maya brings stories to life through compelling game design and artistic vision. Her background in narrative design ensures every Atlas game has heart and purpose. She believes games should create lasting emotional connections with players.",
+  "avatar": "assets/images/team/maya-rodriguez.jpg",
+  "specialties": ["Game Design", "Narrative Design", "Creative Direction"],
+  "joinDate": "2024-01-01",
+  "links": {
+    "linkedin": "https://linkedin.com/in/mayarodriguez",
+    "twitter": "https://twitter.com/mayacreates",
+    "email": "maya@atlasgames.dev",
+    "portfolio": "https://mayarodriguez.design"
+  },
+  "achievements": [
+    "Designed award-winning narrative for Harvest Hustle",
+    "Created design frameworks used across all studio projects",
+    "Published articles on inclusive game design"
+  ]
+}
+

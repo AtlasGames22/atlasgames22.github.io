@@ -1,0 +1,21 @@
+{
+  "name": "Sam Patel",
+  "slug": "sam-patel",
+  "role": "Game Designer",
+  "bio": "Sam crafts the mechanics and systems that make our games fun and engaging. Their focus on player experience ensures every interaction feels meaningful. With expertise in both systems design and user psychology, Sam creates gameplay loops that keep players coming back.",
+  "avatar": "assets/images/team/sam-patel.jpg",
+  "specialties": ["Systems Design", "Player Psychology", "Balancing"],
+  "joinDate": "2024-03-01",
+  "links": {
+    "linkedin": "https://linkedin.com/in/sampatel",
+    "twitter": "https://twitter.com/samdesigns",
+    "email": "sam@atlasgames.dev",
+    "medium": "https://medium.com/@samgamedesign"
+  },
+  "achievements": [
+    "Designed core mechanics for Kenny's Khaos",
+    "Improved player retention by 35% through design iterations",
+    "Speaker at 3 indie game development conferences"
+  ]
+}
+

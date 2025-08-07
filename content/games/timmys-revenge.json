@@ -1,0 +1,56 @@
+{
+  "title": "Timmy's Revenge",
+  "slug": "timmys-revenge",
+  "shortPitch": "A quirky platformer following young Timmy's quest for justice. Unique mechanics, colorful worlds, and boss battles await in this charming adventure.",
+  "fullDescription": "When Timmy's favorite toy is stolen by the neighborhood bully, he embarks on an epic quest through imaginative worlds born from a child's imagination. Timmy's Revenge is a heartwarming platformer that combines classic jump-and-run gameplay with innovative mechanics like emotion-based abilities and perspective-shifting puzzles. Each world represents different aspects of childhood, from the backyard jungle gym to the mysterious basement.",
+  "status": "In Development",
+  "releaseDate": "2025-09-15",
+  "platforms": ["Windows", "Mac", "Linux"],
+  "tags": ["Platformer", "Adventure", "Family-Friendly", "Puzzle"],
+  "coverImage": "assets/images/games/timmys-revenge-cover.jpg",
+  "screenshots": [
+    "assets/images/games/timmys-revenge-1.jpg",
+    "assets/images/games/timmys-revenge-2.jpg",
+    "assets/images/games/timmys-revenge-3.jpg",
+    "assets/images/games/timmys-revenge-4.jpg",
+    "assets/images/games/timmys-revenge-5.jpg"
+  ],
+  "features": [
+    "Emotion-based gameplay mechanics",
+    "Hand-drawn art style with vibrant colors",
+    "Perspective-shifting puzzle elements",
+    "Memorable boss battles with creative patterns",
+    "Accessibility options for younger players",
+    "Hidden collectibles and secret areas"
+  ],
+  "systemRequirements": {
+    "minimum": {
+      "os": "Windows 10 / macOS 10.14 / Ubuntu 18.04",
+      "processor": "Intel Core i3-6100 / AMD FX-6300",
+      "memory": "4 GB RAM",
+      "graphics": "DirectX 11 compatible",
+      "storage": "3 GB available space"
+    },
+    "recommended": {
+      "os": "Windows 11 / macOS 12.0 / Ubuntu 20.04",
+      "processor": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "memory": "8 GB RAM",
+      "graphics": "NVIDIA GTX 1050 / AMD RX 560",
+      "storage": "5 GB available space"
+    }
+  },
+  "links": {
+    "itchio": "https://atlas-games-22.itch.io/timmys-revenge",
+    "steam": "",
+    "trailer": ""
+  },
+  "credits": {
+    "gameDesign": ["Maya Rodriguez", "Sam Patel"],
+    "programming": ["Alex Chen"],
+    "art": ["Jordan Kim"],
+    "audio": ["Emma Thompson"],
+    "qa": ["Chris Wilson"]
+  },
+  "featured": false
+}
+

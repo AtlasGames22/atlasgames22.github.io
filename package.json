@@ -1,0 +1,20 @@
+{
+  "name": "atlas-games-website",
+  "version": "1.0.0",
+  "description": "Professional website for Atlas Games indie game studio",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && node -e \"console.log('Built successfully! Open dist/index.html in your browser')\"",
+    "clean": "node -e \"require('fs').rmSync('dist', {recursive: true, force: true})\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atlasgames22/atlasgames22.github.io.git"
+  },
+  "keywords": ["indie-games", "game-studio", "atlas-games"],
+  "author": "Atlas Games",
+  "license": "MIT",
+  "private": false
+}

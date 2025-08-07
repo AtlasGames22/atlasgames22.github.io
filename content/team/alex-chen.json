@@ -1,0 +1,21 @@
+{
+  "name": "Alex Chen",
+  "slug": "alex-chen",
+  "role": "Lead Developer & Co-Founder",
+  "bio": "With over 8 years of experience in game development, Alex leads our technical vision and ensures our games push the boundaries of what's possible in indie gaming. Previously worked at AAA studios before co-founding Atlas Games to pursue creative freedom.",
+  "avatar": "assets/images/team/alex-chen.jpg",
+  "specialties": ["Unity Development", "Game Architecture", "Performance Optimization"],
+  "joinDate": "2024-01-01",
+  "links": {
+    "linkedin": "https://linkedin.com/in/alexchen",
+    "twitter": "https://twitter.com/alexchengames",
+    "email": "alex@atlasgames.dev",
+    "portfolio": "https://alexchen.dev"
+  },
+  "achievements": [
+    "Led development of Harvest Hustle to 50k+ downloads",
+    "Optimized game performance by 40% across all titles",
+    "Mentored 5+ junior developers"
+  ]
+}
+
