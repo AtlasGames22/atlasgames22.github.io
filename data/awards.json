@@ -1,0 +1,39 @@
+[
+  {
+    "slug": "indie-game-excellence-2024",
+    "title": "Excellence in Game Design",
+    "thumbnail": "assets/images/awards/indie-excellence-2024/trophy.jpg",
+    "competition": "Indie Game Festival 2024",
+    "date": "2024-10-15",
+    "rank": "1st Place",
+    "description": "Mystical Realms won first place for Excellence in Game Design at the prestigious Indie Game Festival 2024.",
+    "linkedGame": "mystical-realms",
+    "participatingMembers": ["sarah-chen", "marcus-rodriguez", "emily-watson"],
+    "detailPath": "award-collection/indie-excellence-2024/indie-excellence-2024.html"
+  },
+  {
+    "slug": "mobile-innovation-award",
+    "title": "Mobile Innovation Award",
+    "thumbnail": "assets/images/awards/mobile-innovation/trophy.jpg",
+    "competition": "Mobile Gaming Awards 2024",
+    "date": "2024-09-22",
+    "rank": "2nd Place",
+    "description": "Neon Runner received recognition for innovative mobile gameplay mechanics and outstanding visual design.",
+    "linkedGame": "neon-runner",
+    "participatingMembers": ["marcus-rodriguez", "emily-watson"],
+    "detailPath": "award-collection/mobile-innovation/mobile-innovation.html"
+  },
+  {
+    "slug": "best-art-direction-2024",
+    "title": "Best Art Direction",
+    "thumbnail": "assets/images/awards/best-art-2024/trophy.jpg",
+    "competition": "Game Art Showcase 2024",
+    "date": "2024-11-08",
+    "rank": "1st Place",
+    "description": "Our art team's exceptional work on Mystical Realms earned top honors for visual excellence and artistic innovation.",
+    "linkedGame": "mystical-realms",
+    "participatingMembers": ["emily-watson"],
+    "detailPath": "award-collection/best-art-2024/best-art-2024.html"
+  }
+]
+

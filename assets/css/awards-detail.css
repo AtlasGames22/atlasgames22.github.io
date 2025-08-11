@@ -1,0 +1,445 @@
+/**
+ * Awards Detail Page Styles - Atlas Games
+ */
+
+/* Award Detail */
+.award-detail {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Award Header */
+.award-header {
+    background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
+    border-radius: var(--border-radius);
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.award-hero {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.award-image {
+    position: relative;
+    text-align: center;
+}
+
+.award-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary-red);
+    box-shadow: var(--box-shadow);
+}
+
+.award-rank {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: var(--primary-red);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    box-shadow: var(--box-shadow);
+}
+
+.rank-1st-place {
+    background: #FFD700;
+    color: var(--charcoal-black);
+}
+
+.rank-2nd-place {
+    background: #C0C0C0;
+    color: var(--charcoal-black);
+}
+
+.rank-3rd-place {
+    background: #CD7F32;
+    color: var(--white);
+}
+
+.award-info h1 {
+    font-size: 2.5rem;
+    color: var(--charcoal-black);
+    margin-bottom: 1.5rem;
+}
+
+.award-meta {
+    margin-bottom: 2rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.meta-label {
+    font-weight: 600;
+    color: var(--steel-grey);
+    min-width: 120px;
+    margin-right: 1rem;
+}
+
+.meta-value {
+    color: var(--charcoal-black);
+    font-weight: 500;
+}
+
+.rank-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.award-description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--steel-grey);
+}
+
+/* Related Game Section */
+.related-game-section {
+    margin-bottom: 3rem;
+}
+
+.related-game-section h2 {
+    color: var(--primary-red);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary-red);
+    padding-bottom: 0.5rem;
+}
+
+.linked-game-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    background: var(--off-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    align-items: start;
+}
+
+.game-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.game-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.game-info h3 a {
+    color: var(--charcoal-black);
+    text-decoration: none;
+}
+
+.game-info h3 a:hover {
+    color: var(--primary-red);
+}
+
+.game-meta {
+    color: var(--steel-grey);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.game-description {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.game-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.game-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Team Section */
+.team-section {
+    margin-bottom: 3rem;
+}
+
+.team-section h2 {
+    color: var(--primary-red);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary-red);
+    padding-bottom: 0.5rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.member-card {
+    background: var(--off-white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.member-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.member-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--primary-red);
+    margin: 0 auto 1rem;
+}
+
+.member-info h4 {
+    margin-bottom: 0.5rem;
+}
+
+.member-info h4 a {
+    color: var(--charcoal-black);
+    text-decoration: none;
+}
+
+.member-info h4 a:hover {
+    color: var(--primary-red);
+}
+
+.member-role {
+    color: var(--primary-red);
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-contribution {
+    color: var(--steel-grey);
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+/* Award Story */
+.award-story {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-red);
+    margin-bottom: 3rem;
+}
+
+.award-story h2 {
+    color: var(--primary-red);
+    margin-bottom: 1.5rem;
+}
+
+.story-content {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--charcoal-black);
+}
+
+.achievement-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--off-white);
+}
+
+.stat-item {
+    text-align: center;
+    background: var(--off-white);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+
+.stat-label {
+    display: block;
+    color: var(--steel-grey);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    display: block;
+    color: var(--charcoal-black);
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+/* Competition Info */
+.competition-info {
+    background: var(--off-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+}
+
+.competition-info h2 {
+    color: var(--primary-red);
+    margin-bottom: 1.5rem;
+}
+
+.competition-content {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--charcoal-black);
+}
+
+/* Award Actions */
+.award-actions {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.actions-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Related Awards */
+.related-awards {
+    background: var(--off-white);
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius);
+}
+
+.related-awards h2 {
+    text-align: center;
+    color: var(--primary-red);
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--primary-red);
+    padding-bottom: 1rem;
+}
+
+/* Toast Messages */
+.toast-message {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--primary-red);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .award-hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .award-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .award-rank {
+        top: -5px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .award-info h1 {
+        font-size: 2rem;
+    }
+
+    .meta-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.25rem;
+    }
+
+    .meta-label {
+        min-width: auto;
+        margin-right: 0;
+    }
+
+    .linked-game-card {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .achievement-stats {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+    }
+
+    .actions-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .award-header {
+        padding: 2rem 1rem;
+    }
+
+    .award-info h1 {
+        font-size: 1.75rem;
+    }
+
+    .award-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-stats {
+        grid-template-columns: 1fr;
+    }
+}

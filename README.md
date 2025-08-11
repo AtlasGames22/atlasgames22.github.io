@@ -1,241 +1,162 @@
-# Atlas Games Website
+# Atlas Games Website — Copilot Agent Step-by-Step Prompts
 
-Professional website for Atlas Games indie game studio, featuring automated static site generation with unified game detail pages.
-
-## 🚀 Quick Start
-
-```bash
-# Install dependencies
-npm install
-
-# Build the website
-npm run build
-
-# Serve locally for development
-npm run serve
-```
-
-Visit `http://localhost:8080` to view the site locally.
-
-## 🎮 How to Add a New Game
-
-### 1. Create Game Data File
-
-Create a new JSON file in `content/games/` following this format:
-
-```json
-{
-  "title": "Your Game Title",
-  "slug": "your-game-slug",
-  "pitch": "Brief elevator pitch (10+ characters)",
-  "description": "Detailed description (50+ characters)",
-  "status": "released|early-access|in-development|coming-soon",
-  "releaseDate": "YYYY-MM-DD",
-  "platforms": ["Windows", "macOS", "Linux", "Web"],
-  "tags": ["Action", "Adventure"],
-  "coverImage": "/assets/images/games/your-game-cover.jpg",
-  "screenshots": [
-    {
-      "url": "/assets/images/games/your-game-1.jpg",
-      "alt": "Descriptive alt text",
-      "caption": "Optional caption"
-    }
-  ],
-  "features": [
-    "Key feature 1",
-    "Key feature 2"
-  ],
-  "systemRequirements": {
-    "minimum": {
-      "os": "Windows 10",
-      "processor": "Intel Core i3",
-      "memory": "4 GB RAM",
-      "graphics": "DirectX 11 compatible",
-      "storage": "2 GB available space"
-    }
-  },
-  "links": {
-    "itchio": "https://your-itch-url",
-    "steam": "https://your-steam-url",
-    "trailer": "https://your-trailer-url"
-  },
-  "credits": {
-    "gameDesign": ["Designer Name"],
-    "programming": ["Programmer Name"],
-    "art": ["Artist Name"],
-    "audio": ["Audio Designer Name"]
-  },
-  "featured": false
-}
-```
-
-### 2. Add Game Assets
-
-- **Cover Image**: Add to `/assets/images/games/`
-- **Screenshots**: Add at least 3 screenshots to `/assets/images/games/`
-- **Optional Markdown**: Create `content/games/your-game-slug.md` for extended description
-
-### 3. Build and Deploy
-
-```bash
-npm run build
-```
-
-The game page will be automatically generated at `/game/your-game-slug.html`.
-
-## 📁 Project Structure
-
-```
-├── content/
-│   ├── games/          # Game data (JSON + optional MD)
-│   ├── team/           # Team member data
-│   ├── blog/           # Blog posts (Markdown)
-│   └── schemas/        # JSON validation schemas
-├── templates/
-│   ├── game-detail.html    # Game page template
-│   └── partials/           # Reusable template parts
-├── assets/
-│   ├── css/main.css        # Unified stylesheet
-│   └── js/main.js          # Interactive functionality
-├── dist/               # Built website (auto-generated)
-└── build.js           # Build system
-```
-
-## 🔧 Build System
-
-### Commands
-
-- `npm run build` - Build the complete website
-- `npm run dev` - Build and show success message
-- `npm run serve` - Start local development server
-- `npm run clean` - Clean the dist directory
-- `npm run test` - Build and run link checker
-- `npm run check-links` - Check for broken links
-
-### Validation
-
-All game data is validated against JSON Schema before building:
-
-- **Required fields**: title, slug, pitch, status, platforms, coverImage, screenshots, description
-- **Status values**: released, early-access, in-development, coming-soon, cancelled
-- **Platform values**: Windows, macOS, Linux, Android, iOS, Web, PlayStation, Xbox, Nintendo Switch
-- **Screenshots**: Minimum 3 required, must include URL and alt text
-
-### Features
-
-- ✅ **Unified templating** - All game pages built from single template
-- ✅ **JSON Schema validation** - Ensures data consistency
-- ✅ **SEO optimization** - Meta tags, Open Graph, JSON-LD schema
-- ✅ **Accessibility** - WCAG AA compliant, keyboard navigation
-- ✅ **Responsive design** - Mobile-first CSS Grid/Flexbox
-- ✅ **Performance** - Lazy loading, optimized assets
-- ✅ **Automated sitemap** - Generated from content
-- ✅ **Broken link checking** - CI validation
-
-## 🎨 Design System
-
-### Brand Colors
-- Primary Red: `#C62828`
-- Dark Background: `#121212`
-- Medium Gray: `#4F4F4F`
-- Light Gray: `#F2F2F2`
-
-### Typography
-- Font: Poppins (Google Fonts)
-- Responsive scaling with proper contrast
-
-### Components
-- Platform badges
-- Status indicators
-- Screenshot lightbox gallery
-- Feature lists
-- System requirements
-- Team credits
-
-## 🚀 Deployment
-
-### GitHub Pages (Automatic)
-
-Push to `main` branch triggers automatic deployment via GitHub Actions:
-
-1. **Validation** - JSON Schema validation of all content
-2. **Build** - Generate static site from templates
-3. **Link Check** - Verify all internal links work
-4. **Deploy** - Upload to GitHub Pages
-
-### Manual Deployment
-
-```bash
-npm run build
-# Upload contents of dist/ folder to your web server
-```
-
-## 🔍 Quality Assurance
-
-### Content Validation
-- JSON Schema validation prevents invalid game data
-- Required fields enforced
-- Image paths validated
-- Alt text required for accessibility
-
-### Performance
-- Lighthouse scores target: ≥95 across all metrics
-- Lazy loading for images
-- Minimal critical CSS inlined
-- Deferred JavaScript loading
-
-### Accessibility
-- WCAG AA compliance
-- Keyboard navigation
-- Screen reader optimization
-- Focus management
-- Skip links
-
-## 🛠️ Development
-
-### Adding New Features
-
-1. **Templates**: Modify `templates/game-detail.html` or partials
-2. **Styling**: Update `assets/css/main.css`
-3. **JavaScript**: Enhance `assets/js/main.js`
-4. **Build Logic**: Extend `build.js`
-
-### Schema Updates
-
-Modify `content/schemas/game.schema.json` for new fields, then update:
-- Template placeholders
-- Build script data processing
-- Documentation
-
-### Testing Locally
-
-```bash
-# Build and serve
-npm run dev
-npm run serve
-
-# Open http://localhost:8080 in browser
-# Test individual game pages at /game/{slug}.html
-```
-
-## 📊 Current Content
-
-- **Games**: 6 (Harvest Hustle, Kenny's Khaos, Void Breaker, Timmy's Revenge, Tiny Cafe, Honey Haven)
-- **Team Members**: 6
-- **Blog Posts**: 2
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make changes following the established patterns
-4. Test locally with `npm run test`
-5. Submit a pull request
-
-## 📄 License
-
-MIT License - see LICENSE file for details.
+This document contains a breakdown of the Copilot Agent prompt into small, auditable steps to reduce hallucinations.  
+Copy and paste each step into WebStorm's Copilot Agent prompt one at a time.
 
 ---
 
-**Atlas Games** - Creating games built to endure.
+## STEP 0 — CONTRACT & SCOPE
+
+You are GitHub Copilot Agent in WebStorm. We will work in SMALL, AUDITABLE steps. If you are unsure about ANYTHING, ask exactly one clarifying question and STOP.
+
+RULES (apply to every step):
+1) Only do the single step requested. Do not anticipate later steps.
+2) Output strictly in the “OUTPUT FORMAT” specified. No extra commentary.
+3) Don’t invent files/paths. If a requested path doesn’t exist, ask to create it.
+4) If a file already exists, produce a unified diff (diff-only). Otherwise output the full file content.
+5) Never change branding/colors/fonts without instruction.
+
+Acknowledge with exactly:
+OK — READY. WHAT STEP?
+
+---
+
+## STEP 1 — SCAFFOLD ONLY (folders + empty files; no content yet)
+
+Goal: Create the exact folder/file scaffold below. Empty files are fine. Do not write HTML/CSS/JS content yet.
+
+(REQUIRED TREE same as original spec — omitted here for brevity, keep in your original detailed structure)
+
+OUTPUT FORMAT:
+- First block: ```CREATED``` listing one relative path per line that you created.
+- Second block: ```EXISTING``` listing any pre-existing paths you detected.
+- Third block: ```TREE``` print the tree from project root.
+- Fourth block: ```NEXT``` one sentence stating you are ready for Step 2.
+
+---
+
+## STEP 2 — REUSABLE INCLUDES (header/nav/footer + includes.js)
+
+Goal: Implement header.html, navigationbar.html, footer.html and includes.js that inject them into every page on DOMContentLoaded.
+
+Constraints:
+- Branding: Poppins; Colors: #C62828, #121212, #4F4F4F, #F2F2F2.
+- Nav links: Home (/index.html), Games (/games.html), Blogs (/blogs.html), Team (/team.html), Awards (/awards.html), Contact (/contact.html).
+- Active-link highlighting via pathname match.
+
+OUTPUT FORMAT:
+- For each file changed/created, output as:
+```FILE: reusables/header.html
+<full content>
+```
+(repeat for navigationbar.html, footer.html, assets/css/style.css additions, assets/js/includes.js)
+- Then ```VERIFY``` with a checklist confirming: injection works on index.html & games.html, active state works, no external libs used.
+- Then ```NEXT``` proposing Step 3.
+
+---
+
+## STEP 3 — DATA SCHEMAS + MINIMAL SAMPLE DATA
+
+Goal: Write JSON schemas (as comments at top of each file) and add ONE sample entry in each:
+- /data/games.json
+- /data/blogs.json
+- /data/team.json
+- /data/awards.json
+- /data/patch-notes.json
+
+Rules:
+- Use the exact fields and types from our Atlas Games spec.
+- Use repository-relative paths.
+- Validate JSON.
+
+OUTPUT FORMAT:
+One block per file:
+```FILE: data/games.json
+<full JSON>
+```
+…repeat for all.
+Then ```VERIFY``` listing keys present and confirming valid JSON.
+Then ```NEXT```.
+
+---
+
+## STEP 4 — LISTINGS (render from JSON)
+
+Goal: Implement client-side rendering for games.html, blogs.html, team.html, awards.html using /assets/js/listing-loader.js, /assets/js/search.js, /assets/js/filters.js.
+
+Requirements:
+- Search, filter, sort; no page reload.
+- Data from /data/*.json.
+
+OUTPUT FORMAT:
+- Diffs or full contents for relevant HTML & JS files.
+- ```VERIFY``` with manual test plan.
+- ```NEXT```.
+
+---
+
+## STEP 5 — DETAIL PAGES & TEMPLATES
+
+Goal: Implement templates in /templates and create one working example per collection folder. Include:
+- Breadcrumbs, back-to-list.
+- Fields and JSON-LD schema.org markup.
+
+OUTPUT FORMAT:
+- ```FILE: path``` blocks for all created/changed files.
+- ```VERIFY``` list of required fields and where they appear.
+- ```NEXT```.
+
+---
+
+## STEP 6 — SEARCH/FILTER POLISH + BREADCRUMBS + ROUTING
+
+Goal:
+- Breadcrumbs reflect paths.
+- Persist state via URL.
+- Prev/next links in details.
+
+OUTPUT FORMAT:
+- Diffs only.
+- ```VERIFY``` accessibility checklist.
+- ```NEXT```.
+
+---
+
+## STEP 7 — SEO, SOCIAL, PERFORMANCE
+
+Goal:
+- Unique titles & meta descriptions.
+- OG + Twitter cards.
+- Lazy-load images, defer JS.
+
+OUTPUT FORMAT:
+- Diffs across pages.
+- ```VERIFY``` meta tags present.
+- ```NEXT```.
+
+---
+
+## STEP 8 — 404, SITEMAP, ROBOTS
+
+Goal:
+- Custom 404.html
+- sitemap.xml
+- robots.txt
+
+OUTPUT FORMAT:
+- Full contents for each.
+- ```VERIFY``` link checks.
+- ```NEXT```.
+
+---
+
+## STEP 9 — FINAL QA & HANDOFF
+
+Goal:
+- Final tree, pages table, test script, README snippet.
+
+OUTPUT FORMAT:
+- ```TREE```
+- ```PAGES_TABLE```
+- ```TEST_SCRIPT```
+- ```README_SNIPPET```

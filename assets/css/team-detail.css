@@ -1,0 +1,425 @@
+/**
+ * Team Member Detail Page Styles - Atlas Games
+ */
+
+/* Member Profile */
+.member-profile {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Profile Header */
+.profile-header {
+    background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
+    border-radius: var(--border-radius);
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-hero {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.profile-image {
+    text-align: center;
+}
+
+.profile-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary-red);
+    box-shadow: var(--box-shadow);
+}
+
+.profile-info h1 {
+    font-size: 2.5rem;
+    color: var(--charcoal-black);
+    margin-bottom: 0.5rem;
+}
+
+.role {
+    font-size: 1.25rem;
+    color: var(--primary-red);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.bio {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--steel-grey);
+    margin-bottom: 2rem;
+}
+
+/* Contact Information */
+.contact-info {
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.contact-label {
+    font-weight: 600;
+    color: var(--charcoal-black);
+    min-width: 80px;
+    margin-right: 1rem;
+}
+
+.contact-item a {
+    color: var(--primary-red);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--charcoal-black);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background: var(--primary-red);
+    color: var(--white);
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    background: currentColor;
+    border-radius: 50%;
+}
+
+/* CV Download */
+.cv-download {
+    margin-top: 1rem;
+}
+
+/* Skills Section */
+.skills-section {
+    background: var(--off-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+
+.skills-section h3 {
+    color: var(--primary-red);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-red);
+    padding-bottom: 0.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.skill-item {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.skill-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-name {
+    font-weight: 600;
+    color: var(--charcoal-black);
+    font-size: 0.9rem;
+}
+
+/* Contributions Section */
+.contributions-section {
+    margin-bottom: 2rem;
+}
+
+.contributions-section h3 {
+    color: var(--primary-red);
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-red);
+    padding-bottom: 0.5rem;
+}
+
+.contributions-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.games-worked-on,
+.blog-posts,
+.awards-participated {
+    background: var(--off-white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+.games-worked-on h4,
+.blog-posts h4,
+.awards-participated h4 {
+    color: var(--charcoal-black);
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    border-bottom: 1px solid var(--steel-grey);
+    padding-bottom: 0.5rem;
+}
+
+.contribution-item {
+    display: flex;
+    gap: 1rem;
+    background: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.contribution-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contribution-thumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
+}
+
+.contribution-info {
+    flex: 1;
+}
+
+.contribution-info h5 {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.contribution-info h5 a {
+    color: var(--charcoal-black);
+    text-decoration: none;
+}
+
+.contribution-info h5 a:hover {
+    color: var(--primary-red);
+}
+
+.contribution-role,
+.contribution-date {
+    font-size: 0.75rem;
+    color: var(--steel-grey);
+    margin-bottom: 0.25rem;
+}
+
+.contribution-desc {
+    font-size: 0.8rem;
+    color: var(--steel-grey);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Journey Section */
+.journey-section {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-red);
+    margin-bottom: 2rem;
+}
+
+.journey-section h3 {
+    color: var(--primary-red);
+    margin-bottom: 1.5rem;
+}
+
+.journey-content {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--charcoal-black);
+}
+
+.journey-content p {
+    margin-bottom: 1rem;
+}
+
+/* Back to Team */
+.back-to-team {
+    text-align: center;
+}
+
+/* Professional Timeline */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary-red);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.75rem;
+    top: 1.5rem;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-red);
+    border-radius: 50%;
+    border: 2px solid var(--white);
+}
+
+.timeline-date {
+    color: var(--primary-red);
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+    color: var(--charcoal-black);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-description {
+    color: var(--steel-grey);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .profile-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-info h1 {
+        font-size: 2rem;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .contact-label {
+        min-width: auto;
+        margin-right: 0;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .contributions-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contribution-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contribution-thumb {
+        width: 80px;
+        height: 80px;
+        align-self: center;
+    }
+
+    .timeline {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-item::before {
+        left: -1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-header {
+        padding: 2rem 1rem;
+    }
+
+    .profile-info h1 {
+        font-size: 1.75rem;
+    }
+
+    .bio {
+        font-size: 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .social-link {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,36 @@
+/**
+ * Atlas Games - Main Stylesheet
+ * Colors: Primary Crimson Red #C62828, Charcoal Black #121212
+ * Secondary Steel Grey #4F4F4F, Off-White #F2F2F2
+ * Font: Poppins (Google Fonts), fallback system-ui, Arial
+ */
+
+/* CSS Variables */
+:root {
+    --primary-red: #C62828;
+    --charcoal-black: #121212;
+    --steel-grey: #4F4F4F;
+    --off-white: #F2F2F2;
+    --white: #FFFFFF;
+    --font-family: 'Poppins', system-ui, Arial, sans-serif;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--charcoal-black);
+    background-color: var(--white);

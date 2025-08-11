@@ -3,121 +3,455 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found - Atlas Games</title>
-    <meta name="description" content="The page you're looking for doesn't exist. Explore Atlas Games and discover our collection of indie games.">
+    <meta name="description" content="Page not found - Atlas Games. The page you're looking for doesn't exist, but we can help you find what you need.">
+    <meta name="keywords" content="404, page not found, Atlas Games">
+    <meta name="author" content="Atlas Games">
+    <meta name="robots" content="noindex, nofollow">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/components.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Page Not Found - Atlas Games</title>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header class="header">
-        <nav class="nav container">
-            <a href="/" class="nav-brand">
-                <img src="assets/logos/atlas-games-logo.png" alt="Atlas Games" width="40" height="40">
-                <span>Atlas Games</span>
-            </a>
+    <div id="header"></div>
+    <div id="nav"></div>
 
-            <ul class="nav-links">
-                <li><a href="/" class="nav-link">Home</a></li>
-                <li><a href="games.html" class="nav-link">Games</a></li>
-                <li><a href="team.html" class="nav-link">Team</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-        </nav>
-    </header>
-
-    <main class="main" id="main-content">
-        <section class="hero">
-            <div class="container text-center">
-                <div style="font-size: 8rem; margin-bottom: var(--spacing-md);">🗺️</div>
-                <h1 class="hero-title">404 - Page Not Found</h1>
-                <p class="hero-subtitle">Looks like you've wandered off the map! The page you're looking for doesn't exist.</p>
-
-                <div style="margin: var(--spacing-xl) 0;">
-                    <div class="grid-2" style="max-width: 600px; margin: 0 auto; gap: var(--spacing-md);">
-                        <a href="/" class="btn btn-primary btn-large">Go Home</a>
-                        <a href="games.html" class="btn btn-outline btn-large">Browse Games</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Explore Atlas Games</h2>
-                <div class="grid-3">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🎮</div>
-                            <h3>Our Games</h3>
-                            <p>Discover our collection of indie games, from farming simulations to action adventures.</p>
-                            <a href="games.html" class="btn btn-primary">View Games</a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">👥</div>
-                            <h3>Meet the Team</h3>
-                            <p>Learn about the passionate developers and artists behind Atlas Games.</p>
-                            <a href="team.html" class="btn btn-primary">Meet Team</a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">💬</div>
-                            <h3>Join Community</h3>
-                            <p>Connect with fellow gamers and get the latest updates on our Discord server.</p>
-                            <a href="https://discord.gg/YuSKf7aPwf" class="btn btn-primary" target="_blank" rel="noopener">Join Discord</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
+    <main id="main-content">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Atlas Games</h4>
-                    <p>Creating games built to endure.</p>
+            <div class="error-page section">
+                <div class="error-content">
+                    <div class="error-image">
+                        <h1 class="error-code">404</h1>
+                        <div class="error-icon">🎮</div>
+                    </div>
+
+                    <div class="error-text">
+                        <h2>Game Over... Page Not Found!</h2>
+                        <p>Looks like this page took a wrong turn in the digital realm. Don't worry, even the best games have hidden areas that are hard to find!</p>
+
+                        <div class="error-actions">
+                            <a href="index.html" class="btn btn-primary">Return to Home Base</a>
+                            <button class="btn btn-secondary" id="go-back-btn">Go Back</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="games.html">Our Games</a></li>
-                        <li><a href="team.html">Meet the Team</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+
+                <!-- Search Section -->
+                <div class="error-search section">
+                    <h3>Looking for something specific?</h3>
+                    <div class="search-form">
+                        <input
+                            type="text"
+                            id="error-search"
+                            class="search-input"
+                            placeholder="Search our games, blog posts, or team..."
+                            aria-label="Search site content"
+                        >
+                        <button type="button" class="btn btn-primary" id="search-btn">Search</button>
+                    </div>
+                    <div id="search-results" class="search-results"></div>
                 </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="mailto:atlasgamesstudio22@gmail.com">atlasgamesstudio22@gmail.com</a></li>
-                        <li><a href="tel:+27814752986">+27 81 475 2986</a></li>
-                        <li><a href="https://discord.gg/YuSKf7aPwf" target="_blank" rel="noopener">Discord</a></li>
-                        <li><a href="https://atlas-games-22.itch.io/" target="_blank" rel="noopener">itch.io</a></li>
-                    </ul>
+
+                <!-- Quick Links -->
+                <div class="quick-links section">
+                    <h3>Quick Links</h3>
+                    <div class="links-grid">
+                        <div class="link-category">
+                            <h4>Our Games</h4>
+                            <ul>
+                                <li><a href="games.html">Browse All Games</a></li>
+                                <li><a href="games.html?status=released">Released Games</a></li>
+                                <li><a href="games.html?status=in-development">Games in Development</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="link-category">
+                            <h4>Content</h4>
+                            <ul>
+                                <li><a href="blogs.html">Latest Blog Posts</a></li>
+                                <li><a href="team.html">Meet Our Team</a></li>
+                                <li><a href="awards.html">Our Achievements</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="link-category">
+                            <h4>Get in Touch</h4>
+                            <ul>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="contact.html?subject=Technical%20Support">Report a Bug</a></li>
+                                <li><a href="contact.html?subject=General%20Inquiry">General Inquiry</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Atlas Games. All rights reserved.</p>
+
+                <!-- Popular Content -->
+                <div class="popular-content section">
+                    <h3>Popular Content</h3>
+                    <div class="popular-grid">
+                        <div id="popular-games" class="popular-section">
+                            <h4>Featured Games</h4>
+                            <div class="popular-items"></div>
+                        </div>
+
+                        <div id="popular-blogs" class="popular-section">
+                            <h4>Popular Posts</h4>
+                            <div class="popular-items"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+    </main>
 
-    <script src="assets/js/main.js"></script>
+    <div id="footer"></div>
+
+    <script src="assets/js/includes.js" defer></script>
+    <script src="assets/js/utils.js" defer></script>
+    <script src="assets/js/search.js" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeErrorPage();
+            loadPopularContent();
+        });
+
+        function initializeErrorPage() {
+            // Go back button functionality
+            const goBackBtn = document.getElementById('go-back-btn');
+            goBackBtn.addEventListener('click', () => {
+                if (window.history.length > 1) {
+                    window.history.back();
+                } else {
+                    window.location.href = 'index.html';
+                }
+            });
+
+            // Search functionality
+            const searchInput = document.getElementById('error-search');
+            const searchBtn = document.getElementById('search-btn');
+
+            const performSearch = async () => {
+                const query = searchInput.value.trim();
+                if (!query) return;
+
+                const resultsContainer = document.getElementById('search-results');
+                resultsContainer.innerHTML = '<div class="loading">Searching...</div>';
+
+                try {
+                    const [games, blogs, team] = await Promise.all([
+                        fetch('data/games.json').then(r => r.json()),
+                        fetch('data/blogs.json').then(r => r.json()),
+                        fetch('data/team.json').then(r => r.json())
+                    ]);
+
+                    const allContent = [
+                        ...games.map(item => ({...item, type: 'game', url: item.detailPath})),
+                        ...blogs.map(item => ({...item, type: 'blog', url: item.detailPath})),
+                        ...team.map(item => ({...item, type: 'team', url: item.detailPath}))
+                    ];
+
+                    const results = allContent.filter(item => {
+                        const searchFields = item.type === 'game'
+                            ? [item.title, item.description, ...(item.tags || [])]
+                            : item.type === 'blog'
+                            ? [item.title, item.excerpt, ...(item.tags || [])]
+                            : [item.name, item.role, item.bio, ...(item.skills || [])];
+
+                        return searchFields.some(field =>
+                            field && field.toString().toLowerCase().includes(query.toLowerCase())
+                        );
+                    }).slice(0, 5);
+
+                    if (results.length > 0) {
+                        resultsContainer.innerHTML = `
+                            <h4>Search Results (${results.length} found)</h4>
+                            <div class="results-list">
+                                ${results.map(item => `
+                                    <div class="result-item">
+                                        <a href="${item.url}">
+                                            <h5>${item.title || item.name}</h5>
+                                            <p class="result-type">${item.type.charAt(0).toUpperCase() + item.type.slice(1)}</p>
+                                            <p class="result-desc">${(item.description || item.excerpt || item.bio || '').substring(0, 100)}...</p>
+                                        </a>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        `;
+                    } else {
+                        resultsContainer.innerHTML = `
+                            <div class="no-results">
+                                <p>No results found for "${query}". Try different keywords or browse our <a href="games.html">games</a>, <a href="blogs.html">blog</a>, or <a href="team.html">team</a> pages.</p>
+                            </div>
+                        `;
+                    }
+                } catch (error) {
+                    console.error('Search error:', error);
+                    resultsContainer.innerHTML = '<div class="error-message">Search is temporarily unavailable. Please try again later.</div>';
+                }
+            };
+
+            searchBtn.addEventListener('click', performSearch);
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        }
+
+        async function loadPopularContent() {
+            try {
+                // Load popular games
+                const gamesResponse = await fetch('data/games.json');
+                const games = await gamesResponse.json();
+                const popularGames = games.slice(0, 3);
+
+                const gamesContainer = document.querySelector('#popular-games .popular-items');
+                gamesContainer.innerHTML = popularGames.map(game => `
+                    <div class="popular-item">
+                        <a href="${game.detailPath}">
+                            <img src="${game.thumbnail}" alt="${game.title}" loading="lazy">
+                            <div class="item-info">
+                                <h5>${game.title}</h5>
+                                <p>${game.genre}</p>
+                            </div>
+                        </a>
+                    </div>
+                `).join('');
+
+                // Load popular blogs
+                const blogsResponse = await fetch('data/blogs.json');
+                const blogs = await blogsResponse.json();
+                const popularBlogs = blogs.slice(0, 3);
+
+                const blogsContainer = document.querySelector('#popular-blogs .popular-items');
+                blogsContainer.innerHTML = popularBlogs.map(blog => `
+                    <div class="popular-item">
+                        <a href="${blog.detailPath}">
+                            <img src="${blog.thumbnail}" alt="${blog.title}" loading="lazy">
+                            <div class="item-info">
+                                <h5>${blog.title}</h5>
+                                <p>By ${blog.author}</p>
+                            </div>
+                        </a>
+                    </div>
+                `).join('');
+
+            } catch (error) {
+                console.error('Error loading popular content:', error);
+            }
+        }
+    </script>
+
+    <style>
+        /* 404 Page Specific Styles */
+        .error-page {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .error-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: var(--primary-red);
+            margin: 0;
+            line-height: 1;
+        }
+
+        .error-icon {
+            font-size: 4rem;
+            margin-top: 1rem;
+        }
+
+        .error-text h2 {
+            color: var(--charcoal-black);
+            margin-bottom: 1rem;
+        }
+
+        .error-text p {
+            color: var(--steel-grey);
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .error-search {
+            background: var(--off-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 400px;
+            margin: 0 auto 2rem;
+        }
+
+        .search-results {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .results-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .result-item {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            text-align: left;
+            box-shadow: var(--box-shadow);
+        }
+
+        .result-item a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .result-item h5 {
+            color: var(--primary-red);
+            margin-bottom: 0.25rem;
+        }
+
+        .result-type {
+            color: var(--steel-grey);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-desc {
+            color: var(--steel-grey);
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .link-category h4 {
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-red);
+            padding-bottom: 0.5rem;
+        }
+
+        .link-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .link-category li {
+            margin-bottom: 0.5rem;
+        }
+
+        .popular-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .popular-section h4 {
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--primary-red);
+            padding-bottom: 0.5rem;
+        }
+
+        .popular-item {
+            display: flex;
+            gap: 1rem;
+            background: var(--off-white);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+        }
+
+        .popular-item img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+        }
+
+        .popular-item a {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .item-info h5 {
+            color: var(--charcoal-black);
+            margin-bottom: 0.25rem;
+        }
+
+        .item-info p {
+            color: var(--steel-grey);
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .error-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .error-code {
+                font-size: 6rem;
+            }
+
+            .search-form {
+                flex-direction: column;
+            }
+
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .popular-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </body>
 </html>

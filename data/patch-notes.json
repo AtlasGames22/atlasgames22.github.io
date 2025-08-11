@@ -1,0 +1,33 @@
+[
+  {
+    "slug": "mystical-realms-v1-2-0",
+    "title": "Mystical Realms v1.2.0 - Winter Update",
+    "number": "1.2.0",
+    "relatedGame": "mystical-realms",
+    "date": "2024-12-20",
+    "content": "## New Features\n\n- Added snow-covered winter realm with unique enemies and treasures\n- Introduced ice magic spells and frost resistance mechanics\n- New legendary winter armor sets and weapons\n- Holiday-themed quests and seasonal events\n\n## Improvements\n\n- Enhanced combat system responsiveness\n- Improved inventory management UI\n- Optimized loading times for large areas\n- Better controller support for all platforms\n\n## Bug Fixes\n\n- Fixed issue where players could get stuck in certain dungeon areas\n- Resolved audio distortion problems in underground levels\n- Fixed rare save game corruption issue\n- Corrected spell cooldown display inconsistencies",
+    "youtubeEmbed": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "detailPath": "patch-notes/mystical-realms-v1-2-0/mystical-realms-v1-2-0.html"
+  },
+  {
+    "slug": "neon-runner-v2-1-5",
+    "title": "Neon Runner v2.1.5 - Performance Boost",
+    "number": "2.1.5",
+    "relatedGame": "neon-runner",
+    "date": "2024-11-30",
+    "content": "## Performance Improvements\n\n- Reduced memory usage by 30% on mobile devices\n- Improved frame rate stability across all platforms\n- Optimized particle effects for better performance\n- Enhanced battery life on mobile devices\n\n## New Content\n\n- Added 3 new character skins with unique animations\n- Introduced weekly challenge mode with exclusive rewards\n- New power-up: Time Dilation for slow-motion effects\n\n## Bug Fixes\n\n- Fixed crash issue on older Android devices\n- Resolved leaderboard synchronization problems\n- Fixed audio cutting out during intense gameplay sections\n- Corrected hitbox inconsistencies with certain obstacles",
+    "youtubeEmbed": null,
+    "detailPath": "patch-notes/neon-runner-v2-1-5/neon-runner-v2-1-5.html"
+  },
+  {
+    "slug": "mystical-realms-v1-1-8",
+    "title": "Mystical Realms v1.1.8 - Bug Fixes",
+    "number": "1.1.8",
+    "relatedGame": "mystical-realms",
+    "date": "2024-11-15",
+    "content": "## Bug Fixes\n\n- Fixed critical bug where quest items could disappear from inventory\n- Resolved issue with NPCs not responding to dialogue interactions\n- Fixed problem where certain spells would not consume mana properly\n- Corrected texture loading issues on high-resolution displays\n\n## Minor Improvements\n\n- Slightly increased drop rates for rare crafting materials\n- Improved visibility of interactive objects in dark areas\n- Enhanced tooltip information for spell descriptions\n- Better error handling for save/load operations",
+    "youtubeEmbed": null,
+    "detailPath": "patch-notes/mystical-realms-v1-1-8/mystical-realms-v1-1-8.html"
+  }
+]
+

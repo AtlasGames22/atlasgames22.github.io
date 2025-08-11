@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{AWARD_DESCRIPTION}}">
+    <meta name="keywords" content="{{AWARD_TITLE}}, {{AWARD_COMPETITION}}, Atlas Games awards">
+    <meta name="author" content="Atlas Games">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{AWARD_TITLE}} - Atlas Games Awards">
+    <meta property="og:description" content="{{AWARD_DESCRIPTION}}">
+    <meta property="og:image" content="{{AWARD_THUMBNAIL}}">
+    <meta property="og:url" content="{{AWARD_URL}}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Atlas Games">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{AWARD_TITLE}} - Atlas Games Awards">
+    <meta name="twitter:description" content="{{AWARD_DESCRIPTION}}">
+    <meta name="twitter:image" content="{{AWARD_THUMBNAIL}}">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Award",
+        "name": "{{AWARD_TITLE}}",
+        "description": "{{AWARD_DESCRIPTION}}",
+        "image": "{{AWARD_THUMBNAIL}}",
+        "url": "{{AWARD_URL}}",
+        "awardingBody": "{{AWARD_COMPETITION}}",
+        "dateCreated": "{{AWARD_DATE}}",
+        "recipient": {
+            "@type": "Organization",
+            "name": "Atlas Games"
+        }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/awards-detail.css">
+
+    <title>{{AWARD_TITLE}} - Atlas Games Awards</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="header"></div>
+    <div id="nav"></div>
+
+    <main id="main-content">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs" aria-label="Breadcrumb navigation">
+                <ol>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../awards.html">Awards</a></li>
+                    <li aria-current="page">{{AWARD_TITLE}}</li>
+                </ol>
+            </nav>
+
+            <!-- Award Details -->
+            <article class="award-detail">
+                <!-- Award Header -->
+                <header class="award-header section">
+                    <div class="award-hero">
+                        <div class="award-image">
+                            <img src="{{AWARD_THUMBNAIL}}" alt="{{AWARD_TITLE}}" loading="eager">
+                            <div class="award-rank rank-{{AWARD_RANK_CLASS}}">{{AWARD_RANK}}</div>
+                        </div>
+                        <div class="award-info">
+                            <h1>{{AWARD_TITLE}}</h1>
+                            <div class="award-meta">
+                                <div class="meta-item">
+                                    <span class="meta-label">Competition:</span>
+                                    <span class="meta-value">{{AWARD_COMPETITION}}</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Date Received:</span>
+                                    <span class="meta-value">{{AWARD_DATE_FORMATTED}}</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Achievement:</span>
+                                    <span class="meta-value rank-badge rank-{{AWARD_RANK_CLASS}}">{{AWARD_RANK}}</span>
+                                </div>
+                            </div>
+                            <p class="award-description">{{AWARD_DESCRIPTION}}</p>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Award Details Content -->
+                <div class="award-content">
+                    <!-- Related Game -->
+                    {{#if AWARD_LINKED_GAME}}
+                    <section class="related-game-section section">
+                        <h2>Award-Winning Game</h2>
+                        <div id="linked-game-container">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </section>
+                    {{/if}}
+
+                    <!-- Participating Team Members -->
+                    <section class="team-section section">
+                        <h2>Team Members</h2>
+                        <div class="team-grid" id="participating-members-container">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </section>
+
+                    <!-- Award Story -->
+                    <section class="award-story section">
+                        <h2>Our Achievement Story</h2>
+                        <div class="story-content">
+                            <p>This award represents a significant milestone in our journey as game developers. The recognition from {{AWARD_COMPETITION}} validates our commitment to creating exceptional gaming experiences.</p>
+
+                            <div class="achievement-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Competition</span>
+                                    <span class="stat-value">{{AWARD_COMPETITION}}</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Category</span>
+                                    <span class="stat-value">{{AWARD_TITLE}}</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Result</span>
+                                    <span class="stat-value">{{AWARD_RANK}}</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Year</span>
+                                    <span class="stat-value">{{AWARD_YEAR}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Competition Information -->
+                    <section class="competition-info section">
+                        <h2>About {{AWARD_COMPETITION}}</h2>
+                        <div class="competition-content">
+                            <p>{{AWARD_COMPETITION}} is a prestigious event in the gaming industry that recognizes outstanding achievements in game development, design, and innovation.</p>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Award Actions -->
+                <div class="award-actions section">
+                    <div class="actions-grid">
+                        {{#if AWARD_LINKED_GAME}}
+                        <a href="../../game-collection/{{AWARD_LINKED_GAME}}/{{AWARD_LINKED_GAME}}-detail.html" class="btn btn-primary">
+                            View Award-Winning Game
+                        </a>
+                        {{/if}}
+                        <a href="../../awards.html" class="btn btn-secondary">View All Awards</a>
+                        <button class="btn btn-secondary" id="share-award">Share Achievement</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Related Awards -->
+            <aside class="related-awards section">
+                <h2>More Achievements</h2>
+                <div id="related-awards-container" class="grid grid-3">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../../assets/js/includes.js" defer></script>
+    <script src="../../assets/js/utils.js" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadLinkedGame();
+            loadParticipatingMembers();
+            loadRelatedAwards();
+            initializeSharing();
+        });
+
+        async function loadLinkedGame() {
+            const linkedGame = '{{AWARD_LINKED_GAME}}';
+            if (!linkedGame) return;
+
+            try {
+                const response = await fetch('../../data/games.json');
+                const games = await response.json();
+                const game = games.find(g => g.slug === linkedGame);
+
+                if (game) {
+                    const container = document.getElementById('linked-game-container');
+                    container.innerHTML = `
+                        <div class="linked-game-card">
+                            <img src="${game.thumbnail}" alt="${game.title}" class="game-image">
+                            <div class="game-info">
+                                <h3><a href="../../${game.detailPath}">${game.title}</a></h3>
+                                <p class="game-meta">${game.genre} • ${Utils.formatDate(game.releaseDate)}</p>
+                                <p class="game-description">${game.description}</p>
+                                <div class="game-tags">
+                                    ${game.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                                </div>
+                                <div class="game-actions">
+                                    <a href="../../${game.detailPath}" class="btn btn-primary btn-sm">View Game</a>
+                                    <a href="${game.itchUrl}" class="btn btn-secondary btn-sm" target="_blank" rel="noopener">Play Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error loading linked game:', error);
+            }
+        }
+
+        async function loadParticipatingMembers() {
+            const memberSlugs = '{{AWARD_PARTICIPATING_MEMBERS}}';
+            if (!memberSlugs) return;
+
+            try {
+                const response = await fetch('../../data/team.json');
+                const team = await response.json();
+                const participatingMembers = team.filter(member =>
+                    memberSlugs.includes(member.slug)
+                );
+
+                const container = document.getElementById('participating-members-container');
+                if (participatingMembers.length > 0) {
+                    container.innerHTML = participatingMembers.map(member => `
+                        <div class="member-card">
+                            <img src="${member.image}" alt="${member.name}" class="member-image">
+                            <div class="member-info">
+                                <h4><a href="../../${member.detailPath}">${member.name}</a></h4>
+                                <p class="member-role">${member.role}</p>
+                                <p class="member-contribution">Contributed to this award-winning project</p>
+                            </div>
+                        </div>
+                    `).join('');
+                } else {
+                    container.innerHTML = '<p>Team information will be updated soon.</p>';
+                }
+            } catch (error) {
+                console.error('Error loading participating members:', error);
+            }
+        }
+
+        async function loadRelatedAwards() {
+            try {
+                const response = await fetch('../../data/awards.json');
+                const awards = await response.json();
+                const currentSlug = '{{AWARD_SLUG}}';
+                const relatedAwards = awards
+                    .filter(award => award.slug !== currentSlug)
+                    .slice(0, 3);
+
+                const container = document.getElementById('related-awards-container');
+                if (relatedAwards.length > 0) {
+                    container.innerHTML = relatedAwards.map(award => `
+                        <article class="card">
+                            <img src="${award.thumbnail}" alt="${award.title}" class="card-image" loading="lazy">
+                            <div class="card-content">
+                                <h3 class="card-title">
+                                    <a href="../../${award.detailPath}">${award.title}</a>
+                                </h3>
+                                <div class="card-meta">
+                                    <span class="competition">${award.competition}</span>
+                                    <span class="date">${Utils.formatDate(award.date)}</span>
+                                </div>
+                                <div class="award-rank rank-${award.rank.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}">${award.rank}</div>
+                                <p class="card-description">${award.description}</p>
+                            </div>
+                        </article>
+                    `).join('');
+                } else {
+                    container.innerHTML = '<p>No other awards to display.</p>';
+                }
+            } catch (error) {
+                console.error('Error loading related awards:', error);
+            }
+        }
+
+        function initializeSharing() {
+            const shareBtn = document.getElementById('share-award');
+
+            shareBtn.addEventListener('click', async () => {
+                const shareData = {
+                    title: '{{AWARD_TITLE}} - Atlas Games Achievement',
+                    text: '{{AWARD_DESCRIPTION}}',
+                    url: window.location.href
+                };
+
+                if (navigator.share) {
+                    try {
+                        await navigator.share(shareData);
+                    } catch (err) {
+                        console.log('Error sharing:', err);
+                    }
+                } else {
+                    // Fallback: copy to clipboard
+                    navigator.clipboard.writeText(window.location.href);
+                    showMessage('Achievement link copied to clipboard!');
+                }
+            });
+        }
+
+        function showMessage(message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'toast-message';
+            messageDiv.textContent = message;
+            document.body.appendChild(messageDiv);
+
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

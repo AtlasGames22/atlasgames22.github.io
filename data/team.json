@@ -1,0 +1,78 @@
+[
+  {
+    "slug": "sarah-chen",
+    "name": "Sarah Chen",
+    "image": "assets/images/team/sarah-chen/profile.jpg",
+    "role": "Lead Game Designer",
+    "bio": "Sarah is a passionate game designer with over 8 years of experience in the industry. She specializes in RPG mechanics and narrative design, bringing worlds to life through compelling gameplay systems.",
+    "skills": ["Game Design", "Narrative Design", "RPG Systems", "Player Psychology", "Prototyping"],
+    "email": "sarah.chen@atlasgames.com",
+    "phone": "+1 (555) 123-4567",
+    "website": "https://sarahchen.dev",
+    "cvDownload": "assets/documents/team/sarah-chen-cv.pdf",
+    "socials": [
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/in/sarahchen-gamedev",
+        "icon": "linkedin"
+      },
+      {
+        "platform": "Twitter",
+        "url": "https://twitter.com/sarahchen_dev",
+        "icon": "twitter"
+      }
+    ],
+    "detailPath": "team-collection/sarah-chen/sarah-chen-detail.html"
+  },
+  {
+    "slug": "marcus-rodriguez",
+    "name": "Marcus Rodriguez",
+    "image": "assets/images/team/marcus-rodriguez/profile.jpg",
+    "role": "Lead Developer",
+    "bio": "Marcus is a full-stack developer who bridges the gap between creative vision and technical implementation. His expertise in multiple programming languages and game engines makes him invaluable to our development process.",
+    "skills": ["Unity", "C#", "JavaScript", "Mobile Development", "Performance Optimization", "Backend Systems"],
+    "email": "marcus.rodriguez@atlasgames.com",
+    "phone": "+1 (555) 234-5678",
+    "website": "https://marcusdev.io",
+    "cvDownload": "assets/documents/team/marcus-rodriguez-cv.pdf",
+    "socials": [
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/marcusrod",
+        "icon": "github"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/in/marcus-rodriguez-dev",
+        "icon": "linkedin"
+      }
+    ],
+    "detailPath": "team-collection/marcus-rodriguez/marcus-rodriguez-detail.html"
+  },
+  {
+    "slug": "emily-watson",
+    "name": "Emily Watson",
+    "image": "assets/images/team/emily-watson/profile.jpg",
+    "role": "Art Director",
+    "bio": "Emily brings visual magic to our games with her exceptional artistic vision. Her background in both traditional and digital art helps create the stunning visuals that define our game aesthetics.",
+    "skills": ["Digital Art", "3D Modeling", "UI/UX Design", "Animation", "Concept Art", "Art Direction"],
+    "email": "emily.watson@atlasgames.com",
+    "phone": "+1 (555) 345-6789",
+    "website": "https://emilywatson.art",
+    "cvDownload": "assets/documents/team/emily-watson-cv.pdf",
+    "socials": [
+      {
+        "platform": "Instagram",
+        "url": "https://instagram.com/emilywatson_art",
+        "icon": "instagram"
+      },
+      {
+        "platform": "ArtStation",
+        "url": "https://artstation.com/emilywatson",
+        "icon": "artstation"
+      }
+    ],
+    "detailPath": "team-collection/emily-watson/emily-watson-detail.html"
+  }
+]
+

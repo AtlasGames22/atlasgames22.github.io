@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{MEMBER_BIO}}">
+    <meta name="keywords" content="{{MEMBER_SKILLS}}, Atlas Games team">
+    <meta name="author" content="Atlas Games">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{MEMBER_NAME}} - {{MEMBER_ROLE}} at Atlas Games">
+    <meta property="og:description" content="{{MEMBER_BIO}}">
+    <meta property="og:image" content="{{MEMBER_IMAGE}}">
+    <meta property="og:url" content="{{MEMBER_URL}}">
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Atlas Games">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{MEMBER_NAME}} - {{MEMBER_ROLE}} at Atlas Games">
+    <meta name="twitter:description" content="{{MEMBER_BIO}}">
+    <meta name="twitter:image" content="{{MEMBER_IMAGE}}">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "{{MEMBER_NAME}}",
+        "jobTitle": "{{MEMBER_ROLE}}",
+        "description": "{{MEMBER_BIO}}",
+        "image": "{{MEMBER_IMAGE}}",
+        "url": "{{MEMBER_URL}}",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Atlas Games"
+        },
+        "email": "{{MEMBER_EMAIL}}",
+        "telephone": "{{MEMBER_PHONE}}",
+        "sameAs": {{MEMBER_SOCIALS_JSON}}
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/team-detail.css">
+
+    <title>{{MEMBER_NAME}} - Atlas Games Team</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="header"></div>
+    <div id="nav"></div>
+
+    <main id="main-content">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs" aria-label="Breadcrumb navigation">
+                <ol>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../team.html">Team</a></li>
+                    <li aria-current="page">{{MEMBER_NAME}}</li>
+                </ol>
+            </nav>
+
+            <!-- Team Member Profile -->
+            <article class="member-profile">
+                <!-- Profile Header -->
+                <header class="profile-header section">
+                    <div class="profile-hero">
+                        <div class="profile-image">
+                            <img src="{{MEMBER_IMAGE}}" alt="{{MEMBER_NAME}}" loading="eager">
+                        </div>
+                        <div class="profile-info">
+                            <h1>{{MEMBER_NAME}}</h1>
+                            <h2 class="role">{{MEMBER_ROLE}}</h2>
+                            <p class="bio">{{MEMBER_BIO}}</p>
+
+                            <!-- Contact Information -->
+                            <div class="contact-info">
+                                {{#if MEMBER_EMAIL}}
+                                <div class="contact-item">
+                                    <span class="contact-label">Email:</span>
+                                    <a href="mailto:{{MEMBER_EMAIL}}">{{MEMBER_EMAIL}}</a>
+                                </div>
+                                {{/if}}
+
+                                {{#if MEMBER_PHONE}}
+                                <div class="contact-item">
+                                    <span class="contact-label">Phone:</span>
+                                    <a href="tel:{{MEMBER_PHONE}}">{{MEMBER_PHONE}}</a>
+                                </div>
+                                {{/if}}
+
+                                {{#if MEMBER_WEBSITE}}
+                                <div class="contact-item">
+                                    <span class="contact-label">Website:</span>
+                                    <a href="{{MEMBER_WEBSITE}}" target="_blank" rel="noopener">{{MEMBER_WEBSITE}}</a>
+                                </div>
+                                {{/if}}
+                            </div>
+
+                            <!-- Social Links -->
+                            {{#if MEMBER_SOCIALS}}
+                            <div class="social-links">
+                                {{MEMBER_SOCIALS_HTML}}
+                            </div>
+                            {{/if}}
+
+                            <!-- CV Download -->
+                            {{#if MEMBER_CV}}
+                            <div class="cv-download">
+                                <a href="{{MEMBER_CV}}" class="btn btn-primary" download>Download CV</a>
+                            </div>
+                            {{/if}}
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Skills Section -->
+                <section class="skills-section section">
+                    <h3>Skills & Expertise</h3>
+                    <div class="skills-grid">
+                        {{MEMBER_SKILLS_LIST}}
+                    </div>
+                </section>
+
+                <!-- Projects & Contributions -->
+                <section class="contributions-section section">
+                    <h3>Projects & Contributions</h3>
+                    <div class="contributions-content">
+                        <div class="games-worked-on">
+                            <h4>Games Worked On</h4>
+                            <div id="member-games-container">
+                                <!-- Will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="blog-posts">
+                            <h4>Blog Posts</h4>
+                            <div id="member-blogs-container">
+                                <!-- Will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="awards-participated">
+                            <h4>Awards & Recognition</h4>
+                            <div id="member-awards-container">
+                                <!-- Will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Professional Journey -->
+                <section class="journey-section section">
+                    <h3>Professional Journey</h3>
+                    <div class="journey-content">
+                        <p>{{MEMBER_JOURNEY_CONTENT}}</p>
+                    </div>
+                </section>
+            </article>
+
+            <!-- Back to Team -->
+            <div class="back-to-team section">
+                <a href="../../team.html" class="btn btn-secondary">← Back to Team</a>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../../assets/js/includes.js" defer></script>
+    <script src="../../assets/js/utils.js" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadMemberContributions();
+        });
+
+        async function loadMemberContributions() {
+            const memberSlug = '{{MEMBER_SLUG}}';
+
+            try {
+                // Load games this member worked on
+                const gamesResponse = await fetch('../../data/games.json');
+                const games = await gamesResponse.json();
+
+                // For now, we'll show all games as this would need more detailed data structure
+                const memberGames = games.slice(0, 3);
+
+                const gamesContainer = document.getElementById('member-games-container');
+                if (memberGames.length > 0) {
+                    gamesContainer.innerHTML = memberGames.map(game => `
+                        <div class="contribution-item">
+                            <img src="${game.thumbnail}" alt="${game.title}" class="contribution-thumb">
+                            <div class="contribution-info">
+                                <h5><a href="../../${game.detailPath}">${game.title}</a></h5>
+                                <p class="contribution-role">Contributed as ${game.status === 'Released' ? 'Developer' : 'Current Project'}</p>
+                                <p class="contribution-desc">${game.description.substring(0, 100)}...</p>
+                            </div>
+                        </div>
+                    `).join('');
+                } else {
+                    gamesContainer.innerHTML = '<p>No games to display yet.</p>';
+                }
+
+                // Load blog posts by this member
+                const blogsResponse = await fetch('../../data/blogs.json');
+                const blogs = await blogsResponse.json();
+                const memberBlogs = blogs.filter(blog => blog.author === '{{MEMBER_NAME}}');
+
+                const blogsContainer = document.getElementById('member-blogs-container');
+                if (memberBlogs.length > 0) {
+                    blogsContainer.innerHTML = memberBlogs.map(blog => `
+                        <div class="contribution-item">
+                            <img src="${blog.thumbnail}" alt="${blog.title}" class="contribution-thumb">
+                            <div class="contribution-info">
+                                <h5><a href="../../${blog.detailPath}">${blog.title}</a></h5>
+                                <p class="contribution-date">${Utils.formatDate(blog.date)}</p>
+                                <p class="contribution-desc">${blog.excerpt.substring(0, 100)}...</p>
+                            </div>
+                        </div>
+                    `).join('');
+                } else {
+                    blogsContainer.innerHTML = '<p>No blog posts yet.</p>';
+                }
+
+                // Load awards this member participated in
+                const awardsResponse = await fetch('../../data/awards.json');
+                const awards = await awardsResponse.json();
+                const memberAwards = awards.filter(award =>
+                    award.participatingMembers && award.participatingMembers.includes(memberSlug)
+                );
+
+                const awardsContainer = document.getElementById('member-awards-container');
+                if (memberAwards.length > 0) {
+                    awardsContainer.innerHTML = memberAwards.map(award => `
+                        <div class="contribution-item">
+                            <img src="${award.thumbnail}" alt="${award.title}" class="contribution-thumb">
+                            <div class="contribution-info">
+                                <h5><a href="../../${award.detailPath}">${award.title}</a></h5>
+                                <p class="contribution-role">${award.rank} - ${award.competition}</p>
+                                <p class="contribution-date">${Utils.formatDate(award.date)}</p>
+                            </div>
+                        </div>
+                    `).join('');
+                } else {
+                    awardsContainer.innerHTML = '<p>No awards to display yet.</p>';
+                }
+
+            } catch (error) {
+                console.error('Error loading member contributions:', error);
+            }
+        }
+    </script>
+</body>
+</html>

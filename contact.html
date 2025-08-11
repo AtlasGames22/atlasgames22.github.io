@@ -3,218 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Atlas Games</title>
-    <meta name="description" content="Get in touch with Atlas Games. Contact us for business inquiries, support, partnerships, or join our team.">
-    <meta name="keywords" content="Atlas Games contact, game studio contact, business inquiries, support">
+    <meta name="description" content="Get in touch with Atlas Games. Contact us for inquiries, partnerships, or feedback about our games and services.">
+    <meta name="keywords" content="Atlas Games contact, game development contact, get in touch">
+    <meta name="author" content="Atlas Games">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/components.css">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact - Atlas Games">
+    <meta property="og:description" content="Get in touch with Atlas Games for inquiries and partnerships">
+    <meta property="og:image" content="assets/images/ui/og-contact.jpg">
+    <meta property="og:url" content="https://atlasgames22.github.io/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Atlas Games">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact - Atlas Games">
+    <meta name="twitter:description" content="Get in touch with Atlas Games for inquiries and partnerships">
+    <meta name="twitter:image" content="assets/images/ui/og-contact.jpg">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Atlas Games",
+        "description": "Contact information for Atlas Games",
+        "url": "https://atlasgames22.github.io/contact.html",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Atlas Games",
+            "email": "info@atlasgames.com",
+            "telephone": "+1-234-567-890"
+        }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Contact - Atlas Games</title>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header class="header">
-        <nav class="nav container">
-            <a href="/" class="nav-brand">
-                <img src="assets/logos/atlas-games-logo.png" alt="Atlas Games" width="40" height="40">
-                <span>Atlas Games</span>
-            </a>
+    <div id="header"></div>
+    <div id="nav"></div>
 
-            <ul class="nav-links">
-                <li><a href="/" class="nav-link">Home</a></li>
-                <li><a href="games.html" class="nav-link">Games</a></li>
-                <li><a href="team.html" class="nav-link">Team</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
+    <main id="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <header class="page-header section">
+                <h1>Get In Touch</h1>
+                <p>We'd love to hear from you! Whether you have questions about our games, partnership opportunities, or just want to say hello.</p>
+            </header>
 
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-        </nav>
-    </header>
-
-    <main class="main" id="main-content">
-        <div class="page-header">
-            <div class="container">
-                <h1 class="page-title">Contact Us</h1>
-                <p class="page-description">We'd love to hear from you! Whether you have questions, feedback, or want to collaborate, don't hesitate to reach out.</p>
-            </div>
-        </div>
-
-        <section class="section">
-            <div class="container">
-                <div class="grid-2" style="gap: var(--spacing-xl);">
+            <div class="contact-content section">
+                <div class="contact-grid">
                     <!-- Contact Form -->
-                    <div>
+                    <div class="contact-form-section">
                         <h2>Send us a Message</h2>
-                        <form id="contact-form" class="form">
+                        <form class="contact-form" id="contact-form" action="mailto:info@atlasgames.com" method="post" enctype="text/plain">
                             <div class="form-group">
-                                <label for="name" class="form-label">Name *</label>
-                                <input type="text" id="name" name="name" class="form-input" required>
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required aria-describedby="name-error">
+                                <div class="error-message" id="name-error"></div>
                             </div>
 
                             <div class="form-group">
-                                <label for="email" class="form-label">Email *</label>
-                                <input type="email" id="email" name="email" class="form-input" required>
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required aria-describedby="email-error">
+                                <div class="error-message" id="email-error"></div>
                             </div>
 
                             <div class="form-group">
-                                <label for="subject" class="form-label">Subject *</label>
-                                <select id="subject" name="subject" class="form-input" required>
-                                    <option value="">Select a topic</option>
-                                    <option value="general">General Inquiry</option>
-                                    <option value="support">Game Support</option>
-                                    <option value="business">Business/Partnership</option>
-                                    <option value="careers">Careers</option>
-                                    <option value="press">Press/Media</option>
-                                    <option value="feedback">Feedback/Suggestions</option>
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required aria-describedby="subject-error">
+                                    <option value="">Select a subject</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Game Feedback">Game Feedback</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Partnership">Partnership Opportunity</option>
+                                    <option value="Press Inquiry">Press Inquiry</option>
+                                    <option value="Other">Other</option>
                                 </select>
+                                <div class="error-message" id="subject-error"></div>
                             </div>
 
                             <div class="form-group">
-                                <label for="message" class="form-label">Message *</label>
-                                <textarea id="message" name="message" class="form-textarea" rows="6" required placeholder="Tell us how we can help you..."></textarea>
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required aria-describedby="message-error" placeholder="Tell us more about your inquiry..."></textarea>
+                                <div class="error-message" id="message-error"></div>
                             </div>
 
-                            <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
                         </form>
                     </div>
 
                     <!-- Contact Information -->
-                    <div>
-                        <h2>Get in Touch</h2>
+                    <div class="contact-info-section">
+                        <h2>Contact Information</h2>
+
                         <div class="contact-info">
-                            <div class="contact-item" style="margin-bottom: var(--spacing-lg);">
-                                <h4>📧 Email</h4>
-                                <p><a href="mailto:atlasgamesstudio22@gmail.com">atlasgamesstudio22@gmail.com</a></p>
-                                <p style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">We typically respond within 24-48 hours</p>
+                            <div class="contact-item">
+                                <h3>Email</h3>
+                                <p><a href="mailto:info@atlasgames.com">info@atlasgames.com</a></p>
                             </div>
 
-                            <div class="contact-item" style="margin-bottom: var(--spacing-lg);">
-                                <h4>📞 Phone</h4>
-                                <p><a href="tel:+27814752986">+27 81 475 2986</a></p>
-                                <p style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">Available Monday-Friday, 9 AM - 5 PM SAST</p>
+                            <div class="contact-item">
+                                <h3>Phone</h3>
+                                <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
                             </div>
 
-                            <div class="contact-item" style="margin-bottom: var(--spacing-lg);">
-                                <h4>💬 Discord</h4>
-                                <p><a href="https://discord.gg/YuSKf7aPwf" target="_blank" rel="noopener">Join our community</a></p>
-                                <p style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">Best for community questions and real-time chat</p>
+                            <div class="contact-item">
+                                <h3>Office Hours</h3>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                Saturday: 10:00 AM - 4:00 PM<br>
+                                Sunday: Closed</p>
                             </div>
 
-                            <div class="contact-item" style="margin-bottom: var(--spacing-lg);">
-                                <h4>🎮 itch.io</h4>
-                                <p><a href="https://atlas-games-22.itch.io/" target="_blank" rel="noopener">Our itch.io profile</a></p>
-                                <p style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">Download our games and leave feedback</p>
+                            <div class="contact-item">
+                                <h3>Follow Us</h3>
+                                <div class="social-links">
+                                    <a href="#" aria-label="Follow us on Twitter" target="_blank" rel="noopener">
+                                        <i class="social-icon twitter"></i> Twitter
+                                    </a>
+                                    <a href="#" aria-label="Subscribe to our YouTube channel" target="_blank" rel="noopener">
+                                        <i class="social-icon youtube"></i> YouTube
+                                    </a>
+                                    <a href="#" aria-label="Join our Discord server" target="_blank" rel="noopener">
+                                        <i class="social-icon discord"></i> Discord
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Quick Links -->
-                        <div class="contact-quick-links" style="margin-top: var(--spacing-xl);">
-                            <h3>Quick Links</h3>
-                            <div class="grid-2" style="gap: var(--spacing-sm);">
-                                <a href="https://discord.gg/YuSKf7aPwf" class="btn btn-outline" target="_blank" rel="noopener">
-                                    Join Discord
-                                </a>
-                                <a href="https://atlas-games-22.itch.io/" class="btn btn-outline" target="_blank" rel="noopener">
-                                    Visit itch.io
-                                </a>
+                        <!-- Optional: Google Map -->
+                        <div class="map-section">
+                            <h3>Our Location</h3>
+                            <div class="map-placeholder">
+                                <p>Map coming soon - We're a remote-first team!</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- FAQ Section -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <div class="grid-2" style="gap: var(--spacing-lg);">
-                    <div>
-                        <div class="faq-item" style="margin-bottom: var(--spacing-lg);">
-                            <h4>How can I report a bug?</h4>
-                            <p>You can report bugs through our Discord community, email us directly, or use the contact form above. Please include your system specifications and steps to reproduce the issue.</p>
-                        </div>
-
-                        <div class="faq-item" style="margin-bottom: var(--spacing-lg);">
-                            <h4>Do you offer internships or remote work?</h4>
-                            <p>Yes! We're a remote-first studio and regularly offer internship opportunities. Check our Discord announcements or email us with your portfolio and area of interest.</p>
-                        </div>
-
-                        <div class="faq-item" style="margin-bottom: var(--spacing-lg);">
-                            <h4>Can I suggest features for your games?</h4>
-                            <p>Absolutely! We love hearing from our community. Join our Discord or use the contact form to share your ideas. While we can't implement every suggestion, we read and consider all feedback.</p>
-                        </div>
+            <!-- FAQ Section -->
+            <section class="faq-section section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How can I report a bug in your games?</h3>
+                        <p>Please use our contact form above with "Technical Support" as the subject, or reach out directly via email with details about the issue you're experiencing.</p>
                     </div>
 
-                    <div>
-                        <div class="faq-item" style="margin-bottom: var(--spacing-lg);">
-                            <h4>Are you interested in publishing other developers' games?</h4>
-                            <p>Currently, we're focused on our own projects, but we're open to discussing unique collaboration opportunities. Please email us with details about your project.</p>
-                        </div>
+                    <div class="faq-item">
+                        <h3>Do you offer internships or job opportunities?</h3>
+                        <p>We're always looking for talented individuals! Send us your portfolio and CV via the contact form with "Partnership" as the subject.</p>
+                    </div>
 
-                        <div class="faq-item" style="margin-bottom: var(--spacing-lg);">
-                            <h4>How can I become a beta tester?</h4>
-                            <p>Join our Discord community! We regularly recruit beta testers from our most active community members. Beta opportunities are announced in our Discord server first.</p>
-                        </div>
+                    <div class="faq-item">
+                        <h3>Can I suggest ideas for new games?</h3>
+                        <p>We love hearing creative ideas from our community! Use the "General Inquiry" option to share your thoughts with us.</p>
+                    </div>
 
-                        <div class="faq-item" style="margin-bottom: var(--spacing-lg);">
-                            <h4>Do you accept unsolicited portfolios?</h4>
-                            <p>Yes, we welcome portfolios! Even if we don't have immediate openings, we keep talented individuals in mind for future opportunities. Email us with your portfolio and preferred contact method.</p>
-                        </div>
+                    <div class="faq-item">
+                        <h3>How do I get press materials for your games?</h3>
+                        <p>For press kits, screenshots, and other media materials, select "Press Inquiry" in the contact form and we'll get back to you promptly.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Response Time Notice -->
-        <section class="section">
-            <div class="container">
-                <div class="alert alert-info text-center">
-                    <h3>Response Times</h3>
-                    <p><strong>Email:</strong> 24-48 hours | <strong>Discord:</strong> Usually within a few hours | <strong>Phone:</strong> During business hours (9 AM - 5 PM SAST)</p>
-                    <p>For urgent technical issues, Discord is often the fastest way to get help from our community and team.</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Atlas Games</h4>
-                    <p>Creating games built to endure.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="games.html">Our Games</a></li>
-                        <li><a href="team.html">Meet the Team</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="mailto:atlasgamesstudio22@gmail.com">atlasgamesstudio22@gmail.com</a></li>
-                        <li><a href="tel:+27814752986">+27 81 475 2986</a></li>
-                        <li><a href="https://discord.gg/YuSKf7aPwf" target="_blank" rel="noopener">Discord</a></li>
-                        <li><a href="https://atlas-games-22.itch.io/" target="_blank" rel="noopener">itch.io</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Atlas Games. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"></div>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/includes.js" defer></script>
+    <script src="assets/js/utils.js" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactForm = document.getElementById('contact-form');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', handleFormSubmit);
+
+                // Real-time validation
+                const inputs = contactForm.querySelectorAll('input, select, textarea');
+                inputs.forEach(input => {
+                    input.addEventListener('blur', () => validateField(input));
+                    input.addEventListener('input', () => clearError(input));
+                });
+            }
+        });
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            // Validate all fields
+            let isValid = true;
+            const inputs = form.querySelectorAll('input, select, textarea');
+
+            inputs.forEach(input => {
+                if (!validateField(input)) {
+                    isValid = false;
+                }
+            });
+
+            if (isValid) {
+                // Create mailto link with form data
+                const subject = encodeURIComponent(`Contact Form: ${formData.get('subject')}`);
+                const body = encodeURIComponent(`
+Name: ${formData.get('name')}
+Email: ${formData.get('email')}
+Subject: ${formData.get('subject')}
+
+Message:
+${formData.get('message')}
+                `);
+
+                const mailtoLink = `mailto:info@atlasgames.com?subject=${subject}&body=${body}`;
+                window.location.href = mailtoLink;
+
+                // Show success message
+                showMessage('Thank you for your message! Your email client should open shortly.', 'success');
+                form.reset();
+            }
+        }
+
+        function validateField(field) {
+            const value = field.value.trim();
+            const fieldName = field.name;
+            let isValid = true;
+            let errorMessage = '';
+
+            // Clear previous error
+            clearError(field);
+
+            // Required field validation
+            if (field.hasAttribute('required') && !value) {
+                errorMessage = `${fieldName.charAt(0).toUpperCase() + fieldName.slice(1)} is required.`;
+                isValid = false;
+            }
+
+            // Email validation
+            if (field.type === 'email' && value && !Utils.isValidEmail(value)) {
+                errorMessage = 'Please enter a valid email address.';
+                isValid = false;
+            }
+
+            // Message length validation
+            if (fieldName === 'message' && value && value.length < 10) {
+                errorMessage = 'Message must be at least 10 characters long.';
+                isValid = false;
+            }
+
+            if (!isValid) {
+                showError(field, errorMessage);
+            }
+
+            return isValid;
+        }
+
+        function showError(field, message) {
+            const errorElement = document.getElementById(`${field.name}-error`);
+            if (errorElement) {
+                errorElement.textContent = message;
+                errorElement.style.display = 'block';
+            }
+            field.classList.add('error');
+        }
+
+        function clearError(field) {
+            const errorElement = document.getElementById(`${field.name}-error`);
+            if (errorElement) {
+                errorElement.textContent = '';
+                errorElement.style.display = 'none';
+            }
+            field.classList.remove('error');
+        }
+
+        function showMessage(message, type = 'info') {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `form-message ${type}`;
+            messageDiv.textContent = message;
+
+            const form = document.getElementById('contact-form');
+            form.insertBefore(messageDiv, form.firstChild);
+
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 5000);
+        }
+    </script>
 </body>
 </html>
+

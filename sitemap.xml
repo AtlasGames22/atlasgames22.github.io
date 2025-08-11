@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Main Pages -->
+    <url>
+        <loc>https://atlasgames22.github.io/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://atlasgames22.github.io/games.html</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://atlasgames22.github.io/blogs.html</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://atlasgames22.github.io/team.html</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://atlasgames22.github.io/awards.html</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://atlasgames22.github.io/contact.html</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Game Detail Pages -->
+    <url>
+        <loc>https://atlasgames22.github.io/game-collection/mystical-realms/mystical-realms-detail.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://atlasgames22.github.io/game-collection/neon-runner/neon-runner-detail.html</loc>
+        <lastmod>2024-08-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://atlasgames22.github.io/game-collection/puzzle-kingdom/puzzle-kingdom-detail.html</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog Detail Pages -->
+    <url>
+        <loc>https://atlasgames22.github.io/blog-collection/game-development-journey/game-development-journey.html</loc>
+        <lastmod>2024-11-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://atlasgames22.github.io/blog-collection/mobile-optimization/mobile-optimization.html</loc>
+        <lastmod>2024-10-28</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://atlasgames22.github.io/blog-collection/puzzle-design/puzzle-design.html</loc>
+        <lastmod>2024-12-03</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Team Detail Pages -->
+    <url>
+        <loc>https://atlasgames22.github.io/team-collection/sarah-chen/sarah-chen-detail.html</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://atlasgames22.github.io/team-collection/marcus-rodriguez/marcus-rodriguez-detail.html</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://atlasgames22.github.io/team-collection/emily-watson/emily-watson-detail.html</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Award Detail Pages -->
+    <url>
+        <loc>https://atlasgames22.github.io/award-collection/indie-excellence-2024/indie-excellence-2024.html</loc>
+        <lastmod>2024-10-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://atlasgames22.github.io/award-collection/mobile-innovation/mobile-innovation.html</loc>
+        <lastmod>2024-09-22</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://atlasgames22.github.io/award-collection/best-art-2024/best-art-2024.html</loc>
+        <lastmod>2024-11-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <!-- Patch Notes Pages -->
+    <url>
+        <loc>https://atlasgames22.github.io/patch-notes/mystical-realms-v1-2-0/mystical-realms-v1-2-0.html</loc>
+        <lastmod>2024-12-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://atlasgames22.github.io/patch-notes/neon-runner-v2-1-5/neon-runner-v2-1-5.html</loc>
+        <lastmod>2024-11-30</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://atlasgames22.github.io/patch-notes/mystical-realms-v1-1-8/mystical-realms-v1-1-8.html</loc>
+        <lastmod>2024-11-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+</urlset>
+

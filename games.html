@@ -3,273 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Games - Atlas Games</title>
-    <meta name="description" content="Explore the complete collection of games from Atlas Games. From farming simulations to action adventures, discover your next gaming obsession.">
-    <meta name="keywords" content="indie games, Atlas Games collection, PC games, simulation games, action games">
+    <meta name="description" content="Explore Atlas Games' collection of immersive gaming experiences. From epic RPGs to mobile adventures, discover our complete game library.">
+    <meta name="keywords" content="Atlas Games, game library, RPG games, mobile games, indie games, puzzle games">
+    <meta name="author" content="Atlas Games">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Games - Atlas Games">
+    <meta property="og:description" content="Explore our complete collection of immersive gaming experiences">
+    <meta property="og:image" content="assets/images/ui/og-games.jpg">
     <meta property="og:url" content="https://atlasgames22.github.io/games.html">
-    <meta property="og:title" content="Our Games - Atlas Games">
-    <meta property="og:description" content="Explore the complete collection of games from Atlas Games.">
-    <meta property="og:image" content="https://atlasgames22.github.io/assets/images/og-games.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Atlas Games">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/components.css">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Games - Atlas Games">
+    <meta name="twitter:description" content="Explore our complete collection of immersive gaming experiences">
+    <meta name="twitter:image" content="assets/images/ui/og-games.jpg">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Atlas Games - Game Collection",
+        "description": "Complete collection of games developed by Atlas Games",
+        "url": "https://atlasgames22.github.io/games.html",
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "Atlas Games Collection"
+        }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Games - Atlas Games</title>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header class="header">
-        <nav class="nav container">
-            <a href="/" class="nav-brand">
-                <img src="assets/logos/atlas-games-logo.png" alt="Atlas Games" width="40" height="40">
-                <span>Atlas Games</span>
-            </a>
+    <div id="header"></div>
+    <div id="nav"></div>
 
-            <ul class="nav-links">
-                <li><a href="/" class="nav-link">Home</a></li>
-                <li><a href="games.html" class="nav-link">Games</a></li>
-                <li><a href="team.html" class="nav-link">Team</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
+    <main id="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <header class="page-header section">
+                <h1>Our Games</h1>
+                <p>Discover our complete collection of immersive gaming experiences, from epic adventures to innovative puzzles.</p>
+            </header>
 
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-        </nav>
-    </header>
+            <!-- Search and Filters -->
+            <div id="filters-container"></div>
 
-    <main class="main" id="main-content">
-        <div class="page-header">
-            <div class="container">
-                <h1 class="page-title">Our Games</h1>
-                <p class="page-description">Discover our collection of immersive gaming experiences, each crafted with passion and built to endure.</p>
+            <!-- Results Info -->
+            <div class="results-info">
+                <div id="results-count"></div>
+            </div>
+
+            <!-- Games Grid -->
+            <div id="games-container">
+                <!-- Games will be loaded here -->
             </div>
         </div>
-
-        <section class="section">
-            <div class="container">
-                <!-- Search and Filter Bar -->
-                <div class="search-bar">
-                    <input type="text" class="search-input form-input" placeholder="Search games...">
-                    <div class="filter-group">
-                        <select name="status" class="filter-select">
-                            <option value="">All Status</option>
-                            <option value="prototype">Prototype</option>
-                            <option value="in-dev">In Development</option>
-                            <option value="released">Released</option>
-                        </select>
-                        <select name="platform" class="filter-select">
-                            <option value="">All Platforms</option>
-                            <option value="windows">Windows</option>
-                            <option value="mac">Mac</option>
-                            <option value="linux">Linux</option>
-                            <option value="web">Web</option>
-                        </select>
-                        <select name="genre" class="filter-select">
-                            <option value="">All Genres</option>
-                            <option value="simulation">Simulation</option>
-                            <option value="action">Action</option>
-                            <option value="puzzle">Puzzle</option>
-                            <option value="strategy">Strategy</option>
-                            <option value="adventure">Adventure</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Games Grid -->
-                <div class="games-grid grid-3">
-                    <!-- Harvest Hustle -->
-                    <div class="card game-card">
-                        <div class="game-card-image">
-                            <img src="assets/images/games/harvest-hustle-cover.jpg" alt="Harvest Hustle" class="card-image">
-                            <div class="game-status released">Released</div>
-                            <div class="game-card-overlay">
-                                <a href="game/harvest-hustle.html" class="btn btn-primary">View Details</a>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Harvest Hustle</h3>
-                            <p class="card-text">A fast-paced farming simulation where time management meets strategic planning. Build your agricultural empire while racing against the seasons.</p>
-                            <div class="tags">
-                                <span class="tag">Simulation</span>
-                                <span class="tag">Strategy</span>
-                                <span class="tag">Farming</span>
-                            </div>
-                            <div class="platforms">Windows, Mac, Linux</div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://atlas-games-22.itch.io/harvest-hustle" class="btn btn-primary" target="_blank" rel="noopener">Play on itch.io</a>
-                        </div>
-                    </div>
-
-                    <!-- Kenny's Khaos -->
-                    <div class="card game-card">
-                        <div class="game-card-image">
-                            <img src="assets/images/games/kennys-khaos-cover.jpg" alt="Kenny's Khaos" class="card-image">
-                            <div class="game-status in-dev">In Development</div>
-                            <div class="game-card-overlay">
-                                <a href="game/kennys-khaos.html" class="btn btn-primary">View Details</a>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Kenny's Khaos</h3>
-                            <p class="card-text">Join Kenny on a chaotic adventure through procedurally generated worlds filled with puzzles, enemies, and unexpected surprises at every turn.</p>
-                            <div class="tags">
-                                <span class="tag">Action</span>
-                                <span class="tag">Adventure</span>
-                                <span class="tag">Roguelike</span>
-                            </div>
-                            <div class="platforms">Windows, Mac</div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="game/kennys-khaos.html" class="btn btn-outline">Coming Soon</a>
-                        </div>
-                    </div>
-
-                    <!-- Tiny Cafe -->
-                    <div class="card game-card">
-                        <div class="game-card-image">
-                            <img src="assets/images/games/tiny-cafe-cover.jpg" alt="Tiny Cafe" class="card-image">
-                            <div class="game-status released">Released</div>
-                            <div class="game-card-overlay">
-                                <a href="game/tiny-cafe.html" class="btn btn-primary">View Details</a>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Tiny Cafe</h3>
-                            <p class="card-text">Manage your own cozy cafe in this relaxing simulation game. Serve customers, customize your space, and build the perfect coffee experience.</p>
-                            <div class="tags">
-                                <span class="tag">Simulation</span>
-                                <span class="tag">Management</span>
-                                <span class="tag">Casual</span>
-                            </div>
-                            <div class="platforms">Windows, Mac, Web</div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://atlas-games-22.itch.io/tiny-cafe" class="btn btn-primary" target="_blank" rel="noopener">Play on itch.io</a>
-                        </div>
-                    </div>
-
-                    <!-- Void Breaker -->
-                    <div class="card game-card">
-                        <div class="game-card-image">
-                            <img src="assets/images/games/void-breaker-cover.jpg" alt="Void Breaker" class="card-image">
-                            <div class="game-status prototype">Prototype</div>
-                            <div class="game-card-overlay">
-                                <a href="game/void-breaker.html" class="btn btn-primary">View Details</a>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Void Breaker</h3>
-                            <p class="card-text">A sci-fi action game where you pilot advanced mechs through dimensional rifts. Fast-paced combat meets strategic mech customization.</p>
-                            <div class="tags">
-                                <span class="tag">Action</span>
-                                <span class="tag">Sci-Fi</span>
-                                <span class="tag">Mech</span>
-                            </div>
-                            <div class="platforms">Windows</div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="game/void-breaker.html" class="btn btn-outline">Early Preview</a>
-                        </div>
-                    </div>
-
-                    <!-- Timmy's Revenge -->
-                    <div class="card game-card">
-                        <div class="game-card-image">
-                            <img src="assets/images/games/timmys-revenge-cover.jpg" alt="Timmy's Revenge" class="card-image">
-                            <div class="game-status in-dev">In Development</div>
-                            <div class="game-card-overlay">
-                                <a href="game/timmys-revenge.html" class="btn btn-primary">View Details</a>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Timmy's Revenge</h3>
-                            <p class="card-text">A quirky platformer following young Timmy's quest for justice. Unique mechanics, colorful worlds, and boss battles await in this charming adventure.</p>
-                            <div class="tags">
-                                <span class="tag">Platformer</span>
-                                <span class="tag">Adventure</span>
-                                <span class="tag">Family-Friendly</span>
-                            </div>
-                            <div class="platforms">Windows, Mac, Linux</div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="game/timmys-revenge.html" class="btn btn-outline">Coming Soon</a>
-                        </div>
-                    </div>
-
-                    <!-- Honey Haven -->
-                    <div class="card game-card">
-                        <div class="game-card-image">
-                            <img src="assets/images/games/honey-haven-cover.jpg" alt="Honey Haven" class="card-image">
-                            <div class="game-status released">Released</div>
-                            <div class="game-card-overlay">
-                                <a href="game/honey-haven.html" class="btn btn-primary">View Details</a>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Honey Haven</h3>
-                            <p class="card-text">Become a master beekeeper in this peaceful simulation. Manage hives, explore flower fields, and create the sweetest honey empire.</p>
-                            <div class="tags">
-                                <span class="tag">Simulation</span>
-                                <span class="tag">Nature</span>
-                                <span class="tag">Relaxing</span>
-                            </div>
-                            <div class="platforms">Windows, Mac, Linux, Web</div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://atlas-games-22.itch.io/honey-haven" class="btn btn-primary" target="_blank" rel="noopener">Play on itch.io</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Call to Action -->
-                <div class="text-center" style="margin-top: var(--spacing-xxl);">
-                    <h2>Want to Stay Updated?</h2>
-                    <p>Join our Discord community to get early access to new games, beta testing opportunities, and behind-the-scenes development updates.</p>
-                    <a href="https://discord.gg/YuSKf7aPwf" class="btn btn-primary btn-large" target="_blank" rel="noopener">Join Our Discord</a>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Atlas Games</h4>
-                    <p>Creating games built to endure.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="games.html">Our Games</a></li>
-                        <li><a href="team.html">Meet the Team</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="mailto:atlasgamesstudio22@gmail.com">atlasgamesstudio22@gmail.com</a></li>
-                        <li><a href="tel:+27814752986">+27 81 475 2986</a></li>
-                        <li><a href="https://discord.gg/YuSKf7aPwf" target="_blank" rel="noopener">Discord</a></li>
-                        <li><a href="https://atlas-games-22.itch.io/" target="_blank" rel="noopener">itch.io</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Atlas Games. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"></div>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/includes.js" defer></script>
+    <script src="assets/js/utils.js" defer></script>
+    <script src="assets/js/search.js" defer></script>
+    <script src="assets/js/filters.js" defer></script>
+    <script src="assets/js/listing-loader.js" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Custom card template for games
+            const gameCardTemplate = (game) => {
+                const tags = game.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+                const platforms = game.platform.map(platform => `<span class="platform">${platform}</span>`).join('');
+
+                return `
+                    <img src="${game.thumbnail}" alt="${game.title}" class="card-image" loading="lazy">
+                    <div class="card-content">
+                        <h3 class="card-title">
+                            <a href="${game.detailPath}">${game.title}</a>
+                        </h3>
+                        <div class="card-meta">
+                            <span class="release-date">${Utils.formatDate(game.releaseDate)}</span>
+                            <span class="genre">${game.genre}</span>
+                        </div>
+                        <p class="card-description">${game.description}</p>
+                        <div class="card-platforms">${platforms}</div>
+                        <div class="card-tags">${tags}</div>
+                        <div class="card-footer">
+                            <span class="status status-${game.status.toLowerCase().replace(/\s+/g, '-')}">${game.status}</span>
+                            <div class="card-actions">
+                                <a href="${game.detailPath}" class="btn btn-primary btn-sm">Learn More</a>
+                                ${game.itchUrl ? `<a href="${game.itchUrl}" class="btn btn-secondary btn-sm" target="_blank" rel="noopener">Play Now</a>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            };
+
+            // Initialize games listing
+            const gamesListing = new ListingLoader({
+                dataUrl: 'data/games.json',
+                containerSelector: '#games-container',
+                filtersSelector: '#filters-container',
+                cardTemplate: gameCardTemplate,
+                searchFields: ['title', 'description', 'tags', 'genre', 'platform'],
+                itemsPerPage: 9
+            });
+        });
+    </script>
 </body>
 </html>

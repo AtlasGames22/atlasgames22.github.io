@@ -3,35 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlas Games - Games Built to Endure</title>
-    <meta name="description" content="Atlas Games is an indie game studio creating immersive, enduring gaming experiences. Discover our games, meet our team, and join our community.">
-    <meta name="keywords" content="indie games, game studio, Atlas Games, game development, gaming">
+    <meta name="description" content="Atlas Games - Crafting immersive gaming experiences with passion and innovation. Discover our latest games, meet our talented team, and explore our award-winning projects.">
+    <meta name="keywords" content="Atlas Games, game development, indie games, RPG, mobile games, puzzle games">
+    <meta name="author" content="Atlas Games">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
+    <meta property="og:title" content="Atlas Games - Home">
+    <meta property="og:description" content="Crafting immersive gaming experiences with passion and innovation">
+    <meta property="og:image" content="assets/images/ui/og-home.jpg">
+    <meta property="og:url" content="https://atlasgames22.github.io">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://atlasgames22.github.io/">
-    <meta property="og:title" content="Atlas Games - Games Built to Endure">
-    <meta property="og:description" content="Atlas Games is an indie game studio creating immersive, enduring gaming experiences.">
-    <meta property="og:image" content="https://atlasgames22.github.io/assets/images/og-image.jpg">
+    <meta property="og:site_name" content="Atlas Games">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://atlasgames22.github.io/">
-    <meta property="twitter:title" content="Atlas Games - Games Built to Endure">
-    <meta property="twitter:description" content="Atlas Games is an indie game studio creating immersive, enduring gaming experiences.">
-    <meta property="twitter:image" content="https://atlasgames22.github.io/assets/images/og-image.jpg">
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.webmanifest">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/components.css">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Atlas Games - Home">
+    <meta name="twitter:description" content="Crafting immersive gaming experiences with passion and innovation">
+    <meta name="twitter:image" content="assets/images/ui/og-home.jpg">
 
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
@@ -39,239 +27,314 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Atlas Games",
-        "description": "Indie game studio creating games built to endure",
         "url": "https://atlasgames22.github.io",
-        "logo": "https://atlasgames22.github.io/assets/logos/atlas-games-logo.png",
+        "logo": "https://atlasgames22.github.io/assets/images/ui/logo.png",
+        "description": "Crafting immersive gaming experiences with passion and innovation",
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+27 81 475 2986",
+            "telephone": "+1-234-567-890",
             "contactType": "customer service",
-            "email": "atlasgamesstudio22@gmail.com"
+            "email": "info@atlasgames.com"
         },
         "sameAs": [
-            "https://atlas-games-22.itch.io/",
-            "https://discord.gg/YuSKf7aPwf"
+            "https://twitter.com/atlasgames",
+            "https://youtube.com/atlasgames"
         ]
     }
     </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Atlas Games - Home</title>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header class="header">
-        <nav class="nav container">
-            <a href="/" class="nav-brand">
-                <img src="assets/logos/atlas-games-logo.png" alt="Atlas Games" width="40" height="40">
-                <span>Atlas Games</span>
-            </a>
+    <div id="header"></div>
+    <div id="nav"></div>
 
-            <ul class="nav-links">
-                <li><a href="/" class="nav-link">Home</a></li>
-                <li><a href="games.html" class="nav-link">Games</a></li>
-                <li><a href="team.html" class="nav-link">Team</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                ☰
-            </button>
-        </nav>
-    </header>
-
-    <main class="main" id="main-content">
+    <main id="main-content">
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero section">
             <div class="container">
-                <h1 class="hero-title">Atlas Games</h1>
-                <p class="hero-subtitle">Games Built to Endure</p>
-                <p class="hero-description">We craft immersive gaming experiences that stand the test of time, bringing together innovation, storytelling, and community in every pixel.</p>
-                <div class="flex justify-center" style="gap: var(--spacing-md); margin-top: var(--spacing-lg);">
-                    <a href="games.html" class="btn btn-primary btn-large">Explore Our Games</a>
-                    <a href="https://discord.gg/YuSKf7aPwf" class="btn btn-outline btn-large" target="_blank" rel="noopener">Join Discord</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Game Section -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Featured Game</h2>
-                <div id="featured-game" class="grid-1">
-                    <!-- Featured game will be loaded here by JavaScript -->
-                    <div class="card game-card">
-                        <div class="game-card-image">
-                            <img src="assets/images/games/harvest-hustle-cover.jpg" alt="Harvest Hustle" class="card-image">
-                            <div class="game-status released">Released</div>
-                            <div class="game-card-overlay">
-                                <a href="game/harvest-hustle.html" class="btn btn-primary">View Details</a>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Harvest Hustle</h3>
-                            <p class="card-text">A fast-paced farming simulation where time management meets strategic planning. Build your agricultural empire while racing against the seasons.</p>
-                            <div class="tags">
-                                <span class="tag">Simulation</span>
-                                <span class="tag">Strategy</span>
-                                <span class="tag">Farming</span>
-                            </div>
-                            <div class="platforms">Windows, Mac, Linux</div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://atlas-games-22.itch.io/harvest-hustle" class="btn btn-primary" target="_blank" rel="noopener">Play on itch.io</a>
-                        </div>
+                <div class="hero-content">
+                    <img src="assets/images/ui/logo-large.png" alt="Atlas Games Logo" class="hero-logo">
+                    <h1>Atlas Games</h1>
+                    <p class="hero-tagline">Crafting immersive gaming experiences with passion and innovation</p>
+                    <div class="hero-actions">
+                        <a href="games.html" class="btn btn-primary">Explore Our Games</a>
+                        <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Latest Blog Posts -->
-        <section class="section">
+        <!-- Featured Games -->
+        <section class="featured-games section">
             <div class="container">
-                <h2 class="section-title">Latest Updates</h2>
-                <div id="latest-posts" class="grid-3">
-                    <!-- Latest posts will be loaded here by JavaScript -->
-                    <div class="card">
-                        <img src="assets/images/blog/game-dev-update.jpg" alt="Development Update" class="card-image">
-                        <div class="card-body">
-                            <div class="blog-date">January 15, 2025</div>
-                            <h3 class="card-title">
-                                <a href="blog/harvest-hustle-v2-update.html">Harvest Hustle v2.0 - Major Update Released!</a>
-                            </h3>
-                            <p class="card-text">We're excited to announce the release of Harvest Hustle v2.0, featuring new crops, seasonal events, and improved farming mechanics.</p>
-                            <div class="tags">
-                                <span class="tag">Game Update</span>
-                                <span class="tag">Harvest Hustle</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="assets/images/blog/team-expansion.jpg" alt="Team Growth" class="card-image">
-                        <div class="card-body">
-                            <div class="blog-date">January 10, 2025</div>
-                            <h3 class="card-title">
-                                <a href="blog/welcoming-new-team-members.html">Welcoming New Team Members to Atlas Games</a>
-                            </h3>
-                            <p class="card-text">As we continue to grow, we're thrilled to welcome talented new developers and artists to our team. Meet our newest members!</p>
-                            <div class="tags">
-                                <span class="tag">Team</span>
-                                <span class="tag">Studio News</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="assets/images/blog/indie-game-development.jpg" alt="Game Development" class="card-image">
-                        <div class="card-body">
-                            <div class="blog-date">January 5, 2025</div>
-                            <h3 class="card-title">
-                                <a href="blog/lessons-learned-indie-development.html">5 Lessons Learned in Our First Year of Indie Development</a>
-                            </h3>
-                            <p class="card-text">Reflecting on our journey as an indie studio, we share the key insights and challenges that shaped our approach to game development.</p>
-                            <div class="tags">
-                                <span class="tag">Development</span>
-                                <span class="tag">Indie Games</span>
-                            </div>
-                        </div>
-                    </div>
+                <h2>Featured Games</h2>
+                <div id="featured-games-container" class="grid grid-3">
+                    <!-- Games will be loaded here -->
                 </div>
-                <div class="text-center" style="margin-top: var(--spacing-lg);">
-                    <a href="blog.html" class="btn btn-outline">View All Posts</a>
+                <div class="section-footer">
+                    <a href="games.html" class="btn btn-primary">View All Games</a>
                 </div>
             </div>
         </section>
 
-        <!-- Community Section -->
-        <section class="section">
+        <!-- Recent Blogs -->
+        <section class="recent-blogs section">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-title">Join Our Community</h2>
-                    <p class="section-subtitle">Connect with fellow gamers, get development updates, and shape the future of our games.</p>
-                    <div class="flex justify-center" style="gap: var(--spacing-md); margin-top: var(--spacing-lg);">
-                        <a href="https://discord.gg/YuSKf7aPwf" class="btn btn-primary btn-large" target="_blank" rel="noopener">
-                            Discord Community
-                        </a>
-                        <a href="https://atlas-games-22.itch.io/" class="btn btn-secondary btn-large" target="_blank" rel="noopener">
-                            itch.io Profile
-                        </a>
-                    </div>
+                <h2>Latest From Our Blog</h2>
+                <div id="recent-blogs-container" class="grid grid-3">
+                    <!-- Blogs will be loaded here -->
+                </div>
+                <div class="section-footer">
+                    <a href="blogs.html" class="btn btn-primary">Read More Articles</a>
                 </div>
             </div>
         </section>
 
-        <!-- Newsletter Signup -->
-        <section class="section">
+        <!-- Team Highlight -->
+        <section class="team-highlight section">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-title">Stay Updated</h2>
-                    <p class="section-subtitle">Get the latest news about our games and studio directly in your inbox.</p>
-                    <form id="newsletter-form" class="form" style="max-width: 400px; margin: 0 auto;">
-                        <div class="form-group">
-                            <label for="newsletter-email" class="sr-only">Email address</label>
-                            <input type="email" id="newsletter-email" name="email" class="form-input" placeholder="Enter your email" required>
+                <h2>Meet Our Team</h2>
+                <div id="team-highlight-container" class="grid grid-3">
+                    <!-- Team members will be loaded here -->
+                </div>
+                <div class="section-footer">
+                    <a href="team.html" class="btn btn-primary">Meet Everyone</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards Highlight -->
+        <section class="awards-highlight section">
+            <div class="container">
+                <h2>Our Achievements</h2>
+                <div id="awards-highlight-container" class="grid grid-3">
+                    <!-- Awards will be loaded here -->
+                </div>
+                <div class="section-footer">
+                    <a href="awards.html" class="btn btn-primary">View All Awards</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section">
+            <div class="container">
+                <div class="about-content">
+                    <h2>About Atlas Games</h2>
+                    <p>We are a passionate indie game development studio dedicated to creating memorable gaming experiences. Our team combines creative vision with technical expertise to bring unique worlds and engaging gameplay to life.</p>
+                    <p>From epic RPG adventures to fast-paced mobile games, we explore diverse genres while maintaining our commitment to quality, innovation, and player satisfaction.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="games-count">0</span>
+                            <span class="stat-label">Games Released</span>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe</button>
-                    </form>
+                        <div class="stat">
+                            <span class="stat-number" id="awards-count">0</span>
+                            <span class="stat-label">Awards Won</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="team-count">0</span>
+                            <span class="stat-label">Team Members</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Atlas Games</h4>
-                    <p>Creating games built to endure. We're passionate about crafting immersive experiences that bring players together and stand the test of time.</p>
-                </div>
+    <div id="footer"></div>
 
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="games.html">Our Games</a></li>
-                        <li><a href="team.html">Meet the Team</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
+    <script src="assets/js/includes.js" defer></script>
+    <script src="assets/js/utils.js" defer></script>
+    <script src="assets/js/search.js" defer></script>
+    <script>
+        // Homepage specific functionality
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                // Load and display featured content
+                await loadFeaturedGames();
+                await loadRecentBlogs();
+                await loadTeamHighlight();
+                await loadAwardsHighlight();
+                await updateStats();
+            } catch (error) {
+                console.error('Error loading homepage content:', error);
+            }
+        });
 
-                <div class="footer-section">
-                    <h4>Games</h4>
-                    <ul>
-                        <li><a href="game/harvest-hustle.html">Harvest Hustle</a></li>
-                        <li><a href="game/kennys-khaos.html">Kenny's Khaos</a></li>
-                        <li><a href="game/tiny-cafe.html">Tiny Cafe</a></li>
-                        <li><a href="game/void-breaker.html">Void Breaker</a></li>
-                    </ul>
-                </div>
+        async function loadFeaturedGames() {
+            try {
+                const response = await fetch('data/games.json');
+                const games = await response.json();
+                const featuredGames = games.slice(0, 3);
 
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="mailto:atlasgamesstudio22@gmail.com">atlasgamesstudio22@gmail.com</a></li>
-                        <li><a href="tel:+27814752986">+27 81 475 2986</a></li>
-                        <li><a href="https://discord.gg/YuSKf7aPwf" target="_blank" rel="noopener">Discord Community</a></li>
-                        <li><a href="https://atlas-games-22.itch.io/" target="_blank" rel="noopener">itch.io Profile</a></li>
-                    </ul>
-                </div>
-            </div>
+                const container = document.getElementById('featured-games-container');
+                container.innerHTML = '';
 
-            <div class="footer-bottom">
-                <p>&copy; 2025 Atlas Games. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-                    <a href="#" class="social-link" aria-label="YouTube">📺</a>
-                    <a href="#" class="social-link" aria-label="Instagram">📷</a>
-                    <a href="https://discord.gg/YuSKf7aPwf" class="social-link" aria-label="Discord" target="_blank" rel="noopener">💬</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+                featuredGames.forEach(game => {
+                    const card = createGameCard(game);
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error loading featured games:', error);
+            }
+        }
 
-    <script src="assets/js/main.js"></script>
+        async function loadRecentBlogs() {
+            try {
+                const response = await fetch('data/blogs.json');
+                const blogs = await response.json();
+                const recentBlogs = blogs.slice(0, 3);
+
+                const container = document.getElementById('recent-blogs-container');
+                container.innerHTML = '';
+
+                recentBlogs.forEach(blog => {
+                    const card = createBlogCard(blog);
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error loading recent blogs:', error);
+            }
+        }
+
+        async function loadTeamHighlight() {
+            try {
+                const response = await fetch('data/team.json');
+                const team = await response.json();
+                const teamHighlight = team.slice(0, 3);
+
+                const container = document.getElementById('team-highlight-container');
+                container.innerHTML = '';
+
+                teamHighlight.forEach(member => {
+                    const card = createTeamCard(member);
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error loading team highlight:', error);
+            }
+        }
+
+        async function loadAwardsHighlight() {
+            try {
+                const response = await fetch('data/awards.json');
+                const awards = await response.json();
+                const awardsHighlight = awards.slice(0, 3);
+
+                const container = document.getElementById('awards-highlight-container');
+                container.innerHTML = '';
+
+                awardsHighlight.forEach(award => {
+                    const card = createAwardCard(award);
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error loading awards highlight:', error);
+            }
+        }
+
+        function createGameCard(game) {
+            const card = document.createElement('article');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${game.thumbnail}" alt="${game.title}" class="card-image" loading="lazy">
+                <div class="card-content">
+                    <h3 class="card-title">
+                        <a href="${game.detailPath}">${game.title}</a>
+                    </h3>
+                    <div class="card-meta">${Utils.formatDate(game.releaseDate)}</div>
+                    <p class="card-description">${game.description}</p>
+                    <div class="card-tags">
+                        ${game.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                    <span class="status status-${game.status.toLowerCase().replace(/\s+/g, '-')}">${game.status}</span>
+                </div>
+            `;
+            return card;
+        }
+
+        function createBlogCard(blog) {
+            const card = document.createElement('article');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${blog.thumbnail}" alt="${blog.title}" class="card-image" loading="lazy">
+                <div class="card-content">
+                    <h3 class="card-title">
+                        <a href="${blog.detailPath}">${blog.title}</a>
+                    </h3>
+                    <div class="card-meta">${Utils.formatDate(blog.date)} • ${blog.readTime} min read</div>
+                    <p class="card-description">${blog.excerpt}</p>
+                    <div class="card-tags">
+                        ${blog.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                </div>
+            `;
+            return card;
+        }
+
+        function createTeamCard(member) {
+            const card = document.createElement('article');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${member.image}" alt="${member.name}" class="card-image" loading="lazy">
+                <div class="card-content">
+                    <h3 class="card-title">
+                        <a href="${member.detailPath}">${member.name}</a>
+                    </h3>
+                    <div class="card-meta">${member.role}</div>
+                    <p class="card-description">${Utils.truncateText(member.bio, 100)}</p>
+                    <div class="card-tags">
+                        ${member.skills.slice(0, 3).map(skill => `<span class="tag">${skill}</span>`).join('')}
+                    </div>
+                </div>
+            `;
+            return card;
+        }
+
+        function createAwardCard(award) {
+            const card = document.createElement('article');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${award.thumbnail}" alt="${award.title}" class="card-image" loading="lazy">
+                <div class="card-content">
+                    <h3 class="card-title">
+                        <a href="${award.detailPath}">${award.title}</a>
+                    </h3>
+                    <div class="card-meta">${award.competition} • ${award.rank}</div>
+                    <p class="card-description">${award.description}</p>
+                    <div class="card-meta">${Utils.formatDate(award.date)}</div>
+                </div>
+            `;
+            return card;
+        }
+
+        async function updateStats() {
+            try {
+                const [games, awards, team] = await Promise.all([
+                    fetch('data/games.json').then(r => r.json()),
+                    fetch('data/awards.json').then(r => r.json()),
+                    fetch('data/team.json').then(r => r.json())
+                ]);
+
+                document.getElementById('games-count').textContent = games.length;
+                document.getElementById('awards-count').textContent = awards.length;
+                document.getElementById('team-count').textContent = team.length;
+            } catch (error) {
+                console.error('Error updating stats:', error);
+            }
+        }
+    </script>
 </body>
 </html>
-

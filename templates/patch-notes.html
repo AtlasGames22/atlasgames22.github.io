@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{PATCH_TITLE}} - Latest update for {{PATCH_GAME}}">
+    <meta name="keywords" content="{{PATCH_GAME}}, patch notes, update, Atlas Games">
+    <meta name="author" content="Atlas Games">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{PATCH_TITLE}} - Atlas Games">
+    <meta property="og:description" content="Latest update for {{PATCH_GAME}}">
+    <meta property="og:image" content="assets/images/games/{{PATCH_GAME}}/thumbnail.png">
+    <meta property="og:url" content="{{PATCH_URL}}">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Atlas Games">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{PATCH_TITLE}} - Atlas Games">
+    <meta name="twitter:description" content="Latest update for {{PATCH_GAME}}">
+    <meta name="twitter:image" content="assets/images/games/{{PATCH_GAME}}/thumbnail.png">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "{{PATCH_TITLE}}",
+        "description": "Patch notes for {{PATCH_GAME}}",
+        "author": {
+            "@type": "Organization",
+            "name": "Atlas Games"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Atlas Games"
+        },
+        "datePublished": "{{PATCH_DATE}}",
+        "url": "{{PATCH_URL}}"
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/patch-notes.css">
+
+    <title>{{PATCH_TITLE}} - Atlas Games</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="header"></div>
+    <div id="nav"></div>
+
+    <main id="main-content">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs" aria-label="Breadcrumb navigation">
+                <ol>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../games.html">Games</a></li>
+                    <li><a href="../../game-collection/{{PATCH_GAME}}/{{PATCH_GAME}}-detail.html">{{PATCH_GAME_TITLE}}</a></li>
+                    <li aria-current="page">{{PATCH_TITLE}}</li>
+                </ol>
+            </nav>
+
+            <!-- Patch Notes Article -->
+            <article class="patch-notes-article">
+                <!-- Patch Header -->
+                <header class="patch-header section">
+                    <div class="patch-meta">
+                        <span class="game-name">{{PATCH_GAME_TITLE}}</span>
+                        <span class="version">Version {{PATCH_NUMBER}}</span>
+                        <span class="date">{{PATCH_DATE_FORMATTED}}</span>
+                    </div>
+                    <h1>{{PATCH_TITLE}}</h1>
+                    <div class="related-game-link">
+                        <a href="../../game-collection/{{PATCH_GAME}}/{{PATCH_GAME}}-detail.html" class="btn btn-secondary btn-sm">
+                            ← Back to {{PATCH_GAME_TITLE}}
+                        </a>
+                    </div>
+                </header>
+
+                <!-- Patch Video (if available) -->
+                {{#if PATCH_YOUTUBE}}
+                <section class="patch-video section">
+                    <h2>Update Highlights</h2>
+                    <div class="video-container">
+                        <iframe
+                            src="{{PATCH_YOUTUBE_EMBED}}"
+                            title="{{PATCH_TITLE}} - Update Highlights"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </section>
+                {{/if}}
+
+                <!-- Patch Content -->
+                <div class="patch-content">
+                    {{PATCH_CONTENT_HTML}}
+                </div>
+
+                <!-- Patch Navigation -->
+                <nav class="patch-navigation section">
+                    <div class="nav-grid">
+                        <div class="nav-item prev" id="prev-patch">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                        <div class="nav-item next" id="next-patch">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Patch Footer -->
+                <footer class="patch-footer section">
+                    <div class="footer-actions">
+                        <a href="../../game-collection/{{PATCH_GAME}}/{{PATCH_GAME}}-detail.html" class="btn btn-primary">
+                            Play {{PATCH_GAME_TITLE}}
+                        </a>
+                        <button class="btn btn-secondary" id="share-patch">Share Update</button>
+                    </div>
+
+                    <div class="feedback-section">
+                        <h3>Feedback</h3>
+                        <p>Have thoughts about this update? We'd love to hear from you!</p>
+                        <a href="../../contact.html?subject=Feedback on {{PATCH_TITLE}}" class="btn btn-secondary btn-sm">
+                            Send Feedback
+                        </a>
+                    </div>
+                </footer>
+            </article>
+
+            <!-- All Patch Notes for Game -->
+            <aside class="all-patches section">
+                <h2>All Updates for {{PATCH_GAME_TITLE}}</h2>
+                <div id="all-patches-container">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../../assets/js/includes.js" defer></script>
+    <script src="../../assets/js/utils.js" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPatchNavigation();
+            loadAllPatches();
+            initializeSharing();
+            enhancePatchContent();
+        });
+
+        async function loadPatchNavigation() {
+            const currentSlug = '{{PATCH_SLUG}}';
+            const gameSlug = '{{PATCH_GAME}}';
+
+            try {
+                const response = await fetch('../../data/patch-notes.json');
+                const patches = await response.json();
+
+                // Filter patches for this game and sort by date
+                const gamePatches = patches
+                    .filter(patch => patch.relatedGame === gameSlug)
+                    .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                const currentIndex = gamePatches.findIndex(patch => patch.slug === currentSlug);
+
+                // Previous patch (newer)
+                const prevContainer = document.getElementById('prev-patch');
+                if (currentIndex > 0) {
+                    const prevPatch = gamePatches[currentIndex - 1];
+                    prevContainer.innerHTML = `
+                        <a href="../../${prevPatch.detailPath}" class="nav-link">
+                            <span class="nav-direction">← Newer</span>
+                            <span class="nav-title">${prevPatch.title}</span>
+                            <span class="nav-version">v${prevPatch.number}</span>
+                        </a>
+                    `;
+                } else {
+                    prevContainer.innerHTML = '<div class="nav-placeholder">No newer updates</div>';
+                }
+
+                // Next patch (older)
+                const nextContainer = document.getElementById('next-patch');
+                if (currentIndex < gamePatches.length - 1) {
+                    const nextPatch = gamePatches[currentIndex + 1];
+                    nextContainer.innerHTML = `
+                        <a href="../../${nextPatch.detailPath}" class="nav-link">
+                            <span class="nav-direction">Older →</span>
+                            <span class="nav-title">${nextPatch.title}</span>
+                            <span class="nav-version">v${nextPatch.number}</span>
+                        </a>
+                    `;
+                } else {
+                    nextContainer.innerHTML = '<div class="nav-placeholder">No older updates</div>';
+                }
+
+            } catch (error) {
+                console.error('Error loading patch navigation:', error);
+            }
+        }
+
+        async function loadAllPatches() {
+            const gameSlug = '{{PATCH_GAME}}';
+            const currentSlug = '{{PATCH_SLUG}}';
+
+            try {
+                const response = await fetch('../../data/patch-notes.json');
+                const patches = await response.json();
+
+                const gamePatches = patches
+                    .filter(patch => patch.relatedGame === gameSlug && patch.slug !== currentSlug)
+                    .sort((a, b) => new Date(b.date) - new Date(a.date))
+                    .slice(0, 5);
+
+                const container = document.getElementById('all-patches-container');
+
+                if (gamePatches.length > 0) {
+                    container.innerHTML = gamePatches.map(patch => `
+                        <div class="patch-item">
+                            <a href="../../${patch.detailPath}" class="patch-link">
+                                <div class="patch-info">
+                                    <h4>${patch.title}</h4>
+                                    <div class="patch-meta">
+                                        <span class="version">v${patch.number}</span>
+                                        <span class="date">${Utils.formatDate(patch.date)}</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    `).join('');
+                } else {
+                    container.innerHTML = '<p>No other updates available.</p>';
+                }
+
+            } catch (error) {
+                console.error('Error loading all patches:', error);
+            }
+        }
+
+        function initializeSharing() {
+            const shareBtn = document.getElementById('share-patch');
+
+            shareBtn.addEventListener('click', async () => {
+                const shareData = {
+                    title: '{{PATCH_TITLE}} - Atlas Games',
+                    text: 'Latest update for {{PATCH_GAME_TITLE}}',
+                    url: window.location.href
+                };
+
+                if (navigator.share) {
+                    try {
+                        await navigator.share(shareData);
+                    } catch (err) {
+                        console.log('Error sharing:', err);
+                    }
+                } else {
+                    // Fallback: copy to clipboard
+                    navigator.clipboard.writeText(window.location.href);
+                    showMessage('Patch notes link copied to clipboard!');
+                }
+            });
+        }
+
+        function enhancePatchContent() {
+            // Add smooth scrolling to internal links
+            const patchContent = document.querySelector('.patch-content');
+            const links = patchContent.querySelectorAll('a[href^="#"]');
+
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(link.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Add copy buttons to code blocks
+            const codeBlocks = patchContent.querySelectorAll('pre code');
+            codeBlocks.forEach(block => {
+                const button = document.createElement('button');
+                button.className = 'copy-code-btn';
+                button.textContent = 'Copy';
+                button.addEventListener('click', () => {
+                    navigator.clipboard.writeText(block.textContent);
+                    button.textContent = 'Copied!';
+                    setTimeout(() => {
+                        button.textContent = 'Copy';
+                    }, 2000);
+                });
+                block.parentNode.appendChild(button);
+            });
+        }
+
+        function showMessage(message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'toast-message';
+            messageDiv.textContent = message;
+            document.body.appendChild(messageDiv);
+
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
