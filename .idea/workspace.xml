@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="87bf6b84-1e14-4d9d-bfe5-92caa251562f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/careers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/games.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/press.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilotDiffState.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.well-known/security.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/games.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/posts.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/team.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/renderGames.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/renderPosts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/renderTeam.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/router.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seo/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seo/schema-org.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seo/sitemap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/utilities.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/team.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1754902515844</updated>
-      <workItem from="1754902517209" duration="314000" />
+      <workItem from="1754902517209" duration="2376000" />
     </task>
     <servers />
   </component>

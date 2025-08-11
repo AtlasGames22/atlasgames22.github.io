@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read Atlas Games devlogs, updates, and behind-the-scenes articles about game development, design insights, and studio news.">
+  <meta name="author" content="Atlas Games">
+  <link rel="canonical" href="https://atlasgames.com/blog.html">
+  <title>Atlas Games — Blog & Devlogs</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="/index.html" class="nav-brand" aria-label="Atlas Games homepage">
+          Atlas Games
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          ☰
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="/index.html" class="nav-link">Home</a></li>
+          <li><a href="/games.html" class="nav-link">Games</a></li>
+          <li><a href="/team.html" class="nav-link">Team</a></li>
+          <li><a href="/blog.html" class="nav-link active" aria-current="page">Blog</a></li>
+          <li><a href="/contact.html" class="nav-link">Contact</a></li>
+          <li><a href="/games.html" class="btn btn-primary btn-sm">Play Our Games</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="blog-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Blog & Devlogs</h1>
+          <p class="hero-subtitle">
+            Follow our game development journey with behind-the-scenes insights, design deep-dives, and lessons learned.
+            Get the latest updates on our projects and discover what drives our creative process.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Navigation & Search -->
+    <section class="py-8" style="background-color: var(--bg);">
+      <div class="container">
+        <!-- Category Filter Navigation -->
+        <nav aria-label="Blog categories" class="text-center mb-8">
+          <ul style="display: flex; justify-content: center; gap: var(--space-6); flex-wrap: wrap; list-style: none; margin: 0; padding: 0;">
+            <li><a href="#all" class="btn btn-ghost btn-sm">All Posts</a></li>
+            <li><a href="#devlog" class="btn btn-ghost btn-sm">Devlog</a></li>
+            <li><a href="#releases" class="btn btn-ghost btn-sm">Releases</a></li>
+            <li><a href="#design" class="btn btn-ghost btn-sm">Design</a></li>
+            <li><a href="#tech" class="btn btn-ghost btn-sm">Tech</a></li>
+          </ul>
+        </nav>
+
+        <!-- Search Placeholder -->
+        <div class="text-center">
+          <form action="#" method="GET" style="max-width: 400px; margin: 0 auto;">
+            <div class="form-group mb-0">
+              <label for="blog-search" class="sr-only">Search blog posts</label>
+              <div style="display: flex; gap: var(--space-2);">
+                <input
+                  type="search"
+                  id="blog-search"
+                  name="search"
+                  class="form-input"
+                  placeholder="Search posts..."
+                  style="flex: 1;"
+                >
+                <button type="submit" class="btn btn-primary">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Posts Grid -->
+    <section class="py-20" id="posts-grid">
+      <div class="container">
+        <h2 id="all" class="text-center mb-12">Latest Posts</h2>
+
+        <div class="grid grid-cols-1 grid-lg-3 gap-8">
+          <!-- Post 1: Shipping Harvest Hustle -->
+          <article class="card">
+            <img
+              src="/assets/blog/shipping-harvest-hustle-thumbnail.webp"
+              alt="Shipping Harvest Hustle: What We Learned thumbnail"
+              class="card-image"
+              width="400"
+              height="225"
+            >
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="/post-shipping-harvest-hustle.html" class="text-base" style="text-decoration: none;">
+                  Shipping Harvest Hustle: What We Learned
+                </a>
+              </h3>
+              <div class="post-meta" style="display: flex; gap: var(--space-4); margin-bottom: var(--space-3); align-items: center;">
+                <time class="text-ui text-sm" datetime="2025-07-10">July 10, 2025</time>
+                <span class="badge" style="background-color: var(--primary); color: var(--white); padding: var(--space-1) var(--space-3); border-radius: var(--radius); font-size: var(--font-size-sm);">Devlog</span>
+              </div>
+              <p class="card-description">
+                Reflecting on the challenges and victories from our first major game release, including player feedback and technical hurdles.
+              </p>
+              <div class="card-footer">
+                <a href="/post-shipping-harvest-hustle.html" class="btn btn-ghost btn-sm">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 2: Prototype to Polish -->
+          <article class="card">
+            <img
+              src="/assets/blog/prototype-to-polish-thumbnail.webp"
+              alt="Prototype to Polish: Tightening Game Feel thumbnail"
+              class="card-image"
+              width="400"
+              height="225"
+            >
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="/post-prototype-to-polish.html" class="text-base" style="text-decoration: none;">
+                  Prototype to Polish: Tightening Game Feel
+                </a>
+              </h3>
+              <div class="post-meta" style="display: flex; gap: var(--space-4); margin-bottom: var(--space-3); align-items: center;">
+                <time class="text-ui text-sm" datetime="2025-06-28">June 28, 2025</time>
+                <span class="badge" style="background-color: var(--ui); color: var(--white); padding: var(--space-1) var(--space-3); border-radius: var(--radius); font-size: var(--font-size-sm);">Design</span>
+              </div>
+              <p class="card-description">
+                How we transformed rough prototypes into polished gameplay through iteration, playtesting, and careful attention to player feedback loops.
+              </p>
+              <div class="card-footer">
+                <a href="/post-prototype-to-polish.html" class="btn btn-ghost btn-sm">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 3: Roadmap H2 2025 -->
+          <article class="card">
+            <img
+              src="/assets/blog/roadmap-h2-2025-thumbnail.webp"
+              alt="Atlas Games Roadmap — H2 2025 thumbnail"
+              class="card-image"
+              width="400"
+              height="225"
+            >
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="/post-roadmap-h2-2025.html" class="text-base" style="text-decoration: none;">
+                  Atlas Games Roadmap — H2 2025
+                </a>
+              </h3>
+              <div class="post-meta" style="display: flex; gap: var(--space-4); margin-bottom: var(--space-3); align-items: center;">
+                <time class="text-ui text-sm" datetime="2025-06-15">June 15, 2025</time>
+                <span class="badge" style="background-color: var(--ui-light); color: var(--white); padding: var(--space-1) var(--space-3); border-radius: var(--radius); font-size: var(--font-size-sm);">Releases</span>
+              </div>
+              <p class="card-description">
+                Our upcoming projects, release timeline, and exciting new features planned for the second half of 2025.
+              </p>
+              <div class="card-footer">
+                <a href="/post-roadmap-h2-2025.html" class="btn btn-ghost btn-sm">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 4: Minimal HUD Patterns -->
+          <article class="card">
+            <img
+              src="/assets/blog/minimal-hud-patterns-thumbnail.webp"
+              alt="UI That Vanishes: Minimal HUD Patterns thumbnail"
+              class="card-image"
+              width="400"
+              height="225"
+            >
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="/post-minimal-hud-patterns.html" class="text-base" style="text-decoration: none;">
+                  UI That Vanishes: Minimal HUD Patterns
+                </a>
+              </h3>
+              <div class="post-meta" style="display: flex; gap: var(--space-4); margin-bottom: var(--space-3); align-items: center;">
+                <time class="text-ui text-sm" datetime="2025-05-30">May 30, 2025</time>
+                <span class="badge" style="background-color: var(--ui); color: var(--white); padding: var(--space-1) var(--space-3); border-radius: var(--radius); font-size: var(--font-size-sm);">Design</span>
+              </div>
+              <p class="card-description">
+                Exploring how to create immersive interfaces that communicate essential information without cluttering the player's view of the game world.
+              </p>
+              <div class="card-footer">
+                <a href="/post-minimal-hud-patterns.html" class="btn btn-ghost btn-sm">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 5: Input Systems Unity -->
+          <article class="card">
+            <img
+              src="/assets/blog/input-systems-unity-thumbnail.webp"
+              alt="Tech Notes: Input Systems in Unity thumbnail"
+              class="card-image"
+              width="400"
+              height="225"
+            >
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="/post-input-systems-unity.html" class="text-base" style="text-decoration: none;">
+                  Tech Notes: Input Systems in Unity
+                </a>
+              </h3>
+              <div class="post-meta" style="display: flex; gap: var(--space-4); margin-bottom: var(--space-3); align-items: center;">
+                <time class="text-ui text-sm" datetime="2025-05-12">May 12, 2025</time>
+                <span class="badge" style="background-color: var(--primary-dark); color: var(--white); padding: var(--space-1) var(--space-3); border-radius: var(--radius); font-size: var(--font-size-sm);">Tech</span>
+              </div>
+              <p class="card-description">
+                A deep dive into Unity's new Input System, covering setup, action maps, and best practices for cross-platform input handling.
+              </p>
+              <div class="card-footer">
+                <a href="/post-input-systems-unity.html" class="btn btn-ghost btn-sm">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 6: Game Jam Postmortem -->
+          <article class="card">
+            <img
+              src="/assets/blog/jam-postmortem-scope-thumbnail.webp"
+              alt="Game Jam Postmortem: Lessons in Scope thumbnail"
+              class="card-image"
+              width="400"
+              height="225"
+            >
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="/post-jam-postmortem-scope.html" class="text-base" style="text-decoration: none;">
+                  Game Jam Postmortem: Lessons in Scope
+                </a>
+              </h3>
+              <div class="post-meta" style="display: flex; gap: var(--space-4); margin-bottom: var(--space-3); align-items: center;">
+                <time class="text-ui text-sm" datetime="2025-04-26">April 26, 2025</time>
+                <span class="badge" style="background-color: var(--primary); color: var(--white); padding: var(--space-1) var(--space-3); border-radius: var(--radius); font-size: var(--font-size-sm);">Devlog</span>
+              </div>
+              <p class="card-description">
+                What we learned about project scope, team coordination, and rapid prototyping during our intense 48-hour game jam experience.
+              </p>
+              <div class="card-footer">
+                <a href="/post-jam-postmortem-scope.html" class="btn btn-ghost btn-sm">Read More</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Category Anchors -->
+        <div style="margin-top: var(--space-20);">
+          <h2 id="devlog" class="mb-6">Development Logs</h2>
+          <p class="text-ui text-center mb-8">Behind-the-scenes insights into our development process. <a href="#all">View all devlog posts above</a>.</p>
+
+          <h2 id="releases" class="mb-6">Release Updates</h2>
+          <p class="text-ui text-center mb-8">Announcements about new games, updates, and roadmaps. <a href="#all">View all release posts above</a>.</p>
+
+          <h2 id="design" class="mb-6">Design Articles</h2>
+          <p class="text-ui text-center mb-8">Game design philosophy, UI/UX insights, and creative processes. <a href="#all">View all design posts above</a>.</p>
+
+          <h2 id="tech" class="mb-6">Technical Posts</h2>
+          <p class="text-ui text-center mb-8">Programming tutorials, engine tips, and technical deep-dives. <a href="#all">View all tech posts above</a>.</p>
+        </div>
+
+        <!-- Pagination Placeholder -->
+        <nav aria-label="Blog pagination" class="text-center" style="margin-top: var(--space-16);">
+          <div style="display: flex; justify-content: center; gap: var(--space-4);">
+            <button class="btn btn-ghost" disabled>← Previous</button>
+            <span class="text-ui" style="align-self: center;">Page 1 of 1</span>
+            <button class="btn btn-ghost" disabled>Next →</button>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="py-20" id="newsletter-cta" style="background-color: var(--bg);">
+      <div class="container">
+        <div class="text-center" style="max-width: 600px; margin: 0 auto;">
+          <h2 class="mb-6">Stay Updated</h2>
+          <p class="text-lg text-ui mb-8">
+            Get notified when we publish new devlogs, release updates, and behind-the-scenes content.
+            Join our community of developers and players.
+          </p>
+
+          <form action="#" method="POST" style="max-width: 400px; margin: 0 auto;">
+            <div class="form-group">
+              <label for="newsletter-email" class="form-label sr-only">Email Address</label>
+              <div style="display: flex; gap: var(--space-2);">
+                <input
+                  type="email"
+                  id="newsletter-email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Enter your email address"
+                  required
+                  style="flex: 1;"
+                >
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </div>
+            </div>
+          </form>
+
+          <p class="text-sm text-ui" style="margin-top: var(--space-4);">
+            We'll only email you about Atlas Games updates. No spam, unsubscribe anytime.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Company Info -->
+        <div class="footer-section">
+          <h3>Atlas Games</h3>
+          <p class="text-ui-lighter mb-4">
+            Creating immersive gaming experiences that bring players together and stand the test of time.
+          </p>
+          <address class="text-ui-lighter" style="font-style: normal;">
+            123 Game Development Ave<br>
+            Studio City, CA 90210<br>
+            <a href="tel:+27814752986" class="footer-link">+27 81 475 2986</a><br>
+            <a href="mailto:atlasgamesstudio22@gmail.com" class="footer-link">atlasgamesstudio22@gmail.com</a>
+          </address>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="/games.html" class="footer-link">Our Games</a></li>
+            <li><a href="/team.html" class="footer-link">Team</a></li>
+            <li><a href="/blog.html" class="footer-link">Blog</a></li>
+            <li><a href="/careers.html" class="footer-link">Careers</a></li>
+            <li><a href="/press.html" class="footer-link">Press Kit</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul class="footer-links">
+            <li><a href="/support.html" class="footer-link">Help Center</a></li>
+            <li><a href="/contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="/bug-report.html" class="footer-link">Report a Bug</a></li>
+            <li><a href="/community-guidelines.html" class="footer-link">Community Guidelines</a></li>
+            <li><a href="/system-requirements.html" class="footer-link">System Requirements</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul class="footer-links">
+            <li><a href="/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="/terms-of-service.html" class="footer-link">Terms of Service</a></li>
+            <li><a href="/eula.html" class="footer-link">EULA</a></li>
+            <li><a href="/refund-policy.html" class="footer-link">Refund Policy</a></li>
+            <li><a href="/cookie-policy.html" class="footer-link">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="https://discord.gg/atlasgames" target="_blank" rel="noopener noreferrer" aria-label="Join our Discord server">
+            💬
+          </a>
+          <a href="https://atlasgames.itch.io" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Itch.io">
+            🎮
+          </a>
+          <a href="https://twitter.com/atlasgames" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
+            🐦
+          </a>
+          <a href="https://facebook.com/atlasgames" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
+            📘
+          </a>
+          <a href="https://youtube.com/atlasgames" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to our YouTube channel">
+            📺
+          </a>
+        </div>
+        <p>&copy; 2025 Atlas Games. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Navigation Toggle Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+          const isOpen = navLinks.classList.contains('open');
+          navLinks.classList.toggle('open');
+          navToggle.setAttribute('aria-expanded', !isOpen);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
