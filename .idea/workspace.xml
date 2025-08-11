@@ -1,73 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="239a876a-0fec-4230-b44b-814bcf585978" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.well-known/security.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/posts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/renderGames.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/renderPosts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/renderTeam.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seo/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seo/schema-org.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seo/sitemap.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/components.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/utilities.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/atlasgames22.github.io.iml" beforeDir="false" />
+    <list default="true" id="87bf6b84-1e14-4d9d-bfe5-92caa251562f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilotDiffState.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/awards-detail.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/blogs-detail.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/games-detail.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/patch-notes.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/team-detail.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/filters.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/includes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/listing-loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/videos/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/award-collection/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/awards.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-collection/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/awards.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/blogs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/games.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/games.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/patch-notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/team.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/team.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game-collection/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games.html" beforeDir="false" afterPath="$PROJECT_DIR$/games.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patch-notes/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reusables/footer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reusables/header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reusables/navigationbar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/team-collection/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/team.html" beforeDir="false" afterPath="$PROJECT_DIR$/team.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog-detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/game-detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/individual-award.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/patch-notes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/team-member-detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.well-known/security.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/games.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/posts.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/team.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/games.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/post.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/renderGames.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/renderPosts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/renderTeam.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seo/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seo/schema-org.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seo/sitemap.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/team.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,31 +37,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="3183LFBjp5KZplHewahwVIsPJyR" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="318P1sfTpFxAH8NrwWZRakYTXMM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "test1",
+    "last_opened_file_path": "C:/Users/tania/Documents/GitHub/atlasgames22.github.io",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -111,12 +68,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="239a876a-0fec-4230-b44b-814bcf585978" name="Changes" comment="" />
-      <created>1754891823262</created>
+      <changelist id="87bf6b84-1e14-4d9d-bfe5-92caa251562f" name="Changes" comment="" />
+      <created>1754902515844</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1754891823262</updated>
-      <workItem from="1754891826571" duration="5769000" />
+      <updated>1754902515844</updated>
+      <workItem from="1754902517209" duration="314000" />
     </task>
     <servers />
   </component>
