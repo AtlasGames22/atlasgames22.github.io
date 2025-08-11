@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Minimum and recommended PC specs for Atlas Games titles on Windows, macOS, and Linux platforms.">
+  <meta name="author" content="Atlas Games">
+  <link rel="canonical" href="https://atlasgames.com/system-requirements.html">
+  <title>Atlas Games — System Requirements</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div data-include="/assets/reusables/header.html"></div>
+  <div data-include="/assets/reusables/navigationbar.html" data-current-page="system-requirements"></div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="sysreq-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">System Requirements</h1>
+          <p class="hero-subtitle">
+            Our games support Windows, macOS, and Linux platforms with specifications
+            that vary by title and target performance settings.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Notes -->
+    <section class="py-20" id="sysreq-notes" style="background-color: var(--bg);">
+      <div class="container">
+        <h2 class="text-center mb-8">Important Notes</h2>
+
+        <div class="card" style="max-width: 800px; margin: 0 auto; padding: var(--space-8);">
+          <ul style="padding-left: var(--space-6); line-height: var(--line-height-relaxed);">
+            <li class="mb-3">
+              Specifications are representative for our current catalog and may change with game updates or new releases
+            </li>
+            <li class="mb-3">
+              Laptop GPUs with similar performance levels are generally supported, though may require adjusted settings
+            </li>
+            <li class="mb-3">
+              Stable internet connection required for game updates, leaderboards, and online features where applicable
+            </li>
+            <li class="mb-3">
+              Controller support is optional and varies by title; all games support keyboard and mouse input
+            </li>
+            <li>
+              For crashes, performance issues, or compatibility problems, please visit our
+              <a href="/support.html" class="text-primary">Support Center</a> or
+              <a href="/bug-report.html" class="text-primary">submit a bug report</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Requirements Overview -->
+    <section class="py-20" id="sysreq-overview">
+      <div class="container">
+        <h2 class="text-center mb-12">Platform Support</h2>
+
+        <div class="grid grid-cols-1 grid-lg-3 gap-8">
+          <div class="card text-center">
+            <h3 class="card-title">Windows</h3>
+            <p class="card-description">
+              Full support for Windows 10 and 11 (64-bit) with DirectX 11+ compatibility.
+              Our primary development and testing platform.
+            </p>
+            <a href="#windows" class="btn btn-secondary btn-sm">View Windows Requirements</a>
+          </div>
+
+          <div class="card text-center">
+            <h3 class="card-title">macOS</h3>
+            <p class="card-description">
+              Compatible with macOS 12+ on both Intel and Apple Silicon Macs.
+              Metal API support required for optimal performance.
+            </p>
+            <a href="#macos" class="btn btn-secondary btn-sm">View macOS Requirements</a>
+          </div>
+
+          <div class="card text-center">
+            <h3 class="card-title">Linux</h3>
+            <p class="card-description">
+              Tested on Ubuntu 22.04+ and similar distributions. Some titles may require
+              Proton compatibility layer for optimal experience.
+            </p>
+            <a href="#linux" class="btn btn-secondary btn-sm">View Linux Requirements</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Windows Requirements -->
+    <section class="py-20" id="windows" style="background-color: var(--bg);">
+      <div class="container">
+        <h2 class="mb-8">Windows Requirements</h2>
+        <p class="text-lg text-ui mb-12" style="max-width: 800px;">
+          Our games are tested on Windows 10 and 11 (64-bit) systems with DirectX 11 or newer.
+          Older versions of Windows are not officially supported but may work with reduced compatibility.
+        </p>
+
+        <div class="grid grid-cols-1 grid-lg-2 gap-8">
+          <!-- Minimum Requirements -->
+          <div>
+            <h3 class="mb-6">Minimum Requirements</h3>
+            <div class="card">
+              <table style="width: 100%; border-collapse: collapse;">
+                <caption class="sr-only">Windows minimum system requirements</caption>
+                <thead>
+                  <tr style="border-bottom: 2px solid var(--ui-lighter);">
+                    <th scope="col" style="text-align: left; padding: var(--space-3); font-weight: var(--font-weight-semibold);">Component</th>
+                    <th scope="col" style="text-align: left; padding: var(--space-3); font-weight: var(--font-weight-semibold);">Specification</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">CPU</th>
+                    <td style="padding: var(--space-3);">Intel i3-6100 / AMD Ryzen 3 1200 or equivalent</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">GPU</th>
+                    <td style="padding: var(--space-3);">GTX 750 Ti / RX 560 / Intel UHD 730 or equivalent</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">RAM</th>
+                    <td style="padding: var(--space-3);">8 GB</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">Storage</th>
+                    <td style="padding: var(--space-3);">2-5 GB free space per title</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">OS</th>
+                    <td style="padding: var(--space-3);">Windows 10/11 64-bit</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">DirectX</th>
+                    <td style="padding: var(--space-3);">DirectX 11 or newer</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style="padding: var(--space-3);">Notes</th>
+                    <td style="padding: var(--space-3);">720p@30fps on low settings</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Recommended Requirements -->
+          <div>
+            <h3 class="mb-6">Recommended Requirements</h3>
+            <div class="card">
+              <table style="width: 100%; border-collapse: collapse;">
+                <caption class="sr-only">Windows recommended system requirements</caption>
+                <thead>
+                  <tr style="border-bottom: 2px solid var(--ui-lighter);">
+                    <th scope="col" style="text-align: left; padding: var(--space-3); font-weight: var(--font-weight-semibold);">Component</th>
+                    <th scope="col" style="text-align: left; padding: var(--space-3); font-weight: var(--font-weight-semibold);">Specification</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">CPU</th>
+                    <td style="padding: var(--space-3);">Intel i5-8400 / AMD Ryzen 5 2600 or equivalent</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">GPU</th>
+                    <td style="padding: var(--space-3);">GTX 1060 / RX 580 / Intel Arc A380 or equivalent</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">RAM</th>
+                    <td style="padding: var(--space-3);">16 GB</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">Storage</th>
+                    <td style="padding: var(--space-3);">5 GB free space, SSD recommended</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">OS</th>
+                    <td style="padding: var(--space-3);">Windows 11 64-bit</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">DirectX</th>
+                    <td style="padding: var(--space-3);">DirectX 12</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style="padding: var(--space-3);">Notes</th>
+                    <td style="padding: var(--space-3);">1080p@60fps on high settings</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- macOS Requirements -->
+    <section class="py-20" id="macos">
+      <div class="container">
+        <h2 class="mb-8">macOS Requirements</h2>
+        <p class="text-lg text-ui mb-12" style="max-width: 800px;">
+          Compatible with macOS 12 (Monterey) and newer on both Intel and Apple Silicon Macs.
+          Metal API support is required for graphics rendering. Some titles may have enhanced performance on Apple Silicon.
+        </p>
+
+        <div class="grid grid-cols-1 grid-lg-2 gap-8">
+          <!-- Minimum Requirements -->
+          <div>
+            <h3 class="mb-6">Minimum Requirements</h3>
+            <div class="card">
+              <table style="width: 100%; border-collapse: collapse;">
+                <caption class="sr-only">macOS minimum system requirements</caption>
+                <thead>
+                  <tr style="border-bottom: 2px solid var(--ui-lighter);">
+                    <th scope="col" style="text-align: left; padding: var(--space-3); font-weight: var(--font-weight-semibold);">Component</th>
+                    <th scope="col" style="text-align: left; padding: var(--space-3); font-weight: var(--font-weight-semibold);">Specification</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">CPU</th>
+                    <td style="padding: var(--space-3);">Intel i5-7400 / Apple M1 or equivalent</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">GPU</th>
+                    <td style="padding: var(--space-3);">Radeon Pro 555 / Intel Iris Plus / Apple M1 integrated</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">RAM</th>
+                    <td style="padding: var(--space-3);">8 GB</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">Storage</th>
+                    <td style="padding: var(--space-3);">2-5 GB free space per title</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">OS</th>
+                    <td style="padding: var(--space-3);">macOS 12.0 (Monterey) or newer</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">Graphics API</th>
+                    <td style="padding: var(--space-3);">Metal support required</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style="padding: var(--space-3);">Notes</th>
+                    <td style="padding: var(--space-3);">720p@30fps on low settings</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Recommended Requirements -->
+          <div>
+            <h3 class="mb-6">Recommended Requirements</h3>
+            <div class="card">
+              <table style="width: 100%; border-collapse: collapse;">
+                <caption class="sr-only">macOS recommended system requirements</caption>
+                <thead>
+                  <tr style="border-bottom: 2px solid var(--ui-lighter);">
+                    <th scope="col" style="text-align: left; padding: var(--space-3); font-weight: var(--font-weight-semibold);">Component</th>
+                    <th scope="col" style="text-align: left; padding: var(--space-3); font-weight: var(--font-weight-semibold);">Specification</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">CPU</th>
+                    <td style="padding: var(--space-3);">Intel i7-9700K / Apple M2 or equivalent</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">GPU</th>
+                    <td style="padding: var(--space-3);">Radeon Pro 5500M / Apple M2 integrated or better</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">RAM</th>
+                    <td style="padding: var(--space-3);">16 GB</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">Storage</th>
+                    <td style="padding: var(--space-3);">5 GB free space, SSD recommended</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">OS</th>
+                    <td style="padding: var(--space-3);">macOS 14.0 (Sonoma) or newer</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">Graphics API</th>
+                    <td style="padding: var(--space-3);">Metal 3 support</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style="padding: var(--space-3);">Notes</th>
+                    <td style="padding: var(--space-3);">1080p@60fps on high settings</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Linux Requirements -->
+    <section class="py-20" id="linux" style="background-color: var(--bg);">
+      <div class="container">
+        <h2 class="mb-8">Linux Requirements</h2>
+        <p class="text-lg text-ui mb-12" style="max-width: 800px;">
+          Tested on Ubuntu 22.04 LTS and similar distributions with Vulkan support.
+          Some titles may require Proton compatibility layer through Steam for optimal experience.
+          Native Linux builds available for select titles.
+        </p>
+
+        <div class="grid grid-cols-1 grid-lg-2 gap-8">
+          <!-- Minimum Requirements -->
+          <div>
+            <h3 class="mb-6">Minimum Requirements</h3>
+            <div class="card">
+              <table style="width: 100%; border-collapse: collapse;">
+                <caption class="sr-only">Linux minimum system requirements</caption>
+                <thead>
+                  <tr style="border-bottom: 2px solid var(--ui-lighter);">
+                    <th scope="col" style="text-align: left; padding: var(--space-3); font-weight: var(--font-weight-semibold);">Component</th>
+                    <th scope="col" style="text-align: left; padding: var(--space-3); font-weight: var(--font-weight-semibold);">Specification</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">CPU</th>
+                    <td style="padding: var(--space-3);">Intel i3-6100 / AMD Ryzen 3 1200 or equivalent</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">GPU</th>
+                    <td style="padding: var(--space-3);">GTX 750 Ti / RX 560 with Vulkan support</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">RAM</th>
+                    <td style="padding: var(--space-3);">8 GB</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">Storage</th>
+                    <td style="padding: var(--space-3);">2-5 GB free space per title</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">OS</th>
+                    <td style="padding: var(--space-3);">Ubuntu 22.04+ or equivalent distribution</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">Graphics API</th>
+                    <td style="padding: var(--space-3);">Vulkan 1.1 or newer</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style="padding: var(--space-3);">Notes</th>
+                    <td style="padding: var(--space-3);">720p@30fps, may require Proton</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Recommended Requirements -->
+          <div>
+            <h3 class="mb-6">Recommended Requirements</h3>
+            <div class="card">
+              <table style="width: 100%; border-collapse: collapse;">
+                <caption class="sr-only">Linux recommended system requirements</caption>
+                <thead>
+                  <tr style="border-bottom: 2px solid var(--ui-lighter);">
+                    <th scope="col" style="text-align: left; padding: var(--space-3); font-weight: var(--font-weight-semibold);">Component</th>
+                    <th scope="col" style="text-align: left; padding: var(--space-3); font-weight: var(--font-weight-semibold);">Specification</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">CPU</th>
+                    <td style="padding: var(--space-3);">Intel i5-8400 / AMD Ryzen 5 2600 or equivalent</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">GPU</th>
+                    <td style="padding: var(--space-3);">GTX 1060 / RX 580 with Vulkan support</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">RAM</th>
+                    <td style="padding: var(--space-3);">16 GB</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">Storage</th>
+                    <td style="padding: var(--space-3);">5 GB free space, SSD recommended</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">OS</th>
+                    <td style="padding: var(--space-3);">Ubuntu 24.04+ or equivalent distribution</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--ui-lighter);">
+                    <th scope="row" style="padding: var(--space-3);">Graphics API</th>
+                    <td style="padding: var(--space-3);">Vulkan 1.3 or newer</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style="padding: var(--space-3);">Notes</th>
+                    <td style="padding: var(--space-3);">1080p@60fps on high settings</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Per-Title Variations -->
+    <section class="py-20" id="per-title">
+      <div class="container">
+        <h2 class="text-center mb-12">Game-Specific Notes</h2>
+
+        <div class="grid grid-cols-1 grid-lg-2 gap-8" style="max-width: 900px; margin: 0 auto;">
+          <div class="card">
+            <h3 class="card-title">Harvest Hustle</h3>
+            <p class="card-description">
+              Very light system requirements. Runs smoothly on integrated GPUs at 1080p with low settings.
+              Excellent choice for older hardware.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Kenny's Khaos</h3>
+            <p class="card-description">
+              Physics-heavy scenes during intense platforming may require mid-tier GPU for consistent 60fps.
+              CPU-intensive during particle effects.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Tiny Cafe</h3>
+            <p class="card-description">
+              CPU-bound performance during high NPC counts and complex restaurant simulations.
+              Benefits significantly from higher core count processors.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Void Breaker</h3>
+            <p class="card-description">
+              Benefits greatly from SSD storage for seamless level streaming and reduced loading times.
+              High-speed storage recommended for optimal experience.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Timmy's Revenge</h3>
+            <p class="card-description">
+              Controller strongly recommended for optimal gameplay experience.
+              Supports Xbox, PlayStation, and generic XInput-compatible controllers.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Honey Haven</h3>
+            <p class="card-description">
+              Stable performance at 1080p medium settings on entry-level GPUs.
+              Well-optimized for lower-end hardware with scalable graphics options.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Display & Input -->
+    <section class="py-20" id="display-input" style="background-color: var(--bg);">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto;">
+          <h2 class="text-center mb-12">Display & Input Support</h2>
+
+          <div class="grid grid-cols-1 grid-lg-2 gap-8">
+            <div class="card">
+              <h3 class="card-title">Display</h3>
+              <ul style="padding-left: var(--space-6); line-height: var(--line-height-relaxed);">
+                <li class="mb-2">Primary testing at 1920x1080 (1080p) resolution</li>
+                <li class="mb-2">Ultrawide monitor support (21:9 aspect ratio) available</li>
+                <li class="mb-2">4K gaming supported on recommended hardware specs</li>
+                <li class="mb-2">Windowed, borderless, and fullscreen modes</li>
+                <li>Variable refresh rate (G-Sync/FreeSync) compatibility</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Input</h3>
+              <ul style="padding-left: var(--space-6); line-height: var(--line-height-relaxed);">
+                <li class="mb-2">Keyboard and mouse support (primary input method)</li>
+                <li class="mb-2">XInput-compatible controllers (Xbox, generic)</li>
+                <li class="mb-2">PlayStation controllers with additional drivers</li>
+                <li class="mb-2">Key remapping varies by title (check in-game settings)</li>
+                <li>Steam Input support for custom controller configurations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Troubleshooting -->
+    <section class="py-20" id="troubleshooting">
+      <div class="container">
+        <h2 class="text-center mb-12">Need Help?</h2>
+
+        <div class="grid grid-cols-1 grid-lg-4 gap-6" style="max-width: 900px; margin: 0 auto;">
+          <a href="/support.html" class="card text-center" style="text-decoration: none; color: inherit;">
+            <h3 class="card-title">Support Center</h3>
+            <p class="card-description">Browse troubleshooting guides and FAQs</p>
+          </a>
+
+          <a href="/bug-report.html" class="card text-center" style="text-decoration: none; color: inherit;">
+            <h3 class="card-title">Report a Bug</h3>
+            <p class="card-description">Submit technical issues and crashes</p>
+          </a>
+
+          <a href="/community-guidelines.html" class="card text-center" style="text-decoration: none; color: inherit;">
+            <h3 class="card-title">Community Guidelines</h3>
+            <p class="card-description">Rules for community interaction</p>
+          </a>
+
+          <a href="/refund-policy.html" class="card text-center" style="text-decoration: none; color: inherit;">
+            <h3 class="card-title">Refund Policy</h3>
+            <p class="card-description">Information about returns and refunds</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="/assets/reusables/footer.html"></div>
+  <script src="/assets/includes.js" defer></script>
+</body>
+</html>

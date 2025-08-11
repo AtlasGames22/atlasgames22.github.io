@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Report bugs for Atlas Games titles. Share steps, system info, and logs to help us fix issues quickly and efficiently.">
+  <meta name="author" content="Atlas Games">
+  <link rel="canonical" href="https://atlasgames.com/bug-report.html">
+  <title>Atlas Games — Report a Bug</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div data-include="/assets/reusables/header.html"></div>
+  <div data-include="/assets/reusables/navigationbar.html" data-current-page="bug-report"></div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="bug-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Report a Bug</h1>
+          <p class="hero-subtitle">
+            Help us improve our games by sharing detailed information about issues you encounter.
+            Your reports help us reproduce and fix problems quickly.
+          </p>
+          <div class="text-center" style="margin-top: var(--space-6);">
+            <p class="text-ui">
+              Need help first? <a href="/support.html" class="text-primary">Visit Support</a> •
+              <a href="/system-requirements.html" class="text-primary">Check System Requirements</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guidelines -->
+    <section class="py-20" id="bug-guidelines" style="background-color: var(--bg);">
+      <div class="container">
+        <h2 class="text-center mb-8">What to Include in Your Report</h2>
+        <div class="card" style="max-width: 700px; margin: 0 auto; padding: var(--space-8);">
+          <ul style="padding-left: var(--space-6); line-height: var(--line-height-relaxed);">
+            <li class="mb-3"><strong>Clear steps to reproduce</strong> - Detailed actions that trigger the bug</li>
+            <li class="mb-3"><strong>Expected vs. actual behavior</strong> - What should happen vs. what actually happens</li>
+            <li class="mb-3"><strong>Screenshots or logs</strong> - Visual evidence or error messages when possible</li>
+            <li class="mb-3"><strong>System details</strong> - Operating system, GPU/CPU model, RAM amount</li>
+            <li class="mb-3"><strong>Game build/version</strong> - Check the main menu or about screen for version info</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bug Report Form -->
+    <section class="py-20" id="bug-form">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2>Bug Report Form</h2>
+          <p class="text-lg text-ui">
+            Please fill out all required fields to help us investigate and resolve the issue.
+          </p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto;">
+          <form action="#" method="post">
+            <!-- Your Info Section -->
+            <fieldset class="form-group" style="border: 1px solid var(--ui-lighter); border-radius: var(--radius-lg); padding: var(--space-6); margin-bottom: var(--space-8);">
+              <legend class="font-weight-semibold text-lg mb-6">Your Information</legend>
+
+              <div class="form-group">
+                <label for="reporter-name" class="form-label">Full Name (required)</label>
+                <input
+                  type="text"
+                  id="reporter-name"
+                  name="name"
+                  class="form-input"
+                  required
+                  autocomplete="name"
+                  aria-describedby="name-help"
+                >
+                <p id="name-help" class="form-help">We'll use this to follow up on your report.</p>
+              </div>
+
+              <div class="form-group">
+                <label for="reporter-email" class="form-label">Email Address (required)</label>
+                <input
+                  type="email"
+                  id="reporter-email"
+                  name="email"
+                  class="form-input"
+                  required
+                  autocomplete="email"
+                  aria-describedby="email-help"
+                >
+                <p id="email-help" class="form-help">We'll send updates about the status of your bug report.</p>
+              </div>
+            </fieldset>
+
+            <!-- Game & Environment Section -->
+            <fieldset class="form-group" style="border: 1px solid var(--ui-lighter); border-radius: var(--radius-lg); padding: var(--space-6); margin-bottom: var(--space-8);">
+              <legend class="font-weight-semibold text-lg mb-6">Game & Environment</legend>
+
+              <div class="form-group">
+                <label for="game-title" class="form-label">Game (required)</label>
+                <select id="game-title" name="game" class="form-select" required>
+                  <option value="">Select a game</option>
+                  <option value="harvest-hustle">Harvest Hustle</option>
+                  <option value="kennys-khaos">Kenny's Khaos</option>
+                  <option value="tiny-cafe">Tiny Cafe</option>
+                  <option value="void-breaker">Void Breaker</option>
+                  <option value="timmys-revenge">Timmy's Revenge</option>
+                  <option value="honey-haven">Honey Haven</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="game-version" class="form-label">Game Version/Build (required)</label>
+                <input
+                  type="text"
+                  id="game-version"
+                  name="version"
+                  class="form-input"
+                  required
+                  aria-describedby="version-help"
+                  placeholder="e.g., v1.2.3"
+                >
+                <p id="version-help" class="form-help">Example: v0.5.2, Itch build #1234, or check the main menu for version info.</p>
+              </div>
+
+              <div class="grid grid-cols-1 grid-lg-2 gap-6">
+                <div class="form-group">
+                  <label for="platform" class="form-label">Platform (required)</label>
+                  <select id="platform" name="platform" class="form-select" required>
+                    <option value="">Select platform</option>
+                    <option value="windows">Windows</option>
+                    <option value="macos">macOS</option>
+                    <option value="linux">Linux</option>
+                    <option value="web">Web Browser</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="input-method" class="form-label">Input Method</label>
+                  <select id="input-method" name="input_method" class="form-select">
+                    <option value="keyboard-mouse">Keyboard & Mouse</option>
+                    <option value="controller">Controller</option>
+                    <option value="touch">Touch</option>
+                    <option value="mixed">Mixed</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="distribution" class="form-label">Distribution</label>
+                <select id="distribution" name="distribution" class="form-select">
+                  <option value="itch-io">Itch.io</option>
+                  <option value="direct-download">Direct Download</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <!-- Severity & Frequency Section -->
+            <fieldset class="form-group" style="border: 1px solid var(--ui-lighter); border-radius: var(--radius-lg); padding: var(--space-6); margin-bottom: var(--space-8);">
+              <legend class="font-weight-semibold text-lg mb-6">Severity & Frequency</legend>
+
+              <div class="form-group">
+                <fieldset>
+                  <legend class="form-label">Severity (required)</legend>
+                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-4);">
+                    <label style="display: flex; align-items: center; gap: var(--space-2);">
+                      <input type="radio" name="severity" value="low" required>
+                      <span>Low - Minor issue</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: var(--space-2);">
+                      <input type="radio" name="severity" value="medium" required>
+                      <span>Medium - Noticeable problem</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: var(--space-2);">
+                      <input type="radio" name="severity" value="high" required>
+                      <span>High - Major issue</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: var(--space-2);">
+                      <input type="radio" name="severity" value="critical" required>
+                      <span>Critical - Game breaking</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="form-group">
+                <label for="frequency" class="form-label">Frequency (required)</label>
+                <select id="frequency" name="frequency" class="form-select" required>
+                  <option value="">How often does this occur?</option>
+                  <option value="once">Once - Happened only one time</option>
+                  <option value="rarely">Rarely - Very occasional</option>
+                  <option value="sometimes">Sometimes - Happens intermittently</option>
+                  <option value="often">Often - Happens frequently</option>
+                  <option value="always">Always - Happens every time</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <!-- Description Section -->
+            <fieldset class="form-group" style="border: 1px solid var(--ui-lighter); border-radius: var(--radius-lg); padding: var(--space-6); margin-bottom: var(--space-8);">
+              <legend class="font-weight-semibold text-lg mb-6">Bug Description</legend>
+
+              <div class="form-group">
+                <label for="bug-title" class="form-label">Title/Summary (required)</label>
+                <input
+                  type="text"
+                  id="bug-title"
+                  name="title"
+                  class="form-input"
+                  required
+                  maxlength="120"
+                  aria-describedby="title-help"
+                  placeholder="Brief description of the issue"
+                >
+                <p id="title-help" class="form-help">Maximum 120 characters. Be specific and concise.</p>
+              </div>
+
+              <div class="form-group">
+                <label for="steps-reproduce" class="form-label">Steps to Reproduce (required)</label>
+                <textarea
+                  id="steps-reproduce"
+                  name="steps"
+                  class="form-textarea"
+                  required
+                  aria-describedby="steps-help"
+                  style="min-height: 120px;"
+                ></textarea>
+                <p id="steps-help" class="form-help">List clear steps: 1. Open the game 2. Click on... 3. The bug occurs when...</p>
+              </div>
+
+              <div class="form-group">
+                <label for="expected-result" class="form-label">Expected Result (required)</label>
+                <textarea
+                  id="expected-result"
+                  name="expected"
+                  class="form-textarea"
+                  required
+                  aria-describedby="expected-help"
+                  style="min-height: 80px;"
+                ></textarea>
+                <p id="expected-help" class="form-help">What should happen when you follow those steps?</p>
+              </div>
+
+              <div class="form-group">
+                <label for="actual-result" class="form-label">Actual Result (required)</label>
+                <textarea
+                  id="actual-result"
+                  name="actual"
+                  class="form-textarea"
+                  required
+                  aria-describedby="actual-help"
+                  style="min-height: 80px;"
+                ></textarea>
+                <p id="actual-help" class="form-help">What actually happens? Include any error messages.</p>
+              </div>
+
+              <div class="form-group">
+                <label for="additional-notes" class="form-label">Additional Notes</label>
+                <textarea
+                  id="additional-notes"
+                  name="notes"
+                  class="form-textarea"
+                  aria-describedby="notes-help"
+                  style="min-height: 80px;"
+                ></textarea>
+                <p id="notes-help" class="form-help">Any other relevant information, workarounds you've tried, etc.</p>
+              </div>
+            </fieldset>
+
+            <!-- System Details Section -->
+            <fieldset class="form-group" style="border: 1px solid var(--ui-lighter); border-radius: var(--radius-lg); padding: var(--space-6); margin-bottom: var(--space-8);">
+              <legend class="font-weight-semibold text-lg mb-6">System Details</legend>
+
+              <div class="form-group">
+                <label for="os-version" class="form-label">Operating System & Version (required)</label>
+                <input
+                  type="text"
+                  id="os-version"
+                  name="os"
+                  class="form-input"
+                  required
+                  aria-describedby="os-help"
+                  placeholder="e.g., Windows 11, macOS 14.1, Ubuntu 22.04"
+                >
+                <p id="os-help" class="form-help">Include the specific version number when possible.</p>
+              </div>
+
+              <div class="grid grid-cols-1 grid-lg-2 gap-6">
+                <div class="form-group">
+                  <label for="cpu-info" class="form-label">CPU</label>
+                  <input
+                    type="text"
+                    id="cpu-info"
+                    name="cpu"
+                    class="form-input"
+                    aria-describedby="cpu-help"
+                    placeholder="e.g., Intel i5-12400, AMD Ryzen 5 5600X"
+                  >
+                  <p id="cpu-help" class="form-help">Processor model if known.</p>
+                </div>
+
+                <div class="form-group">
+                  <label for="gpu-info" class="form-label">GPU</label>
+                  <input
+                    type="text"
+                    id="gpu-info"
+                    name="gpu"
+                    class="form-input"
+                    aria-describedby="gpu-help"
+                    placeholder="e.g., NVIDIA RTX 3060, AMD RX 6600"
+                  >
+                  <p id="gpu-help" class="form-help">Graphics card model if known.</p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 grid-lg-2 gap-6">
+                <div class="form-group">
+                  <label for="ram-info" class="form-label">RAM</label>
+                  <input
+                    type="text"
+                    id="ram-info"
+                    name="ram"
+                    class="form-input"
+                    aria-describedby="ram-help"
+                    placeholder="e.g., 16GB, 8GB"
+                  >
+                  <p id="ram-help" class="form-help">Amount of system memory.</p>
+                </div>
+
+                <div class="form-group">
+                  <label for="storage-type" class="form-label">Storage Type</label>
+                  <select id="storage-type" name="storage" class="form-select">
+                    <option value="">Select storage type</option>
+                    <option value="hdd">HDD (Hard Disk Drive)</option>
+                    <option value="sata-ssd">SATA SSD</option>
+                    <option value="nvme-ssd">NVMe SSD</option>
+                    <option value="unknown">Unknown</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="screenshot-url" class="form-label">Screenshot URL</label>
+                <input
+                  type="url"
+                  id="screenshot-url"
+                  name="screenshot"
+                  class="form-input"
+                  aria-describedby="screenshot-help"
+                  placeholder="https://imgur.com/example or https://drive.google.com/..."
+                >
+                <p id="screenshot-help" class="form-help">Optional: Share a link to a screenshot showing the issue.</p>
+              </div>
+
+              <div class="form-group">
+                <label for="log-url" class="form-label">Log/Crash Report URL</label>
+                <input
+                  type="url"
+                  id="log-url"
+                  name="log"
+                  class="form-input"
+                  aria-describedby="log-help"
+                  placeholder="https://pastebin.com/example or https://drive.google.com/..."
+                >
+                <p id="log-help" class="form-help">Optional: Share a link to log files or crash reports.</p>
+              </div>
+
+              <div class="form-help" style="background-color: var(--bg); padding: var(--space-4); border-radius: var(--radius); margin-top: var(--space-4);">
+                <strong>Note:</strong> File uploads are not supported yet. Please use image sharing services like Imgur or file sharing services like Google Drive, and paste the share links above.
+              </div>
+            </fieldset>
+
+            <!-- Consent Section -->
+            <fieldset class="form-group" style="border: 1px solid var(--ui-lighter); border-radius: var(--radius-lg); padding: var(--space-6); margin-bottom: var(--space-8);">
+              <legend class="font-weight-semibold text-lg mb-6">Consent & Privacy</legend>
+
+              <div class="form-group">
+                <label style="display: flex; align-items: flex-start; gap: var(--space-3); cursor: pointer;">
+                  <input type="checkbox" name="consent" required style="margin-top: 2px;">
+                  <span>I consent to Atlas Games storing this information to investigate the issue (required)</span>
+                </label>
+              </div>
+
+              <div class="form-help">
+                <p class="text-sm text-ui">
+                  By submitting this report, you agree to our
+                  <a href="/privacy-policy.html" class="text-primary">Privacy Policy</a> and
+                  <a href="/terms-of-service.html" class="text-primary">Terms of Service</a>.
+                  We'll only use your information to investigate and resolve the reported issue.
+                </p>
+              </div>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-primary btn-lg">
+                Submit Bug Report
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- After Submit Placeholder -->
+    <section class="py-20" id="after-submit" style="background-color: var(--bg); display: none;">
+      <div class="container">
+        <div class="text-center" style="max-width: 600px; margin: 0 auto;">
+          <h2 class="mb-6">Thank You for Your Report!</h2>
+          <p class="text-lg text-ui mb-8">
+            We've received your bug report and will investigate the issue.
+            You can expect a reply from our team within 2-3 business days with updates or follow-up questions.
+          </p>
+          <a href="/support.html" class="btn btn-secondary btn-lg">Return to Support Center</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Links -->
+    <section class="py-20" id="related-links" style="background-color: var(--bg);">
+      <div class="container">
+        <h2 class="text-center mb-12">Related Resources</h2>
+
+        <div class="grid grid-cols-1 grid-lg-4 gap-6">
+          <a href="/support.html" class="card text-center" style="text-decoration: none; color: inherit;">
+            <h3 class="card-title">Support Center</h3>
+            <p class="card-description">Browse FAQs and troubleshooting guides</p>
+          </a>
+
+          <a href="/system-requirements.html" class="card text-center" style="text-decoration: none; color: inherit;">
+            <h3 class="card-title">System Requirements</h3>
+            <p class="card-description">Check if your system meets minimum specs</p>
+          </a>
+
+          <a href="/community-guidelines.html" class="card text-center" style="text-decoration: none; color: inherit;">
+            <h3 class="card-title">Community Guidelines</h3>
+            <p class="card-description">Rules for community interaction</p>
+          </a>
+
+          <a href="/refund-policy.html" class="card text-center" style="text-decoration: none; color: inherit;">
+            <h3 class="card-title">Refund Policy</h3>
+            <p class="card-description">Information about returns and refunds</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="/assets/reusables/footer.html"></div>
+  <script src="/assets/includes.js" defer></script>
+</body>
+</html>

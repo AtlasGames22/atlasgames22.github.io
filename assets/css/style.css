@@ -520,6 +520,21 @@ a:focus-visible {
   }
 }
 
+/* NAV VISIBILITY */
+.desktop-header-root { display: block; }
+.mobile-nav-root { display: none; }
+@media (max-width: 768px) {
+  .desktop-header-root { display: none; }
+  .mobile-nav-root { display: block; }
+}
+
+/* MOBILE MENU BEHAVIOR (if not present already) */
+.nav-links { display: none; }
+.nav-links.open { display: block; }
+
+/* CONTAINER SANITY */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+
 /* ========================================
    HERO SECTION
    ======================================== */

@@ -14,29 +14,8 @@
 </head>
 
 <body>
-  <!-- Header Navigation -->
-  <header class="header">
-    <div class="container">
-      <nav class="nav" role="navigation" aria-label="Main navigation">
-        <a href="/index.html" class="nav-brand" aria-label="Atlas Games homepage">
-          Atlas Games
-        </a>
-
-        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          ☰
-        </button>
-
-        <ul class="nav-links">
-          <li><a href="/index.html" class="nav-link">Home</a></li>
-          <li><a href="/games.html" class="nav-link">Games</a></li>
-          <li><a href="/team.html" class="nav-link">Team</a></li>
-          <li><a href="/blog.html" class="nav-link active" aria-current="page">Blog</a></li>
-          <li><a href="/contact.html" class="nav-link">Contact</a></li>
-          <li><a href="/games.html" class="btn btn-primary btn-sm">Play Our Games</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div data-include="/assets/reusables/header.html"></div>
+  <div data-include="/assets/reusables/navigationbar.html" data-current-page="blog"></div>
 
   <!-- Main Content -->
   <main>
@@ -326,99 +305,7 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <!-- Company Info -->
-        <div class="footer-section">
-          <h3>Atlas Games</h3>
-          <p class="text-ui-lighter mb-4">
-            Creating immersive gaming experiences that bring players together and stand the test of time.
-          </p>
-          <address class="text-ui-lighter" style="font-style: normal;">
-            123 Game Development Ave<br>
-            Studio City, CA 90210<br>
-            <a href="tel:+27814752986" class="footer-link">+27 81 475 2986</a><br>
-            <a href="mailto:atlasgamesstudio22@gmail.com" class="footer-link">atlasgamesstudio22@gmail.com</a>
-          </address>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul class="footer-links">
-            <li><a href="/games.html" class="footer-link">Our Games</a></li>
-            <li><a href="/team.html" class="footer-link">Team</a></li>
-            <li><a href="/blog.html" class="footer-link">Blog</a></li>
-            <li><a href="/careers.html" class="footer-link">Careers</a></li>
-            <li><a href="/press.html" class="footer-link">Press Kit</a></li>
-          </ul>
-        </div>
-
-        <!-- Support -->
-        <div class="footer-section">
-          <h3>Support</h3>
-          <ul class="footer-links">
-            <li><a href="/support.html" class="footer-link">Help Center</a></li>
-            <li><a href="/contact.html" class="footer-link">Contact Us</a></li>
-            <li><a href="/bug-report.html" class="footer-link">Report a Bug</a></li>
-            <li><a href="/community-guidelines.html" class="footer-link">Community Guidelines</a></li>
-            <li><a href="/system-requirements.html" class="footer-link">System Requirements</a></li>
-          </ul>
-        </div>
-
-        <!-- Legal -->
-        <div class="footer-section">
-          <h3>Legal</h3>
-          <ul class="footer-links">
-            <li><a href="/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
-            <li><a href="/terms-of-service.html" class="footer-link">Terms of Service</a></li>
-            <li><a href="/eula.html" class="footer-link">EULA</a></li>
-            <li><a href="/refund-policy.html" class="footer-link">Refund Policy</a></li>
-            <li><a href="/cookie-policy.html" class="footer-link">Cookie Policy</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Footer Bottom -->
-      <div class="footer-bottom">
-        <div class="footer-social">
-          <a href="https://discord.gg/atlasgames" target="_blank" rel="noopener noreferrer" aria-label="Join our Discord server">
-            💬
-          </a>
-          <a href="https://atlasgames.itch.io" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Itch.io">
-            🎮
-          </a>
-          <a href="https://twitter.com/atlasgames" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
-            🐦
-          </a>
-          <a href="https://facebook.com/atlasgames" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
-            📘
-          </a>
-          <a href="https://youtube.com/atlasgames" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to our YouTube channel">
-            📺
-          </a>
-        </div>
-        <p>&copy; 2025 Atlas Games. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Navigation Toggle Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const navToggle = document.querySelector('.nav-toggle');
-      const navLinks = document.querySelector('.nav-links');
-
-      if (navToggle && navLinks) {
-        navToggle.addEventListener('click', function() {
-          const isOpen = navLinks.classList.contains('open');
-          navLinks.classList.toggle('open');
-          navToggle.setAttribute('aria-expanded', !isOpen);
-        });
-      }
-    });
-  </script>
+  <div data-include="/assets/reusables/footer.html"></div>
+  <script src="/assets/includes.js" defer></script>
 </body>
 </html>

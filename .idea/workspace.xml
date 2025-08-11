@@ -5,15 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87bf6b84-1e14-4d9d-bfe5-92caa251562f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/careers.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/games.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/press.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/includes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/reusables/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/reusables/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/reusables/navigationbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/awards.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bug-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community-guidelines.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookie-policy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eula.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/privacy-policy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refund-policy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system-requirements.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/terms-of-service.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilotDiffState.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/careers.html" beforeDir="false" afterPath="$PROJECT_DIR$/careers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games.html" beforeDir="false" afterPath="$PROJECT_DIR$/games.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/press.html" beforeDir="false" afterPath="$PROJECT_DIR$/press.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/support.html" beforeDir="false" afterPath="$PROJECT_DIR$/support.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team.html" beforeDir="false" afterPath="$PROJECT_DIR$/team.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +59,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tania\Documents\GitHub\atlasgames22.github.io\individual-pages" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -59,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1754902515844</updated>
-      <workItem from="1754902517209" duration="2376000" />
+      <workItem from="1754902517209" duration="6379000" />
     </task>
     <servers />
   </component>
