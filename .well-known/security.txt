@@ -1,0 +1,10 @@
+Contact: mailto:atlasgamesstudio22@gmail.com
+Expires: 2025-12-31T23:59:59.000Z
+Encryption: https://atlasgames22.github.io/contact.html
+Preferred-Languages: en
+Canonical: https://atlasgames22.github.io/.well-known/security.txt
+Policy: https://atlasgames22.github.io/about.html
+
+# Atlas Games Security Contact Information
+# If you discover a security vulnerability, please contact us privately
+# at the email address above rather than creating public issues.

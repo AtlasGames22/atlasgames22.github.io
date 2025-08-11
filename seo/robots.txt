@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://atlasgames22.github.io/seo/sitemap.xml
+
+# Block common bot paths
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.git/
+
+# Allow access to CSS and assets for better indexing
+Allow: /styles/
+Allow: /assets/
