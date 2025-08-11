@@ -4,7 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87bf6b84-1e14-4d9d-bfe5-92caa251562f" name="Changes" comment="" />
+    <list default="true" id="87bf6b84-1e14-4d9d-bfe5-92caa251562f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilotDiffState.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/includes.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/includes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/reusables/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/reusables/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/reusables/navigationbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/reusables/navigationbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/awards.html" beforeDir="false" afterPath="$PROJECT_DIR$/awards.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bug-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/bug-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/careers.html" beforeDir="false" afterPath="$PROJECT_DIR$/careers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-guidelines.html" beforeDir="false" afterPath="$PROJECT_DIR$/community-guidelines.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookie-policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/cookie-policy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eula.html" beforeDir="false" afterPath="$PROJECT_DIR$/eula.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games.html" beforeDir="false" afterPath="$PROJECT_DIR$/games.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/press.html" beforeDir="false" afterPath="$PROJECT_DIR$/press.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/privacy-policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/privacy-policy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/refund-policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/refund-policy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/support.html" beforeDir="false" afterPath="$PROJECT_DIR$/support.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-requirements.html" beforeDir="false" afterPath="$PROJECT_DIR$/system-requirements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team.html" beforeDir="false" afterPath="$PROJECT_DIR$/team.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terms-of-service.html" beforeDir="false" afterPath="$PROJECT_DIR$/terms-of-service.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +37,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="318P1sfTpFxAH8NrwWZRakYTXMM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -25,7 +49,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "test1",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/tania/Documents/GitHub/atlasgames22.github.io",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -55,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1754902515844</updated>
       <workItem from="1754902517209" duration="6686000" />
+      <workItem from="1754915554613" duration="2111000" />
     </task>
     <servers />
   </component>

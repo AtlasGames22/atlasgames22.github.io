@@ -21,14 +21,6 @@
 
     // Grab first top-level element and tag it
     const first = wrapper.firstElementChild;
-    if (first) {
-      const u = url.toLowerCase();
-      if (u.includes('header.html')) {
-        first.classList.add('desktop-header-root');
-      } else if (u.includes('navigationbar.html')) {
-        first.classList.add('mobile-nav-root');
-      }
-    }
 
     // Replace placeholder with nodes of the partial
     el.replaceWith(...wrapper.childNodes);

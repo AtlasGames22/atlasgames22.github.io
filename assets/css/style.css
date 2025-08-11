@@ -823,6 +823,88 @@ a:focus-visible {
 }
 
 /* ========================================
+   HEADER & NAVIGATION VISIBILITY
+   ======================================== */
+
+/* Base visibility for header and nav elements */
+header, nav {
+  display: block;
+}
+
+/* Prevent accidental hiding from stray rules */
+.site-nav, .site-header {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Desktop layout (≥ 960px) */
+@media (min-width: 960px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--bg, #F2F2F2);
+  }
+
+  .site-nav {
+    background: var(--bg, #F2F2F2);
+  }
+
+  .site-nav .nav-links {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .site-nav .nav-toggle {
+    display: none;
+  }
+
+  .site-nav a {
+    color: var(--base, #121212);
+    text-decoration: none;
+  }
+
+  .site-nav a[aria-current="page"] {
+    color: var(--primary, #C62828);
+    font-weight: 600;
+  }
+}
+
+/* Mobile layout (< 960px) */
+@media (max-width: 959.98px) {
+  .site-nav .nav-links {
+    display: none;
+  }
+
+  .site-nav .nav-links.open {
+    display: block;
+  }
+
+  .site-nav .nav-toggle {
+    display: inline-flex;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .nav-toggle,
+  .footer-social,
+  .btn {
+    display: none;
+  }
+
+  .hero {
+    background: none;
+  }
+
+  .card {
+    box-shadow: none;
+    border: 1px solid var(--ui-lighter);
+  }
+}
+
+/* ========================================
    ACCESSIBILITY & RESPONSIVENESS
    ======================================== */
 
@@ -938,22 +1020,4 @@ a:focus-visible {
 
 .shadow-lg {
   box-shadow: var(--shadow-lg);
-}
-
-/* Print Styles */
-@media print {
-  .nav-toggle,
-  .footer-social,
-  .btn {
-    display: none;
-  }
-
-  .hero {
-    background: none;
-  }
-
-  .card {
-    box-shadow: none;
-    border: 1px solid var(--ui-lighter);
-  }
 }
